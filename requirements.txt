@@ -1,8 +1,13 @@
 streamlit==1.30.0
+keras==2.14.0
+opencv-python==4.8.0.74
+os_sys==2.1.4
+sklearn>=0.0.0
+pathlib==1.0.1
 plotly==5.18.0
 lxml==5.1.0
 statsmodels==0.14.4
-scikit-learn==1.4.0
+scikit-learn==1.4.1
 matplotlib==3.8.2
 numpy==1.26.4
 streamlit-lottie==0.0.3
@@ -20,6 +25,7 @@ pandas-gbq>=0.20.0
 vega_datasets==0.9.0
 pandas==2.2.2
 altair==4.1.0
+pmdarima==2.0.4
 #google-cloud-bigquery==3.17.1
 #google-api-core==2.15.0
 #google-auth==2.27.0
@@ -32,6 +38,6 @@ altair==4.1.0
 #google-resumable-media==2.7.0
 #googleapis-common-protos==1.62.0
 #googletrans==3.0.0
-pmdarima==2.0.4
+
 
 
