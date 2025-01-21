@@ -7,7 +7,7 @@ from plotly.colors import n_colors
 import plotly.express as px
 import plotly.graph_objects as go
 
-from utils import importacao_dados_previsao, tratando_dados
+
 
 # Configuração da página
 st.set_page_config(page_title= 'Home ONG - Passos Magicos', layout='wide', page_icon= ':woman-woman-girl-boy:,📊 ')
