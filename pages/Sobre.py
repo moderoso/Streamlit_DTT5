@@ -2,10 +2,10 @@
 import streamlit as st
 
 # Configuração da página
-st.set_page_config(page_title= 'Projeto ML preço do Petróleo', layout='wide', page_icon= ':fuelpump:')
+st.set_page_config(page_title= 'Projeto ML preço do Petróleo', layout='wide', page_icon= '📊')
 
 # Título da página
-st.title('Projeto ML preço do Petróleo 🛠️')
+st.title('ONG - Passos Mágicos :woman-woman-girl-boy:')
 
 # Descrição do projeto
 st.markdown('<p style="text-align: justify;">A GalPreto, uma empresa líder no agenciamento de petróleo, busca otimizar as suas estratégias de mercado e prever flutuações de preço com maior precisão. Para isso, contratou a DataPro para desenvolver um dashboard interativo com visualizações intuitivas, insights em tempo real e um modelo de Machine Learning para previsão do preço do petróleo:</p>', unsafe_allow_html = True)
@@ -53,12 +53,10 @@ st.markdown('<p style="text-align: justify;"><br /><br /><br /><br /></p>', unsa
 
 
 # Equipe do projeto
-st.write("### Equipe FIAP - 5DTAT - Grupo 10")
+st.write("### Equipe FIAP - 5DTAT - Grupo 79")
 #st.markdown('<h5>Equipe FIAP - 5DTAT - Grupo 10</h5>', unsafe_allow_html = True)
-st.markdown('#### Caio Vinicius Branco Gonçalves - RM 354248')
 st.markdown('#### Jhonny da Silva Mineu - RM 355135')
 st.markdown('#### Marina Mendez Araujo - RM 355100')
-st.markdown('#### Mônada Raquel Brito de Oliveira - RM 354367')
 st.markdown('#### Volmir Moderoso Santos - RM 355589')
 
 
