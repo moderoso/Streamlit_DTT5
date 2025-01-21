@@ -1,11 +1,11 @@
 streamlit==1.30.0
-keras==2.14.0
+keras==3.8.0
 opencv-python==4.8.0.74
 pathlib==1.0.1
 plotly==5.18.0
 lxml==5.1.0
 statsmodels==0.14.4
-scikit-learn==1.4.1
+scikit-learn==1.4.0
 matplotlib==3.8.2
 numpy==1.26.4
 streamlit-lottie==0.0.3
