@@ -1,7 +1,6 @@
 # Importação das bibliotecas
 import streamlit as st
 import pandas as pd
-
 import altair as alt
 from plotly.colors import n_colors
 import plotly.express as px
@@ -17,7 +16,6 @@ st.title('ONG - Passos Mágicos :woman-woman-girl-boy:')
 
 
 from util.functions.path import get_file_path, get_dir_name, util_str, data_str
-
 from util.pages.home_page import home_page
 from util.pages.overview_page import overview_page
 from util.pages.pdb_page import pdb_page
