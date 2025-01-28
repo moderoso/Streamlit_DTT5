@@ -31,7 +31,7 @@ from streamlit_navigation_bar import st_navbar
 #st.write(page)
 
 st_navbar(
-    page=["Home", "Library", "Tutorials", "Development", "Download"],
+    pages=["Home", "Library", "Tutorials", "Development", "Download"],
     options={"use_padding": True}
 )
 st.write(page)
