@@ -9,7 +9,7 @@ import plotly.graph_objects as go
 from streamlit_option_menu import option_menu
 from streamlit_navigation_bar import st_navbar
 
-page = st_navbar(["Home", "Documentation", "Examples", "Community", "Sobre"])
+st_navbar = page(["Home", "Documentation", "Examples", "Community", "Sobre"])
 st.write(page)
 
 
