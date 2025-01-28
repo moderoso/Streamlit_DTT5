@@ -32,5 +32,5 @@ from streamlit_navigation_bar import st_navbar
 
 st_navbar(
     pages=["Home", "Library", "Tutorials", "Development", "Download"],
-    options={"use_padding": False}
+    options={"use_padding": True}
 )
