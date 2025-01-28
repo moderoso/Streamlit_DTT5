@@ -28,6 +28,6 @@ st.title('ONG - Passos Mágicos :woman-woman-girl-boy:')
 from streamlit_navigation_bar import st_navbar
 
 page = st_navbar(["Home", "Documentation", "Examples", "Community", "Sobre"])
-options={"use_padding": True}
+
 st.write(page)
 
