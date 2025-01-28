@@ -13,8 +13,10 @@ st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon
 # Título da página
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:')
 
-option = st.selectbox(
-...     'How would you like to be contacted?',
-...     ('Email', 'Home phone', 'Mobile phone'))
+import streamlit as st
+from streamlit_option_menu import option_menu
 
-st.write('You selected:', option)
+with st.sidebar:
+    selected = option_menu("Main Menu", ["Home", 'Settings'], 
+        icons=['house', 'gear'], menu_icon="cast", default_index=1)
+    selected
