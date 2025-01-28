@@ -23,3 +23,9 @@ if selected == "Home":
     st.write("home is where the heart is")
 else:
     st.write("settings is my bettings")
+	
+	
+from streamlit_navigation_bar import st_navbar
+
+page = st_navbar(["Home", "Documentation", "Examples", "Community", "About"])
+st.write(page)
