@@ -21,6 +21,7 @@ seaborn==0.13.2
 statsmodels==0.14.4
 tensorflow==2.17.1
 utils==1.0.2
+util_functions==1.0.1
 pandas-gbq>=0.20.0
 vega_datasets==0.9.0
 pandas==2.2.2
@@ -29,6 +30,13 @@ pmdarima==2.0.4
 pydeck==0.9.1
 watchdog==6.0.0
 st_theme==1.2.3
+
+
+
+
+
+
+
 #google-cloud-bigquery==3.17.1
 #google-api-core==2.15.0
 #google-auth==2.27.0
