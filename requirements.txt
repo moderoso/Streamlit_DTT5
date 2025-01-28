@@ -1,4 +1,5 @@
-streamlit==1.30.0
+streamlit==1.41.1
+streamlit_option_menu==0.4.0
 keras==3.8.0
 opencv-python==4.8.0.74
 pathlib==1.0.1
@@ -24,6 +25,8 @@ vega_datasets==0.9.0
 pandas==2.2.2
 altair==4.1.0
 pmdarima==2.0.4
+pydeck==0.9.1
+watchdog==6.0.0
 #google-cloud-bigquery==3.17.1
 #google-api-core==2.15.0
 #google-auth==2.27.0
