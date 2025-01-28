@@ -34,3 +34,4 @@ st_navbar(
     pages=["Home", "Library", "Tutorials", "Development", "Download"],
     options={"use_padding": True}
 )
+st.write(pages)
