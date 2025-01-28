@@ -7,6 +7,11 @@ from plotly.colors import n_colors
 import plotly.express as px
 import plotly.graph_objects as go
 from streamlit_option_menu import option_menu
+from streamlit_navigation_bar import st_navbar
+
+page = st_navbar(["Home", "Documentation", "Examples", "Community", "Sobre"])
+st.write(page)
+
 
 # Configuração da página
 st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon='📊')
@@ -25,9 +30,6 @@ st.title('ONG - Passos Mágicos :woman-woman-girl-boy:')
 #    st.write("settings is my bettings")
 	
 	
-from streamlit_navigation_bar import st_navbar
 
-page = st_navbar(["Home", "Documentation", "Examples", "Community", "Sobre"])
 
-st.write(page)
 
