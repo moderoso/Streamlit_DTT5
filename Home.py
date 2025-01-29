@@ -14,8 +14,8 @@ st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon
 # Título da página
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 
-def set_background('./images/pm.png'):
-    bin_str = get_base64('./images/pm.png')
+def set_background('/images/pm.png'):
+    bin_str = get_base64('/images/pm.png')
     page_bg_img = '''
     <style>
     .stApp {
