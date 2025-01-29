@@ -14,16 +14,12 @@ st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon
 # Título da página
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:')
 
-st.markdown(
-        f"""
-            <style>
-                [data-testid="stSidebar"] {{
-                    background-image: url(http://placekitten.com/120/120);
-                    background-repeat: no-repeat;
-                    padding-top: 80px;
-                    background-position: 20px 20px;
-                }}
-            </style>
-            """,
-        unsafe_allow_html=True,
-    )
+page_bg_img = 
+<style>
+[data-testid="stAppViewContainer"] {
+background-image: url("https://raw.githubusercontent.com/FIAP-Tech-Challenge/datathon/c36b8f489d9bf07499bb33fb17052ca123066db9/data/1.jpg");
+background-size: 15%;
+background-position: right;
+background-repeat: no-repeat;
+}
+</style>
