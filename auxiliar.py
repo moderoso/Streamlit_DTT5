@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
 
-PRIMARY_COLOR = "#273157"
-SECOND_COLOR = "#273157"
+PRIMARY_COLOR = "#4d5880"
+SECOND_COLOR = "#4d5880"
 
 def apply_custom_style():
     st_custom_style = """
