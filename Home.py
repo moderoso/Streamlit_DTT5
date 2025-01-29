@@ -14,7 +14,8 @@ st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon
 # Título da página
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 
-
+side_bg_ext = 'pm.png'
+sidebar_bg(side_bg)
 
 st.markdown(
       f"""
@@ -25,6 +26,4 @@ st.markdown(
       </style>
       """,
       unsafe_allow_html=True,
-    )
-side_bg_ext = 'pm.png'
-sidebar_bg(side_bg)
+)
