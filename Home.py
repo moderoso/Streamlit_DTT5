@@ -8,7 +8,7 @@ if __name__ == '__main__':
         apply_custom_style()
 
 # Configuração da página
-st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon=':gem:')
+#st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon=':gem:')
 
 # Carregando top
 top = Image.open('images/top.png')
