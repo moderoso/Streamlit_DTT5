@@ -14,7 +14,7 @@ if __name__ == '__main__':
 #### Páginas
 cols = st.columns(6, gap="large")
 with cols[0]:
-    st.image("images/pm.png")
+    st.image("images/pm_top.png")
 with cols[1]:
     if st.button("Home"):
         st.switch_page("Home.py")
