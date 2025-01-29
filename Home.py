@@ -31,19 +31,8 @@ with cols[4]:
 st.header("", divider="gray")
 
 # Carregando top
-top = Image.open('images/top.png')
-st.image(top, width=200)
-
-# Carregando image
-image = Image.open('images/pm.png')
-st.image(image, width=200)
-
-# Carregando top
-top2 = Image.open('images/top.png')
-st.image(top2, width=200)
-
-
-
+#top = Image.open('images/top.png')
+#st.image(top, width=200)
 
 # Título da página
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
