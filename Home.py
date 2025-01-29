@@ -15,3 +15,22 @@ st.image(image, width=200)
 # Título da página
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 
+
+side_bg = 'images/pm.png'
+sidebar_bg(side_bg)
+
+def sidebar_bg(side_bg):
+
+   side_bg_ext = 'png'
+
+   st.markdown(
+      f"""
+      <style>
+      [data-testid="stSidebar"] > div:first-child {{
+          background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
+      }}
+      </style>
+      """,
+      unsafe_allow_html=True,
+      )
+
