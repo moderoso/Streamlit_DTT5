@@ -10,5 +10,5 @@ st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon
 
 from PIL import Image
 image = Image.open('images/pm.png')
-st.image(image, width=1000, height=1500)
+st.image(image, width=1920)
 
