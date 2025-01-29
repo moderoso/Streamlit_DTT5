@@ -9,19 +9,19 @@ from streamlit_option_menu import option_menu
 from streamlit_navigation_bar import st_navbar
 
 # Configuração da página
-st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon=':gem:📊')
+st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon=':gem:')
 
 # Título da página
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 
-page_bg_img = """
-<style>
-body {{
-background-image: url("images/pm.png");
-background-size: cover;
-}}
-</style>
-"""
-
-# Display the background image
-st.markdown(page_bg_img, unsafe_allow_html=True)
+def set_background(images/pm.png):
+    bin_str = get_base64(png_file)
+    page_bg_img = '''
+    <style>
+    .stApp {
+    background-image: url("data:image/png;base64,%s");
+    background-size: cover;
+    }
+    </style>
+    ''' % bin_str
+    st.markdown(page_bg_img, unsafe_allow_html=True)
