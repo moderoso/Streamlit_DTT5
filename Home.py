@@ -65,7 +65,7 @@ with tabs_2[0]:
 
     with colunas_2 [0]:
 
-        st.image("images/metodologia.jpg",caption="Fonte:Relatório de atividades Passos Mágicos 2022", width=600)
+        st.image("images/pm.png",caption="Fonte:Relatório de atividades Passos Mágicos 2022", width=600)
 
 
 # TAB Alunos Impactados
@@ -90,7 +90,6 @@ with tabs_2[1]:
                 </li>
             </ul>""",unsafe_allow_html=True)
     
-    with colunas_3 [1]:    
-        st.plotly_chart(fig_6, use_container_width=True)
+
 
     
