@@ -14,16 +14,17 @@ st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon
 # Título da página
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 
+
+
 st.markdown(
-    """
-    <style>
-    .reportview-container {
-        background: url("pm.png")
-    }
-   .sidebar .sidebar-content {
-        background: url("pm.png")
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+      f"""
+      <style>
+      [data-testid="stSidebar"] > div:first-child {{
+          background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
+      }}
+      </style>
+      """,
+      unsafe_allow_html=True,
+    )
+side_bg = 'pm.png'
+sidebar_bg(side_bg)
