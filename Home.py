@@ -7,6 +7,13 @@ from auxiliar import apply_custom_style
 st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon=':gem:')
 
 # Carregando image
+top = Image.open('images/top.png')
+st.image(top, width=200)
+
+
+
+
+# Carregando image
 image = Image.open('images/pm.png')
 st.image(image, width=200)
     apply_custom_style()
