@@ -1,5 +1,10 @@
 # Importação da biblioteca streamlit
 import streamlit as st
+from auxiliar import apply_custom_style
+
+
+if __name__ == '__main__':
+        apply_custom_style()
 
 # Configuração da página
 st.set_page_config(page_title= 'Projeto ML preço do Petróleo', layout='wide', page_icon= '📊')
