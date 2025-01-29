@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
 
-PRIMARY_COLOR = "#41c4f0"
-SECOND_COLOR = "#41aaf0"
+PRIMARY_COLOR = "#414df0"
+SECOND_COLOR = "#414df0"
 
 def apply_custom_style():
     st_custom_style = """
@@ -18,9 +18,6 @@ def apply_custom_style():
                 }
                 div[data-testid="stStatusWidget"] div div div svg{
                     color: white;
-                }
-                #relat-rio-de-exporta-o-de-vinhos, #tabela-resumida-com-informa-es-de-exporta-es-nos-ltimos-anos{
-                    text-align:center;
                 }
                 div[data-testid="stStatusWidget"] img{
                     opacity: 100%;
@@ -77,7 +74,7 @@ def apply_custom_style():
                 
                     max-width: 86rem !important;
                 }
-                #grupo {
+                #Sobre {
                     background: #9e829b;
                     padding: 15px;
                     border-radius: 10px;
