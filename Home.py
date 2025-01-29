@@ -59,20 +59,7 @@ with tabs_2[0]:
 
     with colunas_1 [1]:
                 st.image("images/pm.png",width=300)
-				
-   st.markdown('''<p style='font-size:20px;'>
-                A Passos baseia-se na meritocracia, por isso engajamos nossas crianças para que acreditem que estudar é bom e pode transformar a vida delas.
-                <br><br>
-                Avaliamos a participação, desempenho e presença para decidir quem participará das atividades de finais de semana e quem pode concorrer a bolsas de estudos na escola particular
-                sendo apadrinhado por uma pessoa que se dispõe a financiar seu estudo.
-                <br><br>
-                As aulas são dadas fora do horário de aula escolar em locais fixos cedidos pela comunidade (em 4 núcleos diferentes), ou seja, não temos uma sede construída, pois acreditamos que
-                todo o valor de arrecadação do projeto deve ir para a melhora da qualidade de entrega e investimento em novas oportunidades para as crianças.
-                </p>
-                <br>
-                ''', unsafe_allow_html=True)
-    
-    st.markdown("")
+
 
     colunas_2 = st.columns(2, gap="large")
 
