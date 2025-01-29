@@ -19,22 +19,3 @@ st.image(image, width=200)
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 
     
-
-    
-  st.markdown("""
-        <style>
-            .section {
-                font-family: 'Sans-serif';
-                font-size: 20px;
-                font-weight: bold;
-                margin-bottom: 10px;
-            }
-            
-            .indicator {
-                margin-left: 20px;
-                font-size: 16px;
-                font-weight: normal;
-            }
-        </style>
-    """, unsafe_allow_html=True)
-
