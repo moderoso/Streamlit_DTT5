@@ -67,23 +67,6 @@ with tabs_2[0]:
 
         st.image("images/metodologia.jpg",caption="Fonte:Relatório de atividades Passos Mágicos 2022", width=600)
 
-    with colunas_2 [1]:
-
-        st.markdown("#")
-        with st.container(border=True):
-
-            st.markdown("""
-                        <p style='font-size:20px;'>A Passos conta com um corpo docente composto por 7 professores, uma psicóloga e uma psicopedagoga, todos eles contratados e remunerados para
-                        garantir a qualidade do ensino. 
-                        <br><br>
-                        A ONG conta com inúmeras atividades de final de semana podem ser culturais como visita a museus e teatros ou educacionais como oficinas, cursos e workshops, todas realizadas
-                        com a ajuda de voluntários que acompanham e participam com nossas crianças.</p>""", unsafe_allow_html=True)
-    
-    st.markdown("#")
-    st.markdown( """## Organograma da estrutura hierárquica da Passos Mágicos""")
-    st.markdown("#")
-
-    st.image("images/Estrutura passos.jpg")
 
 # TAB Alunos Impactados
 with tabs_2[1]: 
