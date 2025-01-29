@@ -11,7 +11,7 @@ st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon
 if __name__ == '__main__':
         apply_custom_style()
 
-#### Páginas
+#### Menu Superior
 cols = st.columns(6, gap="large")
 with cols[0]:
     st.image("images/pm_top.png")
@@ -27,7 +27,6 @@ with cols[3]:
 with cols[4]:
     if st.button("Sobre"):
         st.switch_page("pages/Sobre.py")
-
 st.header("", divider="gray")
 
 # Carregando top
