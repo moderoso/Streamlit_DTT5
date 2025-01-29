@@ -26,5 +26,5 @@ st.markdown(
       """,
       unsafe_allow_html=True,
     )
-side_bg = 'pm.png'
+side_bg_ext = 'pm.png'
 sidebar_bg(side_bg)
