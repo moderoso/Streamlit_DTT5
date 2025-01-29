@@ -7,7 +7,7 @@ if __name__ == '__main__':
         apply_custom_style()
 
 # Configuração da página
-st.set_page_config(page_title= 'Projeto ML preço do Petróleo', layout='wide', page_icon= '📊')
+#st.set_page_config(page_title= 'Projeto ML preço do Petróleo', layout='wide', page_icon= '📊')
 
 # Título da página
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:')
