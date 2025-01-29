@@ -16,13 +16,13 @@ st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 
 
 side_bg_ext = 'pm.png'
-sidebar_bg(side_bg_ext)
+sidebar_bg(side_bg)
 
    st.markdown(
       f"""
       <style>
       [data-testid="stSidebar"] > div:first-child {{
-          background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg_ext, "rb").read()).decode()});
+          background: url(data:image/{side_bg_ext};base64,{base64.b64encode(open(side_bg, "rb").read()).decode()});
       }}
       </style>
       """,
