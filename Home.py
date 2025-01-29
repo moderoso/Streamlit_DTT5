@@ -11,8 +11,7 @@ if __name__ == '__main__':
 #st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon=':gem:')
 
 
-###### Páginal Inicial do Streamlit ######
-st.set_page_config(layout= 'wide')
+
 
 #### Páginas
 cols = st.columns(6, gap="large")
