@@ -14,20 +14,16 @@ st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon
 # Título da página
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 
-import base64
-
-def set_png_as_page_bg(png_file):
-    bin_str = get_base64_of_bin_file(png_file)
-    page_bg_img = '''
+st.markdown(
+    """
     <style>
-    body {
-    background-image: url("data:image/png;base64,%s");
-    background-size: cover;
+    .reportview-container {
+        background: url("pm.png")
+    }
+   .sidebar .sidebar-content {
+        background: url("pm.png")
     }
     </style>
-    ''' % bin_str
-    
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-    return
-
-set_png_as_page_bg('pm.png')
+    """,
+    unsafe_allow_html=True
+)
