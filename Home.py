@@ -55,7 +55,7 @@ with tabs_2[0]:
 É efetuada um processo seletivo visando garantir a dignidade e a autoestima com o intuito de promover a inclusão social ativa. É efetuada a divulgação das vagas na comunidade, é aplicada uma prova de sondagem aos interessados, aos selecionados é feita uma entrevista com psicologos, pedagogos e assistentes sociais. Após deliberarem analisam o perfil socioeconomicos para direcionar o conteudo e por fim a matricula.</p>""", unsafe_allow_html=True)
 
     with colunas_1 [1]:
-                st.image("images/pm.png",width=300)
+                st.image("images/borda.png",width=300)
 
 
     colunas_2 = st.columns(2, gap="large")
