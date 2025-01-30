@@ -92,7 +92,12 @@ with tabs_2[2]:
                 </p>''',unsafe_allow_html=True)
     colunas_3 = st.columns(2)
     with colunas_3 [0]:
-        st.image("images/indicador_avaliacao.png",caption="Fonte:PEDE Pontos importantes", width=600)
+        st.image("images/indicador_avaliacao.png",caption="Indicadores de Avaliação, descrição e seus pesos - Fonte:PEDE Pontos importantes", width=600)
+    with colunas_3 [1]:
+        st.image("images/indicador_conselho.png",caption="Indicadores de Conselho, descrição e seus pesos - Fonte:PEDE Pontos importantes", width=600)
+    with colunas_3 [3]:
+        st.image("images/pedraINDE.png",caption="Faixas de desempenho Pedra-conceito INDE - Fonte:PEDE Pontos importantes", width=600)		
+
 
        
 
