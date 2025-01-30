@@ -5,6 +5,24 @@ from auxiliar import apply_custom_style
 
 if __name__ == '__main__':
         apply_custom_style()
+		
+#### Menu Superior
+cols = st.columns(6, gap="large")
+with cols[0]:
+    st.image("images/pme.png")
+with cols[1]:
+    if st.button("Home"):
+        st.switch_page("Home.py")
+with cols[2]:
+    if st.button("Análise"):
+        st.switch_page("pages/PSE (2020).py")
+with cols[3]:
+    if st.button("História"):
+        st.switch_page("pages/MVP (sobre).py")
+with cols[4]:
+    if st.button("Sobre"):
+        st.switch_page("pages/Sobre.py")
+st.header("", divider="gray")
 
 # Configuração da página
 #st.set_page_config(page_title= 'Projeto ML preço do Petróleo', layout='wide', page_icon= '📊')
