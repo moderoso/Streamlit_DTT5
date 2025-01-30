@@ -63,16 +63,10 @@ st.markdown('<p style="text-align: justify;"><br /><br /><br /><br /></p>', unsa
 
 st.write("### Fontes de dados")
 st.write("Links acessado em 20 novembro 2024"
-         "\n* A história do petróleo no Brasil   https://www.gov.br/anp/pt-br/acesso-a-informacao/institucional/historia-petroleo-brasil"
-         "\n* Qual é a origem do petróleo?  https://www.bbc.com/portuguese/articles/cnk0e0yydelo"
-         "\n* OPEC  https://www.opec.org/opec_web/en/index.htm"
+
          "\n* OpenAI. “O Chat GPT é uma ferramenta de processamento de linguagem natural orientada por IA, que possibilita conversas semelhantes às humanas com o chatbot   https://openai.com/blog/chat-gpt-3-launch"
-         "\n* Geopolítica do Petróle  https://mundoeducacao.uol.com.br/geografia/geopolitica-petroleo.html"
-         "\n* Nos Bastidores da Terra: Geóloga Explica a Formação do Petróleo  https://super.abril.com.br/coluna/deriva-continental/nos-bastidores-da-terra-geologa-explica-a-formacao-do-petroleo#google_vignette"
-         "\n* Organização dos Países Exportadores de Petróleo https://pt.wikipedia.org/wiki/Organiza%C3%A7%C3%A3o_dos_Pa%C3%ADses_Exportadores_de_Petr%C3%B3leo"
-		 "\n* Agência Internacional de Energia   https://pt.wikipedia.org/wiki/Ag%C3%AAncia_Internacional_de_Energia"
-         "\n* Oito motivos para a queda do preço do  petróleo  https://www.dw.com/pt-br/oito-motivos-para-a-queda-do-pre%C3%A7o-do-petr%C3%B3leo/a-19051686"
-		 )
+         "\n* Passos Mágicos. “ONG Passos Mágicos   https://passosmagicos.org.br/"		 
+ 		 )
 
 st.markdown('<p style="text-align: justify;"><br /><br /><br /><br /></p>', unsafe_allow_html = True)
 
