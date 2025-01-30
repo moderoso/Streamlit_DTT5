@@ -51,7 +51,8 @@ with tabs_2[0]:
 
         with st.container(border=True):
             st.markdown("""
-                        <p style='font-size:20px;'>A Passos Mágicos tem como objetivo acelerar a ascensão social de crianças e jovens do município de Embu Guaçu através da educação.   
+                        <p style='font-size:20px;'>A Passos Mágicos tem como objetivo acelerar a ascensão social de crianças e jovens do município de Embu Guaçu através da educação.
+É efetuada um processo seletivo visando garantir a dignidade e a autoestima com o intuito de promover a inclusão social ativa. É efetuada a divulgação das vagas na comunidade, é aplicada uma prova de sondagem aos interessados, aos selecionados é feita uma entrevista com psicologos, pedagogos e assistentes sociais. Após deliberarem analisam o perfil socioeconomicos para direcionar o conteudo e por fim a matricula.		
                         <br><br>
                         Fornecendo aulas de português, matemática e inglês três vezes na semana, atividades extracurriculares de finais de semana e bolsas de estudos no colégio particular, em cursos técnicos
                         e de graduação.</p>""", unsafe_allow_html=True)
