@@ -31,12 +31,12 @@ st.header("", divider="gray")
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:')
 
 # Descrição do projeto
-st.markdown("###O Problema")
+st.markdown('###O Problema')
 st.markdown('<p style="text-align: justify;">A ONG Passos Mágicos enfrenta um desafio delicado e crucial: como ampliar o impacto positivo em crianças e jovens em situação de vulnerabilidade, quando as dificuldades em medir de forma clara os efeitos de suas ações tornam esse processo complexo.Cada aluno traz consigo uma realidade única, com diferentes contextos socioeconômicos e emocionais, o que torna difícil acompanhar seu progresso de maneira personalizada. Ela precisa de novas ferramentas para entender melhor os dados e ajustar suas estratégias, garantindo que cada criança receba o apoio e as oportunidades que merece, para que possa crescer e superar os obstáculos de sua jornada.:</p>', unsafe_allow_html = True)
 #st.markdown('- Análise Exploratória')
 #st.markdown('- Desenvolvimento dashboard com os insights abaixo na ferramenta Streamlit')
 #st.markdown('- Desenvolvimento de um modelo Machine Learning')
-st.markdown("###Objetivo")
+st.markdown('###Objetivo')
 st.markdown('<p style="text-align: justify;">Este projeto visa utilizar análises preditivas para avaliar como as ações da ONG Passos Mágicos impactam o desempenho e o desenvolvimento dos estudantes.<br />O objetivo é identificar padrões e relações nos dados educacionais, socioeconômicos e comportamentais, para compreender como diferentes fatores influenciam tanto o sucesso quanto as dificuldades dos alunos.<br />Com esses insights, a ONG poderá aprimorar suas abordagens e programas, ajustando-os para atender de forma mais eficaz às necessidades individuais dos alunos e potencializar os benefícios em suas trajetórias educacionais.:</p>', unsafe_allow_html = True)
 
 # Visualização da fluxo de trabalho do projeto
