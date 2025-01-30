@@ -90,13 +90,13 @@ with tabs_2[2]:
     st.markdown('''<p style='font-size:20px;'>Os dados que serão mostrados abaixo tem a finalidade de demonstrar o impacto da Passos Mágicos no sistema educacional e nos jovens da região de Embu-Guaçu.
                 <br><br>
                 </p>''',unsafe_allow_html=True)
-    colunas_3 = st.columns(3)
+    colunas_3 = st.columns()
     with colunas_3 [0]:
         st.image("images/indicador_avaliacao.png",caption="Indicadores de Avaliação, descrição e seus pesos - Fonte:PEDE Pontos importantes", width=600)
     with colunas_3 [1]:
         st.image("images/indicador_conselho.png",caption="Indicadores de Conselho, descrição e seus pesos - Fonte:PEDE Pontos importantes", width=600)
  
-	with colunas_4 [0]:
+	with colunas_3 [2]:
         st.image("images/pedraINDE.png",caption="Faixas de desempenho Pedra-conceito INDE - Fonte:PEDE Pontos importantes", width=600)		
 
 
