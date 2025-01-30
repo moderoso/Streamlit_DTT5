@@ -96,7 +96,18 @@ with tabs_2[2]:
  #   with colunas_3 [1]:
         st.image("images/indicador_conselho.png",caption="Indicadores de Conselho, descrição e seus pesos - Fonte:PEDE Pontos importantes", width=600)
  #	with colunas_3 [2]:
-        st.image("images/pedraINDE.png",caption="Faixas de desempenho Pedra-conceito INDE - Fonte:PEDE Pontos importantes", width=600)		
+        st.image("images/pedraINDE.png",caption="Faixas de desempenho Pedra-conceito INDE - Fonte:PEDE Pontos importantes", width=600)
+## Rodapé
+st.markdown("---")
+
+st.markdown('''<div class="center">
+                    <a target="_self" href="#ea054864">
+                        <button class="back-to-top">
+                            Voltar ao topo
+                        </button>
+                    </a>
+                </div>''', unsafe_allow_html=True)
+		
 
 
        
