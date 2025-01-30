@@ -45,7 +45,7 @@ tabs_2 = st.tabs(tabs_titles_2)
 
 # Tab Como funciona a Passos
 with tabs_2[0]: 
-    st.header("Como Funciona a Passos Mágicos")
+#    st.header("Como Funciona a Passos Mágicos")
 	st.markdown("")
     colunas_1 = st.columns(2)
     with colunas_1 [0]:
