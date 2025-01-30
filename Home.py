@@ -60,10 +60,7 @@ with tabs_2[0]:
 
     colunas_2 = st.columns(2, gap="large")
 
- #   with colunas_2 [0]:
-
- #       st.image("images/pm.png",caption="Fonte:Relatório de atividades Passos Mágicos 2022", width=600)
-
+ 
 
 # TAB Alunos Impactados
 with tabs_2[1]: 
@@ -94,13 +91,9 @@ with tabs_2[2]:
                 <br><br>
                 </p>''',unsafe_allow_html=True)
     colunas_3 = st.columns(2)
-    with colunas_3 [0]:
-        st.markdown(''' <ul class="font-text-destaques">
-                    <br><br>
-                    <li> O gráfico abaixo demonstra a quantidade de alunos e a evolução desse número no período de 2020 até 2022. Podemos notar o crescimento expressivo entre o período de 2021 e 2022.
-                    que passou de <b> 727 <b> para <b> 939 <b> alunos.
-                    </li>
-                    </ul>''',unsafe_allow_html=True)
+   with colunas_3 [0]:
+        st.image("images/indicador_avaliacao.png",caption="Fonte:PEDE Pontos importantes", width=600)
 
+       
 
     
