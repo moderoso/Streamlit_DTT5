@@ -1,5 +1,6 @@
 # Importação das bibliotecas
 import streamlit as st
+import pandas as pd
 from PIL import Image
 from auxiliar import apply_custom_style
 
@@ -27,3 +28,22 @@ with cols[4]:
     if st.button("Sobre"):
         st.switch_page("pages/Sobre.py")
 st.header("", divider="gray")
+
+# Título do aplicativo
+st.title("Upload de Arquivo Excel")
+
+# Criando o widget de upload
+uploaded_file = st.file_uploader("Faça upload do seu arquivo Excel", type=["xlsx"])
+
+# Verifica se um arquivo foi enviado
+if uploaded_file is not None:
+    # Lendo o arquivo Excel como DataFrame
+    df = pd.read_excel(uploaded_file)
+
+    # Exibe o DataFrame
+    st.write("### Dados do Arquivo:")
+    st.dataframe(df)
+
+    # Exibir estatísticas do DataFrame (opcional)
+    st.write("### Estatísticas do DataFrame:")
+    st.write(df.describe())
