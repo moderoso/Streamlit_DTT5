@@ -5,7 +5,6 @@ from auxiliar import apply_custom_style
 
 
 # Configuração da página
-#st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon=':gem:')
 st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon=':gem:')
 
 if __name__ == '__main__':
@@ -30,8 +29,8 @@ with cols[4]:
 st.header("", divider="gray")
 
 # Carregando top
-#top = Image.open('images/top.png')
-#st.image(top, width=200)
+top = Image.open('images/pme.png')
+st.image(top, width=200)
 
 # Título da página
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
