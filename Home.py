@@ -11,7 +11,7 @@ if __name__ == '__main__':
         apply_custom_style()
 
 #### Menu Superior
-cols = st.columns(4, gap="large")
+cols = st.columns(5, gap="large")
 with cols[0]:
     st.image("images/pme.png")
 with cols[1]:
