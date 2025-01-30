@@ -13,7 +13,7 @@ if __name__ == '__main__':
 #### Menu Superior
 cols = st.columns(6, gap="large")
 with cols[0]:
-    st.image("images/pm_top.png")
+    st.image("images/pme.png")
 with cols[1]:
     if st.button("Home"):
         st.switch_page("Home.py")
@@ -29,8 +29,8 @@ with cols[4]:
 st.header("", divider="gray")
 
 # Carregando top
-top = Image.open('images/pme.png')
-st.image(top, width=200)
+#top = Image.open('images/pme.png')
+#st.image(top, width=200)
 
 # Título da página
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
