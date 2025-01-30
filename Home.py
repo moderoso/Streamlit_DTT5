@@ -19,10 +19,10 @@ with cols[1]:
         st.switch_page("Home.py")
 with cols[2]:
     if st.button("Análise"):
-        st.switch_page("pages/PSE (2020).py")
+        st.switch_page("pages/Analise.py")
 with cols[3]:
     if st.button("História"):
-        st.switch_page("pages/MVP (sobre).py")
+        st.switch_page("pages/Historia.py")
 with cols[4]:
     if st.button("Sobre"):
         st.switch_page("pages/Sobre.py")
