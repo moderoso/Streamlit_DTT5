@@ -78,4 +78,17 @@ st.markdown('#### Jhonny da Silva Mineu - RM 355135')
 st.markdown('#### Marina Mendez Araujo - RM 355100')
 st.markdown('#### Volmir Moderoso Santos - RM 355589')
 
+## Rodapé
+st.markdown("---")
+
+st.markdown('''<div class="center">
+                    <a target="_self" href="#286ba15e">
+                        <button class="back-to-top">
+                            Voltar ao topo
+                        </button>
+                    </a>
+                </div>''', unsafe_allow_html=True)
+		
+
+
 
