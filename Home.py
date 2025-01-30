@@ -91,7 +91,7 @@ with tabs_2[2]:
                 <br><br>
                 </p>''',unsafe_allow_html=True)
     colunas_3 = st.columns(2)
-   with colunas_3 [0]:
+    with colunas_3 [0]:
         st.image("images/indicador_avaliacao.png",caption="Fonte:PEDE Pontos importantes", width=600)
 
        
