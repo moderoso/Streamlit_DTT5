@@ -60,9 +60,9 @@ with tabs_2[0]:
 
     colunas_2 = st.columns(2, gap="large")
 
-    with colunas_2 [0]:
+ #   with colunas_2 [0]:
 
-        st.image("images/pm.png",caption="Fonte:Relatório de atividades Passos Mágicos 2022", width=600)
+ #       st.image("images/pm.png",caption="Fonte:Relatório de atividades Passos Mágicos 2022", width=600)
 
 
 # TAB Alunos Impactados
