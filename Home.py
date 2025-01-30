@@ -40,19 +40,20 @@ st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 #st.markdown("#")
 
 ### Tabs da página inicial
-tabs_titles_2= ["Como funciona a Passos","Alunos impactados pela Passos","Indicadores"]
+tabs_titles_2= ["Como funciona...","Alunos impactados pela Passos","Indicadores"]
 tabs_2 = st.tabs(tabs_titles_2)
 
 # Tab Como funciona a Passos
 with tabs_2[0]: 
-    st.markdown("")
+    st.header("Como Funciona a Passos Mágicos")
+	st.markdown("")
     colunas_1 = st.columns(2)
     with colunas_1 [0]:
 
         with st.container(border=True):
             st.markdown("""
                         <p style='font-size:20px;'>A Passos Mágicos tem como objetivo acelerar a ascensão social de crianças e jovens do município de Embu Guaçu através da educação.
-É efetuada um processo seletivo visando garantir a dignidade e a autoestima com o intuito de promover a inclusão social ativa. É efetuada a divulgação das vagas na comunidade, é aplicada uma prova de sondagem aos interessados, aos selecionados é feita uma entrevista com psicologos, pedagogos e assistentes sociais. Após deliberarem analisam o perfil socioeconomicos para direcionar o conteudo e por fim a matricula.</p>""", unsafe_allow_html=True)
+                        É efetuada um processo seletivo visando garantir a dignidade e a autoestima com o intuito de promover a inclusão social ativa. É efetuada a divulgação das vagas na comunidade, é aplicada uma prova de sondagem aos interessados, aos selecionados é feita uma entrevista com psicologos, pedagogos e assistentes sociais. Após deliberarem analisam o perfil socioeconomicos para direcionar o conteudo e por fim a matricula.</p>""", unsafe_allow_html=True)
 
     with colunas_1 [1]:
                 st.image("images/borda.png",width=300)
