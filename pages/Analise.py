@@ -4,6 +4,8 @@ import datetime
 import pandas as pd
 from PIL import Image
 from auxiliar import apply_custom_style
+from Funcoes import rodando_modelo
+import joblib
 
 
 # Configuração da página
@@ -30,6 +32,9 @@ with cols[4]:
         st.switch_page("pages/Sobre.py")
 st.header("", divider="gray")
 
+scaler = joblib.load('database/scaler.pkl')
+modelo_carregado = joblib.load("database/modelo_evasao.pkl")
+
 # Título do aplicativo
 st.title("Upload de Arquivo Excel")
 
@@ -48,6 +53,8 @@ if uploaded_file is not None:
     # Exibir estatísticas do DataFrame (opcional)
     st.write("### Estatísticas do DataFrame:")
     st.write(df.describe())
+
+    rodando_modelo(modelo_carregado,scaler,df)
 	
 #Adicionando inputs do Usuario
 
