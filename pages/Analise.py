@@ -50,4 +50,4 @@ if uploaded_file is not None:
 	
 #Adicionando inputs do Usuario
 
-fase = st.number_input("Insira um número 0 - 7")
+fase = st.number_input("Insira um número 0 - 7", format="%.2f", value = temp_val, max_value=7, min_value=1)
