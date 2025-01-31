@@ -62,7 +62,7 @@ st.markdown('<p style="text-align: justify;"><br /><br /><br /><br /></p>', unsa
 
 
 st.write("### Fontes de dados")
-st.write("Links acessado em 20 Janeiro 2025"
+st.write("Links acessado em 20 e 30 Janeiro 2025"
 
          "\n* OpenAI. “O Chat GPT é uma ferramenta de processamento de linguagem natural orientada por IA, que possibilita conversas semelhantes às humanas com o chatbot   https://openai.com/blog/chat-gpt-3-launch"
          "\n* Passos Mágicos. “ONG Passos Mágicos   https://passosmagicos.org.br/"

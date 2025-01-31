@@ -47,3 +47,7 @@ if uploaded_file is not None:
     # Exibir estatísticas do DataFrame (opcional)
     st.write("### Estatísticas do DataFrame:")
     st.write(df.describe())
+	
+#Adicionando inputs do Usuario
+
+fase = st.number_input("Insira um número 0 - 7")
