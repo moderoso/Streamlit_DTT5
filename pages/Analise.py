@@ -58,4 +58,4 @@ ano_ingresso = st.number_input("Insira ano de Ingresso", value=2025, min_value=1
 anos_pm = st.number_input("Insira ano PM", value=2025, min_value=1900, max_value=2050)
 intituicao_ensino = st.selectbox("Selecione a Instituição de Ensino",["Escola Pública", "Escola Privada", "Já Formado", "Outro"])
 pedra = st.selectbox("Selecione a Pedra",["Ametista", "Topázio", "Ágata", "Quartzo","Desconhecido"])
-inde = st.number_input("INDE 0 - 10", max_value=10, min_value=1, step=float)
+inde = st.number_input("INDE 0 - 10", max_value=10, min_value=1)
