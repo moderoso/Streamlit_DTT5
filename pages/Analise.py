@@ -32,8 +32,8 @@ with cols[4]:
         st.switch_page("pages/Sobre.py")
 st.header("", divider="gray")
 
-scaler = joblib.load('database/scaler.pkl')
-modelo_carregado = joblib.load("database/modelo_evasao.pkl")
+scaler = joblib.load('db/scaler.pkl')
+modelo_carregado = joblib.load("db/modelo_evasao.pkl")
 
 # Título do aplicativo
 st.title("Upload de Arquivo Excel")
