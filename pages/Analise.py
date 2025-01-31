@@ -1,5 +1,6 @@
 # Importação das bibliotecas
 import streamlit as st
+import datetime
 import pandas as pd
 from PIL import Image
 from auxiliar import apply_custom_style
