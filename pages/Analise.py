@@ -57,3 +57,5 @@ ano_nascimento = st.number_input("Insira ano de Nascimento", value=2025, min_val
 genero = st.radio("Selecione o Genero", ["Masculino", "Feminino", "Prefiro não infomar"]) 
 ano_ingresso = st.number_input("Insira ano de Ingresso", value=2025, min_value=1900, max_value=2050)
 anos_pm = st.number_input("Insira ano PM", value=2025, min_value=1900, max_value=2050)
+#intituicao_ensino = st.radio("Selecione o Genero", ["Masculino", "Feminino", "Prefiro não infomar"])
+intituicao_ensino = st.selectbox("Selecione a Instituição de Ensino",("Escola Pública", "Escola Privada", "Já Formado", "Outro"))
