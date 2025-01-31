@@ -6,7 +6,7 @@ from PIL import Image
 from auxiliar import apply_custom_style
 import joblib
 
-from Funcoes import rodando_modelo # type: ignore
+from Funcoes import rodando_modelo, exibindo # type: ignore
 
 
 
@@ -88,7 +88,7 @@ else:
     ipp = st.number_input("IPP 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
     defas = st.selectbox("Nível defasagem",["Em Fase", "Moderada", "Severa"])
 
-    st.button("Prever",on_click='Prevendo...')
+    st.button("Prever",on_click=exibindo)
 
 
 

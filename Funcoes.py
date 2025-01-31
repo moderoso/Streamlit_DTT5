@@ -1,6 +1,6 @@
 import pandas as pd
 from datetime import datetime
-
+import streamlit as st
 
 def rodando_modelo(model,sc,df):
     ano_atual = datetime.now().year
@@ -42,3 +42,6 @@ def rodando_modelo(model,sc,df):
         print("🔹 Previsão: Não evadiu")
     else:
         print("🔹 Previsão: Evadiu")
+
+def exibindo():
+    st.warning('Prevendo', icon="⚠️")
