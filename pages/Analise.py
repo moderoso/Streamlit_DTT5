@@ -52,4 +52,4 @@ if uploaded_file is not None:
 #Adicionando inputs do Usuario
 
 fase = st.number_input("Insira um número 0 - 7", max_value=7, min_value=1)
-ano_nascimento = st.date_input("Insira ano de nascimento", max_value=datetime.date(year=2050 , month=12, day=31))
+ano_nascimento = st.date_input("Insira ano de nascimento", max_value=datetime.date(year=2050 , month=12, day=31), format="YYYY")
