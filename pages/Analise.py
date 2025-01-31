@@ -4,7 +4,7 @@ import datetime
 import pandas as pd
 from PIL import Image
 from auxiliar import apply_custom_style
-from Funcoes import rodando_modelo
+#from Funcoes import rodando_modelo
 import joblib
 
 
