@@ -54,7 +54,7 @@ if uploaded_file is not None:
     st.write("### Estatísticas do DataFrame:")
     st.write(df.describe())
 
-  rodando_modelo(modelo_carregado,scaler,df)
+ # rodando_modelo(modelo_carregado,scaler,df)
 	
 #Adicionando inputs do Usuario
 
