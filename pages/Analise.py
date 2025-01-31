@@ -65,7 +65,7 @@ ano_ingresso = st.number_input("Insira ano de Ingresso", value=2025, min_value=1
 anos_pm = st.number_input("Insira ano PM", value=2025, min_value=1900, max_value=2050)
 intituicao_ensino = st.selectbox("Selecione a Instituição de Ensino",["Escola Pública", "Escola Privada", "Já Formado", "Outro"])
 pedra = st.selectbox("Selecione a Pedra",["Ametista", "Topázio", "Ágata", "Quartzo","Desconhecido"])
-inde = st.number_input("INDE 0 - 10", max_value=10.0, min_value=1.0, step=0.1 format="%.1f" )
+inde = st.number_input("INDE 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
 iaa = st.number_input("IAA 0 - 10",  max_value=10, min_value=1, format="%.1f" )
 ieg = st.number_input("IEG 0 - 10", max_value=10, min_value=1, format="%.2f" )
 ips = st.number_input("IPS 0 - 10", max_value=10, min_value=1, format="%.2f" )
