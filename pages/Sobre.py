@@ -65,7 +65,12 @@ st.write("### Fontes de dados")
 st.write("Links acessado em 20 Janeiro 2025"
 
          "\n* OpenAI. “O Chat GPT é uma ferramenta de processamento de linguagem natural orientada por IA, que possibilita conversas semelhantes às humanas com o chatbot   https://openai.com/blog/chat-gpt-3-launch"
-         "\n* Passos Mágicos. “ONG Passos Mágicos   https://passosmagicos.org.br/"		 
+         "\n* Passos Mágicos. “ONG Passos Mágicos   https://passosmagicos.org.br/"
+        "\n* Abandono escolar: entendendo as causas e buscando soluções. “Abandono Escolar  https://institutoayrtonsenna.org.br/abandono-escolar"
+         "\n* Brazil and the OECD. “Brazil and the OECD   https://www.oecd.org/en/countries/brazil.html" 
+		 "\n* Dois milhões de crianças e adolescentes de 11 a 19 anos não estão frequentando a escola no Brasil, “alerta a UNICEF   https://www.unicef.org/brazil/comunicados-de-imprensa/dois-milhoes-de-criancas-e-adolescentes-de-11-a-19-anos-nao-estao-frequentando-a-escola-no-brasil"
+         "\n* Evasão escolar e o abandono: um guia para entender esses conceitos. “Evasão Escolar   https://observatoriodeeducacao.institutounibanco.org.br/em-debate/abandono-evasao-escolar/?gad_source=1&gclid=Cj0KCQiA4-y8BhC3ARIsAHmjC_EpA-7Air9ZuFjOOpgmc2-UwED_38gmL7qeBX7uX7Eufl1dEh__JZMaAifREALw_wcB"	
+		 "\n* Relatório PEDE2021. “Disponível pela FIAP para Datathon" 		 
  		 )
 
 st.markdown('<p style="text-align: justify;"><br /><br /><br /><br /></p>', unsafe_allow_html = True)
