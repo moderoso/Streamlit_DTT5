@@ -38,41 +38,57 @@ scaler = joblib.load('db/scaler.pkl')
 modelo_carregado = joblib.load("db/modelo_evasao.pkl")
 
 # Título do aplicativo
-st.title("Upload de Arquivo Excel")
+st.title("Entrada de Dados: Manual ou Upload de Arquivo")
+# Criando um botão de escolha
+escolha = st.radio("Como deseja inserir os dados?", ("Upload de Excel", "Entrada Manual"))
 
-# Criando o widget de upload
-uploaded_file = st.file_uploader("Faça upload do seu arquivo Excel", type=["xlsx"])
+# Se o usuário escolher "Upload de Excel"
+if escolha == "Upload de Excel":
 
-# Verifica se um arquivo foi enviado
-if uploaded_file is not None:
-    # Lendo o arquivo Excel como DataFrame
-    df = pd.read_excel(uploaded_file)
+    # Título do aplicativo
+    st.title("Upload de Arquivo Excel")
 
-    # Exibe o DataFrame
-    st.write("### Dados do Arquivo:")
-    st.dataframe(df)
+    # Criando o widget de upload
+    uploaded_file = st.file_uploader("Faça upload do seu arquivo Excel", type=["xlsx"])
 
-    # Exibir estatísticas do DataFrame (opcional)
-    st.write("### Estatísticas do DataFrame:")
-    st.write(df.describe())
+    # Verifica se um arquivo foi enviado
+    if uploaded_file is not None:
+        # Lendo o arquivo Excel como DataFrame
+        df = pd.read_excel(uploaded_file)
 
-    rodando_modelo(modelo_carregado,scaler,df)
+        # Exibe o DataFrame
+        st.write("### Dados do Arquivo:")
+        st.dataframe(df)
+
+        # Exibir estatísticas do DataFrame (opcional)
+        st.write("### Estatísticas do DataFrame:")
+        st.write(df.describe())
+
+        rodando_modelo(modelo_carregado,scaler,df)
 	
-#Adicionando inputs do Usuario
+# Se o usuário escolher "Entrada Manual"
+else:
+    st.write("### Insira os dados manualmente:")
 
-fase = st.number_input("Insira um número 0 - 7", max_value=7, min_value=1)
-ano_nascimento = st.number_input("Insira ano de Nascimento", value=2025, min_value=1900, max_value=2050)
-genero = st.radio("Selecione o Genero", ["Masculino", "Feminino", "Prefiro não infomar"]) 
-ano_ingresso = st.number_input("Insira ano de Ingresso", value=2025, min_value=1900, max_value=2050)
-anos_pm = st.number_input("Insira ano PM", value=2025, min_value=1900, max_value=2050)
-intituicao_ensino = st.selectbox("Selecione a Instituição de Ensino",["Escola Pública", "Escola Privada", "Já Formado", "Outro"])
-pedra = st.selectbox("Selecione a Pedra",["Ametista", "Topázio", "Ágata", "Quartzo","Desconhecido"])
-inde = st.number_input("INDE 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-iaa = st.number_input("IAA 0 - 10",  max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-ieg = st.number_input("IEG 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-ips = st.number_input("IPS 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-ida = st.number_input("IDA 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-ipv = st.number_input("IPV 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-ian = st.number_input("IAN 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-ipp = st.number_input("IPP 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-defas = st.selectbox("Selecione Defas",["Em Fase", "Moderada", "Severa"])
+    #Adicionando inputs do Usuario
+    fase = st.number_input("Insira um número 0 - 7", max_value=7, min_value=1)
+    ano_nascimento = st.number_input("Insira ano de Nascimento", value=2025, min_value=1900, max_value=2050)
+    genero = st.radio("Selecione o Genero", ["Masculino", "Feminino", "Prefiro não infomar"]) 
+    ano_ingresso = st.number_input("Insira ano de Ingresso", value=2025, min_value=1900, max_value=2050)
+    anos_pm = st.number_input("Insira ano PM", value=2025, min_value=1900, max_value=2050)
+    intituicao_ensino = st.selectbox("Selecione a Instituição de Ensino",["Escola Pública", "Escola Privada", "Já Formado", "Outro"])
+    pedra = st.selectbox("Selecione a Pedra",["Ametista", "Topázio", "Ágata", "Quartzo","Desconhecido"])
+    inde = st.number_input("INDE 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+    iaa = st.number_input("IAA 0 - 10",  max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+    ieg = st.number_input("IEG 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+    ips = st.number_input("IPS 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+    ida = st.number_input("IDA 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+    ipv = st.number_input("IPV 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+    ian = st.number_input("IAN 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+    ipp = st.number_input("IPP 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+    defas = st.selectbox("Selecione Defas",["Em Fase", "Moderada", "Severa"])
+
+
+
+
+
