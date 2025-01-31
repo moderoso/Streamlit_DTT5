@@ -4,8 +4,10 @@ import datetime
 import pandas as pd
 from PIL import Image
 from auxiliar import apply_custom_style
-from Funcoes import rodando_modelo
 import joblib
+
+from Funcoes import rodando_modelo # type: ignore
+
 
 
 # Configuração da página
@@ -54,7 +56,7 @@ if uploaded_file is not None:
     st.write("### Estatísticas do DataFrame:")
     st.write(df.describe())
 
-    ##rodando_modelo(modelo_carregado,scaler,df)
+    rodando_modelo(modelo_carregado,scaler,df)
 	
 #Adicionando inputs do Usuario
 
