@@ -73,7 +73,7 @@ else:
     #Adicionando inputs do Usuario
     fase = st.number_input("Insira um número 0 - 7", max_value=7, min_value=1)
     ano_nascimento = st.number_input("Insira ano de Nascimento", value=2025, min_value=1900, max_value=2050)
-    genero = st.radio("Selecione o Genero", ["Masculino", "Feminino", "Prefiro não infomar"]) 
+    genero = st.radio("Selecione o Genero", ["Masculino", "Feminino"]) 
     ano_ingresso = st.number_input("Insira ano de Ingresso", value=2025, min_value=1900, max_value=2050)
     anos_pm = st.number_input("Insira ano PM", value=2025, min_value=1900, max_value=2050)
     intituicao_ensino = st.selectbox("Selecione a Instituição de Ensino",["Escola Pública", "Escola Privada", "Já Formado", "Outro"])
@@ -86,9 +86,9 @@ else:
     ipv = st.number_input("IPV 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
     ian = st.number_input("IAN 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
     ipp = st.number_input("IPP 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-    defas = st.selectbox("Selecione Defas",["Em Fase", "Moderada", "Severa"])
+    defas = st.selectbox("Nível defasagem",["Em Fase", "Moderada", "Severa"])
 
-
+    st.button("Prever",on_click='Prevendo...')
 
 
 
