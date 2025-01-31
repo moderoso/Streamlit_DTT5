@@ -54,5 +54,6 @@ if uploaded_file is not None:
 fase = st.number_input("Insira um número 0 - 7", max_value=7, min_value=1)
 #ano_nascimento = st.date_input("Insira ano de nascimento", max_value=datetime.date(year=2050 , month=12, day=31))
 ano_nascimento = st.number_input("Insira ano de nascimento", value=2025, min_value=1900, max_value=2050)
-user_gender = st.radio("Select Gender", ["Male", "Female"]) [2, 4, 8]
-
+genero = st.radio("Selecione o Genero", ["Masculino", "Feminino", "Prefiro não infomar"]) 
+ano_ingresso = st.number_input("Insira ano de nascimento", value=2025, min_value=1900, max_value=2050)
+anos_pm = st.number_input("Insira ano de nascimento", value=2025, min_value=1900, max_value=2050)
