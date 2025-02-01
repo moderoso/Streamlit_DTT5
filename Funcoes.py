@@ -20,6 +20,11 @@ def rodando_modelo(model,sc,df,tipo):
         df['Idade'] = ano_atual - df['Ano Nascimento']
         df['Anos PM'] = ano_atual - df['Ano Ingresso']
 
+        df = df.reindex(columns=[
+            "Fase", "Ano Nascimento", "Idade", "Ano Ingresso", "Anos PM",
+            "INDE", "IAA", "IEG", "IPS", "IDA", "IPV", "IAN", "IPP"
+        ])
+
         # Separando colunas por tipo de dado
         colunas_numericas = df.select_dtypes(include=['number'])
         colunas_categoricas = df.select_dtypes(include=['object'])
@@ -45,7 +50,7 @@ def rodando_modelo(model,sc,df,tipo):
         # Separando colunas por tipo de dado
         colunas_numericas = df.select_dtypes(include=['number'])
         colunas_categoricas = df.select_dtypes(include=['object'])
-        
+
         # Normalizando as colunas númericas do dataframe
         df[colunas_numericas.columns] = sc.transform(df[colunas_numericas.columns])
 
@@ -87,3 +92,11 @@ def exportando_excel(df):
         file_name="Previsao_Evasao.xlsx",
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     )
+
+
+
+
+
+
+
+    
