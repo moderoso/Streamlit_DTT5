@@ -60,7 +60,7 @@ if escolha == "Upload de Excel":
         st.write("### Dados do Arquivo:")
         st.dataframe(df)
 
-        rodando_modelo(modelo_carregado,scaler,df,'Massivo')
+        rodando_modelo(modelo_carregado,scaler,df,tipo='Massivo')
 	
 # Se o usuário escolher "Entrada Manual"
 else:
@@ -85,7 +85,6 @@ else:
     ipp = st.number_input("IPP 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
     defas = st.selectbox("Nível defasagem",["Em Fase", "Moderada", "Severa"])
 
-    {}
 
     ##st.button("Prever",on_click=exibindo)
 
