@@ -45,6 +45,7 @@ def rodando_modelo(model,sc,df,tipo):
         # Separando colunas por tipo de dado
         colunas_numericas = df.select_dtypes(include=['number'])
         colunas_categoricas = df.select_dtypes(include=['object'])
+        
         # Normalizando as colunas númericas do dataframe
         df[colunas_numericas.columns] = sc.transform(df[colunas_numericas.columns])
 
