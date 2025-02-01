@@ -22,7 +22,7 @@ def rodando_modelo(model,sc,df):
     df['Defasagem'] = df['Defas'].apply(lambda x: "Em Fase" if x >= 0 else ("Moderada" if x < 0 and x <= -2 else "Severa"))
     df = df.drop(columns=['Defas','STATUS'])
 
-    df_copy = df
+    df_copy = df.copy(deep=True)
     # Obtendo coluna de valores numéricos e categóricos
     colunas_numericas = df.select_dtypes(include=['number'])
     colunas_categoricas = df.select_dtypes(include=['object'])
