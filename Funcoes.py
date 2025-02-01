@@ -3,6 +3,22 @@ from datetime import datetime
 import streamlit as st
 import io
 
+def valid_model(df):
+    output = io.BytesIO()
+    with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
+        df.to_excel(writer, index=False, sheet_name="Previsao")
+    
+    output.seek(0)  # Voltando ao início do buffer
+
+    # Botão para download do arquivo Excel
+    st.download_button(
+        label="📥 Baixar Resultado Previsão",
+        data=output,
+        file_name="Validacao_Modelo.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+)
+
+
 def rodando_modelo(model,sc,df,tipo):
     colunas_df = ['Fase', 'Ano Nascimento', 'Idade', 'Ano Ingresso', 'Anos PM', 'INDE',
        'IAA', 'IEG', 'IPS', 'IDA', 'IPV', 'IAN', 'IPP', 'Gênero_Feminino',
@@ -44,6 +60,9 @@ def rodando_modelo(model,sc,df,tipo):
         # Prenvendo o valor
         previsao = model.predict(df)
         st.dataframe(df)
+
+        valid_model(df)
+
 
         st.dataframe(previsao)
         if previsao[0] == 1:
