@@ -38,7 +38,9 @@ def rodando_modelo(model,sc,df,tipo):
 
         # Prenvendo o valor
         previsao = model.predict(df)
+        st.dataframe(df)
 
+        st.dataframe(previsao)
         if previsao[0] == 0:
             st.success("🔹 Previsão: Não evadiu")
         else:
