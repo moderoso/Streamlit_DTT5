@@ -66,7 +66,8 @@ if escolha == "Upload de Excel":
 else:
     st.write("### Insira os dados manualmente:")
 
-    ano_atual = datetime.date.today().year()
+    data = datetime.date.today()
+    ano_atual = data.year()
 
     #Adicionando inputs do Usuario
     fase = st.number_input("Insira um número 0 - 7", max_value=7, min_value=1)
