@@ -29,6 +29,7 @@ pmdarima==2.0.4
 pydeck==0.9.1
 watchdog==6.0.0
 st_theme==1.2.3
+XlsxWriter==3.2.2
 openpyxl
 altair
 
