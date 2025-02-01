@@ -89,7 +89,7 @@ def rodando_modelo(model,sc,df,tipo):
         previsao = model.predict(df)
 
         df_copy = pd.concat([df, pd.Series(previsao, name='Previsao')], axis=1)
-        df_copy['Previsao'] = df_copy['Previsao'].apply(lambda x: "Não evadiu" if x == 1 else "Evadiu")
+        df_copy['Previsao'] = df_copy['Previsao'].apply(lambda x: "Não evadiu" if x == 0 else "Evadiu")
  
         output = io.BytesIO()
         with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
