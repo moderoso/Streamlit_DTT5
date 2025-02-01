@@ -21,11 +21,11 @@ def valid_model(df):
 def rodando_modelo(model,sc,df,tipo):
     colunas_df = ['Fase', 'Idade', 'Anos PM', 'INDE',
        'IAA', 'IEG', 'IPS', 'IDA', 'IPV', 'IAN', 'IPP', 'Gênero_Feminino',
-       'Gênero_Masculino', 'Instituição de Ensino_Desconhecido',
+       'Gênero_Masculino', 'Instituição de Ensino_Outro',
        'Instituição de Ensino_Escola Privada',
        'Instituição de Ensino_Escola Pública',
        'Instituição de Ensino_Já formado', 'Instituição de Ensino_Outro',
-       'Pedra_Ametista', 'Pedra_Desconhecido', 'Pedra_Quartzo',
+       'Pedra_Ametista', 'Pedra_Outro', 'Pedra_Quartzo',
        'Pedra_Topázio', 'Pedra_Ágata', 'Defasagem_Em Fase',
        'Defasagem_Moderada', 'Defasagem_Severa']
 
