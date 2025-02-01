@@ -28,7 +28,7 @@ def rodando_modelo(model,sc,df,tipo):
         for coluna in colunas_num:
             df[coluna] = pd.to_numeric(df[coluna], errors='coerce')
 
-        df = df.reindex(columns=colunas_numericas)
+        df = df.reindex(columns=colunas_num)
 
         # Separando colunas por tipo de dado
         colunas_numericas = df.select_dtypes(include=['number'])
