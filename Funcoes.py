@@ -1,6 +1,7 @@
 import pandas as pd
 from datetime import datetime
 import streamlit as st
+import io
 
 def rodando_modelo(model,sc,df):
     ano_atual = datetime.now().year
@@ -38,10 +39,43 @@ def rodando_modelo(model,sc,df):
     df = df.reindex(columns=colunas_df, fill_value=False)
 
     previsao = model.predict(df)
-    if previsao[0] == 0:
-        st.success("🔹 Previsão: Não evadiu")
-    else:
-        st.error("🔹 Previsão: Evadiu")
 
-def exibindo():
-    st.warning('Prevendo', icon="⚠️")
+    if len(previsao[0]) > 1:
+        df_concat = pd.concat([df, pd.Series(previsao, name='Previsao')], axis=1)
+        df_concat['Previsao'] = df_concat['Previsao'].apply(lambda x: "Não evadiu" if x == 1 else "Evadiu")
+ 
+        output = io.BytesIO()
+        with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
+            df_concat.to_excel(writer, index=False, sheet_name="Previsao")
+        
+        output.seek(0)  # Voltando ao início do buffer
+
+        # Botão para download do arquivo Excel
+        st.download_button(
+            label="📥 Baixar Resultado Previsão",
+            data=output,
+            file_name="Previsao_Evasao.xlsx",
+            mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+ 
+ 
+    else:
+        if previsao[0] == 0:
+            st.success("🔹 Previsão: Não evadiu")
+        else:
+            st.error("🔹 Previsão: Evadiu")
+
+def exportando_excel(df):
+    output = io.BytesIO()
+    with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
+        df.to_excel(writer, index=False, sheet_name="Previsao")
+    
+    output.seek(0)  # Voltando ao início do buffer
+
+    # Botão para download do arquivo Excel
+    st.download_button(
+        label="📥 Baixar Resultado Previsão",
+        data=output,
+        file_name="Previsao_Evasao.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )

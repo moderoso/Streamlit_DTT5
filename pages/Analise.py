@@ -60,10 +60,6 @@ if escolha == "Upload de Excel":
         st.write("### Dados do Arquivo:")
         st.dataframe(df)
 
-        # Exibir estatísticas do DataFrame (opcional)
-        st.write("### Estatísticas do DataFrame:")
-        st.write(df.describe())
-
         rodando_modelo(modelo_carregado,scaler,df)
 	
 # Se o usuário escolher "Entrada Manual"
