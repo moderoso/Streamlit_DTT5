@@ -33,6 +33,9 @@ def rodando_modelo(model,sc,df,tipo):
     if tipo == 'Manual':
         ano_atual = datetime.now().year
 
+        colunas_categoricas = df.select_dtypes(include=['object'])
+        df = pd.get_dummies(df, columns=colunas_categoricas.columns, drop_first=False)
+        
         df['Idade'] = ano_atual - df['Ano Nascimento']
         df['Anos PM'] = ano_atual - df['Ano Ingresso']
 
@@ -48,13 +51,9 @@ def rodando_modelo(model,sc,df,tipo):
 
         # Separando colunas por tipo de dado
         colunas_numericas = df.select_dtypes(include=['number'])
-        colunas_categoricas = df.select_dtypes(include=['object'])
-
+        
         # Normalizando as colunas númericas do dataframe
         df[colunas_numericas.columns] = sc.transform(df[colunas_numericas.columns])
-
-        # Aplicando o enconding nas colunas categoricas e preenchendo false nas demais
-        df = pd.get_dummies(df, columns=colunas_categoricas.columns, drop_first=False)
         df = df.reindex(columns=colunas_df, fill_value=False)
         print(df)
         # Prenvendo o valor
