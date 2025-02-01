@@ -100,7 +100,7 @@ else:
                 'IAN': ian,
                 'IPP': ipp,
                 'Defasagem': defas}
-    df = pd.DataFrame(respostas)
+    df = pd.DataFrame(data=respostas)
 
     st.button("Prever",on_click=rodando_modelo(modelo_carregado,scaler,df,tipo='Manual'))
 
