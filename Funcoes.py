@@ -1,5 +1,4 @@
 import pandas as pd
-from datetime import datetime
 import streamlit as st
 import io
 
@@ -20,7 +19,7 @@ def valid_model(df):
 
 
 def rodando_modelo(model,sc,df,tipo):
-    colunas_df = ['Fase', 'Ano Nascimento', 'Idade', 'Ano Ingresso', 'Anos PM', 'INDE',
+    colunas_df = ['Fase', 'Idade', 'Anos PM', 'INDE',
        'IAA', 'IEG', 'IPS', 'IDA', 'IPV', 'IAN', 'IPP', 'Gênero_Feminino',
        'Gênero_Masculino', 'Instituição de Ensino_Desconhecido',
        'Instituição de Ensino_Escola Privada',
@@ -31,14 +30,9 @@ def rodando_modelo(model,sc,df,tipo):
        'Defasagem_Moderada', 'Defasagem_Severa']
 
     if tipo == 'Manual':
-        ano_atual = datetime.now().year
-
-        # Criando colunas derivadas
-        df['Idade'] = ano_atual - df['Ano Nascimento']
-        df['Anos PM'] = ano_atual - df['Ano Ingresso']
 
         # Definição das colunas numéricas
-        colunas_num = ['Fase', 'Ano Nascimento', 'Idade', 'Ano Ingresso', 'Anos PM', 'INDE',
+        colunas_num = ['Fase', 'Idade', 'Anos PM', 'INDE',
                     'IAA', 'IEG', 'IPS', 'IDA', 'IPV', 'IAN', 'IPP']
 
         # Convertendo as colunas numéricas para garantir o tipo correto
@@ -73,7 +67,7 @@ def rodando_modelo(model,sc,df,tipo):
         st.dataframe(previsao)
 
         # Exibindo resultado da previsão
-        if previsao[0] == 1:
+        if previsao[0] == 0:
             st.success("🔹 Previsão: Não evadiu")
         else:
             st.error("🔹 Previsão: Evadiu")
