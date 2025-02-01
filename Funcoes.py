@@ -13,16 +13,16 @@ def rodando_modelo(model,sc,df,tipo):
        'Pedra_Ametista', 'Pedra_Desconhecido', 'Pedra_Quartzo',
        'Pedra_Topázio', 'Pedra_Ágata', 'Defasagem_Em Fase',
        'Defasagem_Moderada', 'Defasagem_Severa']
-    
-    # Separando colunas por tipo de dado
-    colunas_numericas = df.select_dtypes(include=['number'])
-    colunas_categoricas = df.select_dtypes(include=['object'])
 
     if tipo == 'Manual':
         ano_atual = datetime.now().year
 
         df['Idade'] = ano_atual - df['Ano Nascimento']
         df['Anos PM'] = ano_atual - df['Ano Ingresso']
+
+        # Separando colunas por tipo de dado
+        colunas_numericas = df.select_dtypes(include=['number'])
+        colunas_categoricas = df.select_dtypes(include=['object'])
 
         # Normalizando as colunas númericas do dataframe
         df[colunas_numericas.columns] = sc.transform(df[colunas_numericas.columns])
@@ -42,6 +42,9 @@ def rodando_modelo(model,sc,df,tipo):
     else:
         df_copy = df.copy(deep=True)
 
+        # Separando colunas por tipo de dado
+        colunas_numericas = df.select_dtypes(include=['number'])
+        colunas_categoricas = df.select_dtypes(include=['object'])
         # Normalizando as colunas númericas do dataframe
         df[colunas_numericas.columns] = sc.transform(df[colunas_numericas.columns])
 
