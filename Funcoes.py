@@ -36,10 +36,8 @@ def rodando_modelo(model,sc,df,tipo):
         df['Idade'] = ano_atual - df['Ano Nascimento']
         df['Anos PM'] = ano_atual - df['Ano Ingresso']
 
-        colunas_num = [
-            "Fase", "Ano Nascimento", "Idade","Gênero", "Ano Ingresso", "Anos PM","Instituição de Ensino","Pedra",
-            "INDE", "IAA", "IEG", "IPS", "IDA", "IPV", "IAN", "IPP","Defasagem"
-        ]
+        colunas_num = ['Fase', 'Ano Nascimento', 'Idade', 'Ano Ingresso', 'Anos PM', 'INDE',
+       'IAA', 'IEG', 'IPS', 'IDA', 'IPV', 'IAN', 'IPP']
 
         for coluna in colunas_num:
             df[coluna] = pd.to_numeric(df[coluna], errors='coerce')
