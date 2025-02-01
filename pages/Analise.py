@@ -66,12 +66,14 @@ if escolha == "Upload de Excel":
 else:
     st.write("### Insira os dados manualmente:")
 
+    ano_atual = datetime.now().year
+
     #Adicionando inputs do Usuario
     fase = st.number_input("Insira um número 0 - 7", max_value=7, min_value=1)
-    ano_nascimento = st.slider("Insira ano de Nascimento", value=2025, min_value=1990, max_value=2050)
+    ano_nascimento = st.slider("Insira ano de Nascimento", value=2025, min_value=1990, max_value=ano_atual)
     genero = st.radio("Selecione o Genero", ["Masculino", "Feminino"]) 
-    ano_ingresso = st.slider("Insira ano de Ingresso", value=2025, min_value=1990, max_value=2050)
-    anos_pm = st.slider("Insira ano PM", value=2025, min_value=1990, max_value=2050)
+    ano_ingresso = st.slider("Insira ano de Ingresso", value=2025, min_value=1990, max_value=ano_atual)
+    anos_pm = st.slider("Insira ano PM", value=2025, min_value=1990, max_value=ano_atual)
     intituicao_ensino = st.selectbox("Selecione a Instituição de Ensino",["Escola Pública", "Escola Privada", "Já Formado", "Outro"])
     pedra = st.selectbox("Selecione a Pedra",["Ametista", "Topázio", "Ágata", "Quartzo","Desconhecido"])
     inde = st.number_input("INDE 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
