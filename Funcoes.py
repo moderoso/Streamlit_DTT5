@@ -32,29 +32,30 @@ def rodando_modelo(model,sc,df,tipo):
 
     if tipo == 'Manual':
         ano_atual = datetime.now().year
-
-        colunas_categoricas = df.select_dtypes(include=['object'])
-        df = pd.get_dummies(df, columns=colunas_categoricas.columns, drop_first=False)
         
         df['Idade'] = ano_atual - df['Ano Nascimento']
         df['Anos PM'] = ano_atual - df['Ano Ingresso']
 
         colunas_num = [
-            "Fase", "Ano Nascimento", "Idade", "Ano Ingresso", "Anos PM",
-            "INDE", "IAA", "IEG", "IPS", "IDA", "IPV", "IAN", "IPP"
+            "Fase", "Ano Nascimento", "Idade","Gênero", "Ano Ingresso", "Anos PM","Instituição de Ensino","Pedra",
+            "INDE", "IAA", "IEG", "IPS", "IDA", "IPV", "IAN", "IPP","Defasagem"
         ]
 
         for coluna in colunas_num:
             df[coluna] = pd.to_numeric(df[coluna], errors='coerce')
 
-        df = df.reindex(columns=colunas_num)
+        #df = df.reindex(columns=colunas_num)
 
         # Separando colunas por tipo de dado
         colunas_numericas = df.select_dtypes(include=['number'])
+        colunas_categoricas = df.select_dtypes(include=['object'])
         
         # Normalizando as colunas númericas do dataframe
         df[colunas_numericas.columns] = sc.transform(df[colunas_numericas.columns])
+
+        df = pd.get_dummies(df, columns=colunas_categoricas.columns, drop_first=False)
         df = df.reindex(columns=colunas_df, fill_value=False)
+        
         print(df)
         # Prenvendo o valor
         previsao = model.predict(df)
