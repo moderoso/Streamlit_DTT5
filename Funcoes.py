@@ -22,6 +22,7 @@ def rodando_modelo(model,sc,df):
     df['Defasagem'] = df['Defas'].apply(lambda x: "Em Fase" if x >= 0 else ("Moderada" if x < 0 and x <= -2 else "Severa"))
     df = df.drop(columns=['Defas','STATUS'])
 
+    df_copy = df
     # Obtendo coluna de valores numéricos e categóricos
     colunas_numericas = df.select_dtypes(include=['number'])
     colunas_categoricas = df.select_dtypes(include=['object'])
@@ -41,12 +42,12 @@ def rodando_modelo(model,sc,df):
     previsao = model.predict(df)
 
     if len(df['Fase']) > 1:
-        df_concat = pd.concat([df, pd.Series(previsao, name='Previsao')], axis=1)
-        df_concat['Previsao'] = df_concat['Previsao'].apply(lambda x: "Não evadiu" if x == 1 else "Evadiu")
+        df_copy = pd.concat([df, pd.Series(previsao, name='Previsao')], axis=1)
+        df_copy['Previsao'] = df_copy['Previsao'].apply(lambda x: "Não evadiu" if x == 1 else "Evadiu")
  
         output = io.BytesIO()
         with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
-            df_concat.to_excel(writer, index=False, sheet_name="Previsao")
+            df_copy.to_excel(writer, index=False, sheet_name="Previsao")
         
         output.seek(0)  # Voltando ao início do buffer
 
