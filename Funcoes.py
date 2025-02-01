@@ -20,13 +20,18 @@ def rodando_modelo(model,sc,df,tipo):
         df['Idade'] = ano_atual - df['Ano Nascimento']
         df['Anos PM'] = ano_atual - df['Ano Ingresso']
 
-        df = df.reindex(columns=[
+        colunas_numericas = [
             "Fase", "Ano Nascimento", "Idade", "Ano Ingresso", "Anos PM",
             "INDE", "IAA", "IEG", "IPS", "IDA", "IPV", "IAN", "IPP"
-        ])
+        ]
+
+        for coluna in colunas_numericas:
+            df[coluna] = pd.to_numeric(df[coluna], errors='coerce')
+
+        df = df.reindex(columns=colunas_numericas)
 
         # Separando colunas por tipo de dado
-        colunas_numericas = df.select_dtypes(include=['number'])
+        #colunas_numericas = df.select_dtypes(include=['number'])
         colunas_categoricas = df.select_dtypes(include=['object'])
 
         # Normalizando as colunas númericas do dataframe
