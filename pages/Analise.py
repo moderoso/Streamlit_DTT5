@@ -1,6 +1,6 @@
 # Importação das bibliotecas
 import streamlit as st
-import datetime
+from datetime import datetime 
 import pandas as pd
 from PIL import Image
 from auxiliar import apply_custom_style
@@ -66,8 +66,7 @@ if escolha == "Upload de Excel":
 else:
     st.write("### Insira os dados manualmente:")
 
-    data = datetime.date.today()
-    ano_atual = data.year()
+    ano_atual =  datetime.now().year
 
     #Adicionando inputs do Usuario
     fase = st.number_input("Insira um número 0 - 7", max_value=7, min_value=1)
