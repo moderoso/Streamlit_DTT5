@@ -39,9 +39,9 @@ def rodando_modelo(model,sc,df):
 
     previsao = model.predict(df)
     if previsao[0] == 0:
-        print("🔹 Previsão: Não evadiu")
+        st.success("🔹 Previsão: Não evadiu")
     else:
-        print("🔹 Previsão: Evadiu")
+        st.error("🔹 Previsão: Evadiu")
 
 def exibindo():
     st.warning('Prevendo', icon="⚠️")
