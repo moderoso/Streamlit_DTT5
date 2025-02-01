@@ -32,37 +32,47 @@ def rodando_modelo(model,sc,df,tipo):
 
     if tipo == 'Manual':
         ano_atual = datetime.now().year
-        
+
+        # Criando colunas derivadas
         df['Idade'] = ano_atual - df['Ano Nascimento']
         df['Anos PM'] = ano_atual - df['Ano Ingresso']
 
+        # Definição das colunas numéricas
         colunas_num = ['Fase', 'Ano Nascimento', 'Idade', 'Ano Ingresso', 'Anos PM', 'INDE',
-       'IAA', 'IEG', 'IPS', 'IDA', 'IPV', 'IAN', 'IPP']
+                    'IAA', 'IEG', 'IPS', 'IDA', 'IPV', 'IAN', 'IPP']
 
+        # Convertendo as colunas numéricas para garantir o tipo correto
         for coluna in colunas_num:
             df[coluna] = pd.to_numeric(df[coluna], errors='coerce')
 
-        #df = df.reindex(columns=colunas_num)
-
         # Separando colunas por tipo de dado
-        colunas_numericas = df.select_dtypes(include=['number'])
-        colunas_categoricas = df.select_dtypes(include=['object'])
-        
-        # Normalizando as colunas númericas do dataframe
-        df[colunas_numericas.columns] = sc.transform(df[colunas_numericas.columns])
+        colunas_numericas = df[colunas_num]  # Apenas as colunas numéricas definidas
+        colunas_categoricas = df.select_dtypes(include=['object'])  # Pegando colunas categóricas
 
+        # Aplicando normalização às colunas numéricas
+        df[colunas_numericas.columns] = sc.transform(colunas_numericas)
+
+        # Criando colunas dummies para as variáveis categóricas
         df = pd.get_dummies(df, columns=colunas_categoricas.columns, drop_first=False)
+
+        # Garantindo que o DataFrame final tenha todas as colunas esperadas (preenchendo ausentes com False)
         df = df.reindex(columns=colunas_df, fill_value=False)
-        
+
+        # Debug: Verificando estrutura final do DataFrame
         print(df)
-        # Prenvendo o valor
+        st.write("📊 DataFrame final:", df)
+
+        # Fazendo a previsão
         previsao = model.predict(df)
+
         st.dataframe(df)
 
+        # Validando modelo
         valid_model(df)
 
-
         st.dataframe(previsao)
+
+        # Exibindo resultado da previsão
         if previsao[0] == 1:
             st.success("🔹 Previsão: Não evadiu")
         else:
