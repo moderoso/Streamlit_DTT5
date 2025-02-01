@@ -85,8 +85,24 @@ else:
     ipp = st.number_input("IPP 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
     defas = st.selectbox("Nível defasagem",["Em Fase", "Moderada", "Severa"])
 
+    respostas = {'Fase' : fase,
+               'Ano Nascimento' : ano_nascimento,
+                'Gênero' : genero,
+                'Ano Ingresso': ano_ingresso,
+                'Instituição de Ensino': intituicao_ensino,
+                'Pedra': pedra,
+                'INDE': inde,
+                'IAA': iaa,
+                'IEG': ieg,
+                'IPS': ips,
+                'IDA': ida,
+                'IPV': ipv,
+                'IAN': ian,
+                'IPP': ipp,
+                'Defasagem': defas}
+    df = pd.DataFrame(respostas)
 
-    ##st.button("Prever",on_click=exibindo)
+    st.button("Prever",on_click=rodando_modelo(modelo_carregado,scaler,df,tipo='Manual'))
 
 
 
