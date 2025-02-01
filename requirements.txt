@@ -30,6 +30,7 @@ pydeck==0.9.1
 watchdog==6.0.0
 st_theme==1.2.3
 XlsxWriter==3.2.2
+datetime==5.5
 openpyxl
 altair
 
