@@ -102,6 +102,8 @@ else:
                 'Defasagem': defas}
     df = pd.DataFrame(data=[respostas])
 
+    df.info()
+
     if st.button("Prever"):
         resultado = rodando_modelo(modelo_carregado, scaler, df, tipo='Manual')
         st.write("Resultado da Previsão:", resultado)
