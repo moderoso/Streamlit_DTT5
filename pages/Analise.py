@@ -46,7 +46,7 @@ escolha = st.radio("Como deseja inserir os dados?", ("Upload de Excel", "Entrada
 if escolha == "Upload de Excel":
 
     # Título do aplicativo
-    st.title("Upload de Arquivo Excel")
+    st.write("### Upload de Arquivo Excel:")
 
     # Criando o widget de upload
     uploaded_file = st.file_uploader("Faça upload do seu arquivo Excel", type=["xlsx"])
@@ -60,7 +60,7 @@ if escolha == "Upload de Excel":
         st.write("### Dados do Arquivo:")
         st.dataframe(df)
 
-        rodando_modelo(modelo_carregado,scaler,df)
+        rodando_modelo(modelo_carregado,scaler,df,'Massivo')
 	
 # Se o usuário escolher "Entrada Manual"
 else:
@@ -72,8 +72,7 @@ else:
     fase = st.number_input("Insira um número 0 - 7", max_value=7, min_value=1)
     ano_nascimento = st.slider("Insira ano de Nascimento", value=2025, min_value=1990, max_value=ano_atual)
     genero = st.radio("Selecione o Genero", ["Masculino", "Feminino"]) 
-    ano_ingresso = st.slider("Insira ano de Ingresso", value=2025, min_value=1990, max_value=ano_atual)
-    anos_pm = st.slider("Insira ano PM", value=2025, min_value=1990, max_value=ano_atual)
+    ano_ingresso = st.slider("Insira ano de Ingresso na Passos Mágicos", value=2025, min_value=1990, max_value=ano_atual)
     intituicao_ensino = st.selectbox("Selecione a Instituição de Ensino",["Escola Pública", "Escola Privada", "Já Formado", "Outro"])
     pedra = st.selectbox("Selecione a Pedra",["Ametista", "Topázio", "Ágata", "Quartzo","Desconhecido"])
     inde = st.number_input("INDE 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
@@ -85,6 +84,8 @@ else:
     ian = st.number_input("IAN 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
     ipp = st.number_input("IPP 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
     defas = st.selectbox("Nível defasagem",["Em Fase", "Moderada", "Severa"])
+
+    {}
 
     ##st.button("Prever",on_click=exibindo)
 
