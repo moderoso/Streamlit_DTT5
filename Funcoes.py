@@ -51,19 +51,8 @@ def rodando_modelo(model,sc,df,tipo):
         # Garantindo que o DataFrame final tenha todas as colunas esperadas (preenchendo ausentes com False)
         df = df.reindex(columns=colunas_df, fill_value=False)
 
-        # Debug: Verificando estrutura final do DataFrame
-        print(df)
-        st.write("📊 DataFrame final:", df)
-
         # Fazendo a previsão
         previsao = model.predict(df)
-
-        st.dataframe(df)
-
-        # Validando modelo
-        valid_model(df)
-
-        st.dataframe(previsao)
 
         # Exibindo resultado da previsão
         if previsao[0] == 0:
