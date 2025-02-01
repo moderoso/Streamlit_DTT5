@@ -40,13 +40,13 @@ def rodando_modelo(model,sc,df,tipo):
         # Aplicando o enconding nas colunas categoricas e preenchendo false nas demais
         df = pd.get_dummies(df, columns=colunas_categoricas.columns, drop_first=False)
         df = df.reindex(columns=colunas_df, fill_value=False)
-
+        print(df)
         # Prenvendo o valor
         previsao = model.predict(df)
         st.dataframe(df)
 
         st.dataframe(previsao)
-        if previsao[0] == 0:
+        if previsao[0] == 1:
             st.success("🔹 Previsão: Não evadiu")
         else:
             st.error("🔹 Previsão: Evadiu")
