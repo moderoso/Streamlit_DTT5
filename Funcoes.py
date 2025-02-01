@@ -78,20 +78,7 @@ def rodando_modelo(model,sc,df,tipo):
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     )
 
-def exportando_excel(df):
-    output = io.BytesIO()
-    with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
-        df.to_excel(writer, index=False, sheet_name="Previsao")
-    
-    output.seek(0)  # Voltando ao início do buffer
 
-    # Botão para download do arquivo Excel
-    st.download_button(
-        label="📥 Baixar Resultado Previsão",
-        data=output,
-        file_name="Previsao_Evasao.xlsx",
-        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-    )
 
 
 
