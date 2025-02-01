@@ -40,7 +40,7 @@ def rodando_modelo(model,sc,df):
 
     previsao = model.predict(df)
 
-    if len(previsao[0]) > 1:
+    if len(df['Fase']) > 1:
         df_concat = pd.concat([df, pd.Series(previsao, name='Previsao')], axis=1)
         df_concat['Previsao'] = df_concat['Previsao'].apply(lambda x: "Não evadiu" if x == 1 else "Evadiu")
  
