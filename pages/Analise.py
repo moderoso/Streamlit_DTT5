@@ -6,7 +6,7 @@ from PIL import Image
 from auxiliar import apply_custom_style
 import joblib
 
-from Funcoes import rodando_modelo, exibindo # type: ignore
+from Funcoes import rodando_modelo, exportando_excel # type: ignore
 
 
 
