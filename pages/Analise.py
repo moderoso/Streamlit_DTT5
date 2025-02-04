@@ -42,77 +42,79 @@ st.title("Entrada de Dados: Manual ou Upload de Arquivo")
 # Criando um botão de escolha
 escolha = st.radio("Como deseja inserir os dados?", ("Upload de Excel", "Entrada Manual"))
 
-# Se o usuário escolher "Upload de Excel"
-if escolha == "Upload de Excel":
+try:
+    # Se o usuário escolher "Upload de Excel"
+    if escolha == "Upload de Excel":
 
-    ex = pd.read_excel('db/exemplo.xlsx',sheet_name='Planilha1')
-    # Exibe o DataFrame
-    st.write("### Exemplo de layout do arquivo:")
-
-    st.markdown('<p style="text-align: justify;">A tabela abaixo é um exemplo de como os dados e quais colunas devem estar no arquivo para que o modelo consiga prever a probabilidade de evasão do aluno. O modelo retornará o mesmo arquivo passado, mas acrescentará duas colunas, de probabilidade de evasão e o resultado final da previsão ("Evadir" ou "Não evadir").</p>', unsafe_allow_html = True)
-    st.dataframe(ex)
-    # Título do aplicativo
-    st.write("### Upload de Arquivo Excel:")
-
-    # Criando o widget de upload
-    uploaded_file = st.file_uploader("Faça upload do seu arquivo Excel", type=["xlsx"])
-
-    # Verifica se um arquivo foi enviado
-    if uploaded_file is not None:
-        # Lendo o arquivo Excel como DataFrame
-        df = pd.read_excel(uploaded_file)
-
+        ex = pd.read_excel('db/exemplo.xlsx',sheet_name='Planilha1')
         # Exibe o DataFrame
-        st.write("### Dados do Arquivo:")
-        st.dataframe(df)
+        st.write("### Exemplo de layout do arquivo:")
 
-        rodando_modelo(modelo_carregado,scaler,df,tipo='Massivo')
-	
-# Se o usuário escolher "Entrada Manual"
-else:
-    st.write("### Insira os dados manualmente:")
+        st.markdown('<p style="text-align: justify;">A tabela abaixo é um exemplo de como os dados e quais colunas devem estar no arquivo para que o modelo consiga prever a probabilidade de evasão do aluno. O modelo retornará o mesmo arquivo passado, mas acrescentará duas colunas, de probabilidade de evasão e o resultado final da previsão ("Evadir" ou "Não evadir").</p>', unsafe_allow_html = True)
+        st.dataframe(ex)
+        # Título do aplicativo
+        st.write("### Upload de Arquivo Excel:")
 
-    ano_atual =  datetime.now().year
+        # Criando o widget de upload
+        uploaded_file = st.file_uploader("Faça upload do seu arquivo Excel", type=["xlsx"])
 
-    #Adicionando inputs do Usuario
-    fase = st.number_input("Insira um número 0 - 7", max_value=7, min_value=1)
-    idade = st.slider("Insira a idade", value=10, min_value=0, max_value=26)
-    genero = st.radio("Selecione o Genero", ["Masculino", "Feminino"]) 
-    ano_pm = st.slider("Insira anos na Passos Mágicos", value=1, min_value=0, max_value=7)
-    intituicao_ensino = st.selectbox("Selecione a Instituição de Ensino",["Escola Pública", "Escola Privada", "Já Formado", "Outro"])
-    pedra = st.selectbox("Selecione a Pedra",["Ametista", "Topázio", "Ágata", "Quartzo","Desconhecido"])
-    inde = st.number_input("INDE 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-    iaa = st.number_input("IAA 0 - 10",  max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-    ieg = st.number_input("IEG 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-    ips = st.number_input("IPS 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-    ida = st.number_input("IDA 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-    ipv = st.number_input("IPV 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-    ian = st.number_input("IAN 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-    ipp = st.number_input("IPP 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
-    defas = st.selectbox("Nível defasagem",["Em Fase", "Moderada", "Severa"])
+        # Verifica se um arquivo foi enviado
+        if uploaded_file is not None:
+            # Lendo o arquivo Excel como DataFrame
+            df = pd.read_excel(uploaded_file)
 
-    respostas = {'Fase' : fase,
-               'Idade' : idade,
-                'Gênero' : genero,
-                'Anos PM': ano_pm,
-                'Instituição de Ensino': intituicao_ensino,
-                'Pedra': pedra,
-                'INDE': inde,
-                'IAA': iaa,
-                'IEG': ieg,
-                'IPS': ips,
-                'IDA': ida,
-                'IPV': ipv,
-                'IAN': ian,
-                'IPP': ipp,
-                'Defasagem': defas}
-    df = pd.DataFrame(data=[respostas])
+            # Exibe o DataFrame
+            st.write("### Dados do Arquivo:")
+            st.dataframe(df)
 
-    print(df.info())
+            rodando_modelo(modelo_carregado,scaler,df,tipo='Massivo')
+        
+    # Se o usuário escolher "Entrada Manual"
+    else:
+        st.write("### Insira os dados manualmente:")
 
-    if st.button("Prever"):
-        resultado = rodando_modelo(modelo_carregado, scaler, df, tipo='Manual')
-        ##st.write("Resultado da Previsão:", resultado)
+        ano_atual =  datetime.now().year
+
+        #Adicionando inputs do Usuario
+        fase = st.number_input("Insira um número 0 - 7", max_value=7, min_value=1)
+        idade = st.slider("Insira a idade", value=10, min_value=0, max_value=26)
+        genero = st.radio("Selecione o Genero", ["Masculino", "Feminino"]) 
+        ano_pm = st.slider("Insira anos na Passos Mágicos", value=1, min_value=0, max_value=7)
+        intituicao_ensino = st.selectbox("Selecione a Instituição de Ensino",["Escola Pública", "Escola Privada", "Já Formado", "Outro"])
+        pedra = st.selectbox("Selecione a Pedra",["Ametista", "Topázio", "Ágata", "Quartzo","Desconhecido"])
+        inde = st.number_input("INDE 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+        iaa = st.number_input("IAA 0 - 10",  max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+        ieg = st.number_input("IEG 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+        ips = st.number_input("IPS 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+        ida = st.number_input("IDA 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+        ipv = st.number_input("IPV 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+        ian = st.number_input("IAN 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+        ipp = st.number_input("IPP 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+        defas = st.selectbox("Nível defasagem",["Em Fase", "Moderada", "Severa"])
+
+        respostas = {'Fase' : fase,
+                'Idade' : idade,
+                    'Gênero' : genero,
+                    'Anos PM': ano_pm,
+                    'Instituição de Ensino': intituicao_ensino,
+                    'Pedra': pedra,
+                    'INDE': inde,
+                    'IAA': iaa,
+                    'IEG': ieg,
+                    'IPS': ips,
+                    'IDA': ida,
+                    'IPV': ipv,
+                    'IAN': ian,
+                    'IPP': ipp,
+                    'Defasagem': defas}
+        df = pd.DataFrame(data=[respostas])
+
+        print(df.info())
+
+        if st.button("Prever"):
+            resultado = rodando_modelo(modelo_carregado, scaler, df, tipo='Manual')
+except:
+    st.error('Ops, ocorreu um erro!', icon="🚨")
 
 
 
