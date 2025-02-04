@@ -82,8 +82,8 @@ def rodando_modelo(model,sc,df,tipo):
 
         #df = pd.concat([df, pd.Series([previsao,probabilidades], name=['Previsao','Probabilidade'])], axis=1)
         #df = pd.concat([df, pd.Series([previsao,probabilidades], name=['Previsao','Probabilidade'])], axis=1)
-        df = df.assign(C=previsao, D=probabilidades)
-        df['C'] = df['C'].apply(lambda x: "Não evadir" if x == 0 else "Evadir")
+        df = df.assign(ProbabilidadeEvasao=probabilidades,Previsao=previsao)
+        df['Previsao'] = df['Previsao'].apply(lambda x: "Não evadir" if x == 0 else "Evadir")
  
         output = io.BytesIO()
         with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
