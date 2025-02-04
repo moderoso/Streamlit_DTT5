@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import io
+from sklearn.ensemble import RandomForestClassifier
 
 def valid_model(df):
     output = io.BytesIO()
@@ -51,14 +52,15 @@ def rodando_modelo(model,sc,df,tipo):
         # Garantindo que o DataFrame final tenha todas as colunas esperadas (preenchendo ausentes com False)
         df = df.reindex(columns=colunas_df, fill_value=False)
 
-        # Fazendo a previsão
+        # Fazendo a previsão e probabilidade de evasão
+        probabilidades = model.predict_proba(df)
         previsao = model.predict(df)
-
+        
         # Exibindo resultado da previsão
         if previsao[0] == 0:
-            st.success("🔹 Previsão: Não evadiu")
+            st.success(f"🔹 Previsão: Não evadiu (Probabilidade de evasão: {probabilidades[0]*100:.2f}%)")
         else:
-            st.error("🔹 Previsão: Evadiu")
+            st.error(f"🔹 Previsão: Evadiu (Probabilidade de evasão: {probabilidades[0]*100:.2f}%)")
     
     else:
         df_copy = df.copy(deep=True)
