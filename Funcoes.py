@@ -63,30 +63,29 @@ def rodando_modelo(model,sc,df,tipo):
             st.error(f"🔹 Previsão: Evadir (Probabilidade de evasão: {probabilidades[0]*100:.2f}%)")
     
     else:
-        df_copy = df
+        df_copy = df.copy(deep=True)
 
         # Separando colunas por tipo de dado
-        colunas_numericas = df.select_dtypes(include=['number'])
-        colunas_categoricas = df.select_dtypes(include=['object'])
+        colunas_numericas = df_copy.select_dtypes(include=['number'])
+        colunas_categoricas = df_copy.select_dtypes(include=['object'])
 
         # Normalizando as colunas númericas do dataframe
-        df[colunas_numericas.columns] = sc.transform(df[colunas_numericas.columns])
+        df_copy[colunas_numericas.columns] = sc.transform(df_copy[colunas_numericas.columns])
 
         # Aplicando o enconding nas colunas categoricas e preenchendo false nas demais
-        df = pd.get_dummies(df, columns=colunas_categoricas.columns, drop_first=False)
-        df = df.reindex(columns=colunas_df, fill_value=False)
+        df_copy = pd.get_dummies(df_copy, columns=colunas_categoricas.columns, drop_first=False)
+        df_copy = df_copy.reindex(columns=colunas_df, fill_value=False)
 
         # Fazendo a previsão e probabilidade de evasão
-        probabilidades = model.predict_proba(df)[:, 1]
-        previsao = model.predict(df)
+        probabilidades = model.predict_proba(df_copy)[:, 1]
+        previsao = model.predict(df_copy)
 
-        df_copy = pd.concat([df, pd.Series(probabilidades, name='Probabilidade')], axis=1)
-        df_copy = pd.concat([df, pd.Series(previsao, name='Previsao')], axis=1)
-        df_copy['Previsao'] = df_copy['Previsao'].apply(lambda x: "Não evadir" if x == 0 else "Evadir")
+        df = pd.concat([df, pd.Series([previsao,probabilidades], name=['Previsao','Probabilidade'])], axis=1)
+        df['Previsao'] = df['Previsao'].apply(lambda x: "Não evadir" if x == 0 else "Evadir")
  
         output = io.BytesIO()
         with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
-            df_copy.to_excel(writer, index=False, sheet_name="Previsao")
+            df.to_excel(writer, index=False, sheet_name="Previsao")
         
         output.seek(0)  # Voltando ao início do buffer
 
