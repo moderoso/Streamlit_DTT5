@@ -48,6 +48,8 @@ if escolha == "Upload de Excel":
     ex = pd.read_excel('db/exemplo.xlsx',sheet_name='Planilha1')
     # Exibe o DataFrame
     st.write("### Exemplo de layout do arquivo:")
+
+    st.markdown('<p style="text-align: justify;">A tabela abaixo é um exemplo de como os dados e quais colunas devem ser passadas no arquivo para que o modelo consiga prever a probabilidade de evasão do aluno.</p>', unsafe_allow_html = True)
     st.dataframe(ex)
     # Título do aplicativo
     st.write("### Upload de Arquivo Excel:")
