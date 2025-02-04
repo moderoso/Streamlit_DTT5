@@ -63,7 +63,7 @@ def rodando_modelo(model,sc,df,tipo):
             st.error(f"🔹 Previsão: Evadir (Probabilidade de evasão: {probabilidades[0]*100:.2f}%)")
     
     else:
-        df_copy = df.copy(deep=True)
+        df_copy = df
 
         # Separando colunas por tipo de dado
         colunas_numericas = df.select_dtypes(include=['number'])
