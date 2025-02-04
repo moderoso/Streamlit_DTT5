@@ -106,7 +106,7 @@ else:
 
     if st.button("Prever"):
         resultado = rodando_modelo(modelo_carregado, scaler, df, tipo='Manual')
-        st.write("Resultado da Previsão:", resultado)
+        ##st.write("Resultado da Previsão:", resultado)
 
 
 
