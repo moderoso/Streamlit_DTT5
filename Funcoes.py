@@ -80,8 +80,6 @@ def rodando_modelo(model,sc,df,tipo):
         probabilidades = model.predict_proba(df_copy)[:, 1]
         previsao = model.predict(df_copy)
 
-        #df = pd.concat([df, pd.Series([previsao,probabilidades], name=['Previsao','Probabilidade'])], axis=1)
-        #df = pd.concat([df, pd.Series([previsao,probabilidades], name=['Previsao','Probabilidade'])], axis=1)
         df = df.assign(ProbabilidadeEvasao=probabilidades,Previsao=previsao)
         df['Previsao'] = df['Previsao'].apply(lambda x: "Não evadir" if x == 0 else "Evadir")
  
