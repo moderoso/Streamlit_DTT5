@@ -45,6 +45,10 @@ escolha = st.radio("Como deseja inserir os dados?", ("Upload de Excel", "Entrada
 # Se o usuário escolher "Upload de Excel"
 if escolha == "Upload de Excel":
 
+    ex = pd.read_excel('db/exemplo.xlsx',sheet_name='Planilha1')
+    # Exibe o DataFrame
+    st.write("### Exemplo de layout do arquivo:")
+    st.dataframe(ex)
     # Título do aplicativo
     st.write("### Upload de Arquivo Excel:")
 
