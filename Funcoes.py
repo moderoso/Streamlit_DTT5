@@ -53,7 +53,7 @@ def rodando_modelo(model,sc,df,tipo):
         df = df.reindex(columns=colunas_df, fill_value=False)
 
         # Fazendo a previsão e probabilidade de evasão
-        probabilidades = model.predict_proba(df)
+        probabilidades = model.predict_proba(df)[:, 1]
         previsao = model.predict(df)
         
         # Exibindo resultado da previsão
