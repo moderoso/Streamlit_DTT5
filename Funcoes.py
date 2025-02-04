@@ -58,9 +58,9 @@ def rodando_modelo(model,sc,df,tipo):
         
         # Exibindo resultado da previsão
         if previsao[0] == 0:
-            st.success(f"🔹 Previsão: Não evadiu (Probabilidade de evasão: {probabilidades[0]*100:.2f}%)")
+            st.success(f"🔹 Previsão: Não evadir (Probabilidade de evasão: {probabilidades[0]*100:.2f}%)")
         else:
-            st.error(f"🔹 Previsão: Evadiu (Probabilidade de evasão: {probabilidades[0]*100:.2f}%)")
+            st.error(f"🔹 Previsão: Evadir (Probabilidade de evasão: {probabilidades[0]*100:.2f}%)")
     
     else:
         df_copy = df.copy(deep=True)
@@ -76,11 +76,13 @@ def rodando_modelo(model,sc,df,tipo):
         df = pd.get_dummies(df, columns=colunas_categoricas.columns, drop_first=False)
         df = df.reindex(columns=colunas_df, fill_value=False)
 
-        # Prenvendo o valor
+        # Fazendo a previsão e probabilidade de evasão
+        probabilidades = model.predict_proba(df)
         previsao = model.predict(df)
 
+        df_copy = pd.concat([df, pd.Series(probabilidades, name='Probabilidade')], axis=1)
         df_copy = pd.concat([df, pd.Series(previsao, name='Previsao')], axis=1)
-        df_copy['Previsao'] = df_copy['Previsao'].apply(lambda x: "Não evadiu" if x == 0 else "Evadiu")
+        df_copy['Previsao'] = df_copy['Previsao'].apply(lambda x: "Não evadir" if x == 0 else "Evadir")
  
         output = io.BytesIO()
         with pd.ExcelWriter(output, engine="xlsxwriter") as writer:
