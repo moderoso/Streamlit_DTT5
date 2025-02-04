@@ -76,8 +76,8 @@ try:
         ano_atual =  datetime.now().year
 
         #Adicionando inputs do Usuario
-        fase = st.number_input("Insira um número 0 - 7", max_value=7, min_value=1)
-        idade = st.slider("Insira a idade", value=10, min_value=0, max_value=26)
+        fase = st.number_input("Insira um número 0 - 7", max_value=7, min_value=0)
+        idade = st.slider("Insira a idade", value=10, min_value=6, max_value=26)
         genero = st.radio("Selecione o Genero", ["Masculino", "Feminino"]) 
         ano_pm = st.slider("Insira anos na Passos Mágicos", value=1, min_value=0, max_value=7)
         intituicao_ensino = st.selectbox("Selecione a Instituição de Ensino",["Escola Pública", "Escola Privada", "Já Formado", "Outro"])
