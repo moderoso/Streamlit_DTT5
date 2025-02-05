@@ -45,3 +45,14 @@ st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">Tax
 
 st.markdown('<p style="text-align: justify;">A situação tem causado um impacto significativo no futuro educacional e social desses jovens, demandando ações urgentes e políticas públicas voltadas à inclusão e à permanência escolar, áreas com as quais a ONG Passos Mágicos possui uma estreita conexão. Considerando a gravidade do tema, que pode acarretar consequências sérias tanto para os indivíduos quanto para o país, nosso objetivo é apresentar um modelo preditivo relacionado à evasão escolar, visando aprimorar as previsões e estratégias da ONG.</p>', unsafe_allow_html = True)
 
+## Rodapé
+st.markdown("---")
+
+st.markdown('''<div class="center">
+                    <a target="_self" href="#quem-somos">
+                        <button class="back-to-top">
+                            Voltar ao topo
+                        </button>
+                    </a>
+                </div>''', unsafe_allow_html=True)
+
