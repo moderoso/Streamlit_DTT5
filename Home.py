@@ -103,6 +103,7 @@ with tabs_2[2]:
     st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">Ametista – </span>6,868 a 8,230</p>', unsafe_allow_html = True)
     st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">Topázio – </span>8,230 a 9,294</p>', unsafe_allow_html = True)
     st.image("images/pedraINDE.png",caption="Faixas de desempenho Pedra-conceito INDE - Fonte:PEDE Pontos importantes", width=600)
+    st.markdown('<p style="text-align: justify;">Essas quatro pedras, que simbolizam etapas de uma jornada de aprendizado e de desenvolvimento educacional, indicarão a posição de cada estudante em relação ao desempenho geral de todos na pesquisa avaliativa PEDE 2021.Analisando a evasão por Pedra, é possível identificar que a pedra Ametista e Ágata, são as que mais possuem alunos na situação de evasão, onde há alunos com valores na média do INDE.</p>', unsafe_allow_html = True)
 ## Rodapé
 st.markdown("---")
 
