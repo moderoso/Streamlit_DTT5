@@ -49,7 +49,7 @@ with tabs_2[0]:
     st.markdown("")
     colunas_1 = st.columns(2)
     with colunas_1 [0]:
-    st.header("Como funciona a Passos Mágicos")
+        st.header("Como funciona a Passos Mágicos")
         with st.container(border=True):
 			st.markdown("""
                         <p style='font-size:20px;text-align: justify;'>A Passos Mágicos tem como objetivo acelerar a ascensão social de crianças e jovens do município de Embu Guaçu através da educação.
