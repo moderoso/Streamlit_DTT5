@@ -77,7 +77,7 @@ with tabs_2[1]:
     colunas_3 = st.columns(2, gap="large")
     
     with colunas_3 [0]:
-        st.markdown( '####Faixa etária')
+        st.markdown( '#### Faixa etária')
 		
 		
 		
