@@ -122,9 +122,12 @@ with tabs_2[2]:
 # Tab Modelo
 with tabs_2[3]: 
     st.header("Modelo")
-    st.markdown("")
-    colunas_1 = st.columns(2)
-    with colunas_1 [0]:	
+    st.markdown("""
+                <p style='text-align: justify;'>Para a construção da análise preditiva, foi escolhido dois modelos para serem treinados, o RandomForest e o XGBoost:
+                <br><br>
+                </p>""", unsafe_allow_html=True)
+
+    colunas_3 = st.columns(2, gap="large")
 	
 ## Rodapé
 st.markdown("---")
