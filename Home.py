@@ -77,15 +77,10 @@ with tabs_2[1]:
     colunas_3 = st.columns(2, gap="large")
     
     with colunas_3 [0]:
-        st.markdown( """         
-            <ul class="font-text-destaques">
-                <br><br>
-                <li> O gráfico ao lado demonstra a evolução do número de alunos impactados pelo sistema de aceleração de aprendizado da Passos Mágicos.
-                </li>
-                <li> Podemos notar que houve um crescimento exponencial chegando ao número de <b> 1.000 </b> alunos impactados pelo PAC da Passos no ano de 2022.
-                </li>
-            </ul>""",unsafe_allow_html=True)
-    
+        st.markdown( '####Faixa etária')
+		
+		
+		
 # TAB de Indicadores      
 with tabs_2[2]: 
     st.header("Indicadores Passos Mágicos")
