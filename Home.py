@@ -99,7 +99,7 @@ with tabs_2[2]:
         st.image("images/indicador_conselho.png",caption="Indicadores de Conselho, descrição e seus pesos - Fonte:PEDE Pontos importantes", width=600)
  #	with colunas_3 [2]:
     st.markdown('<p style="text-align: justify;">A pedra é a classificação do aluno, baseado no número do INDE (Índice do Desenvolvimento Educacional), que é uma métrica de processo avaliativo geral do aluno. O conceito de classificação é dado por:</p>', unsafe_allow_html = True)
-    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><span style="font-weight: bold"><li>Quartzo – </span>2,405 a 5,506</li></p></ul>', unsafe_allow_html = True)
+    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><span style="font-weight: bold">Quartzo – </span><li>2,405 a 5,506</li></p></ul>', unsafe_allow_html = True)
     st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">Ágata – </span>5,506 a 6,868</p>', unsafe_allow_html = True)
     st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">Ametista – </span>6,868 a 8,230</p>', unsafe_allow_html = True)
     st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">Topázio – </span>8,230 a 9,294</p>', unsafe_allow_html = True)
