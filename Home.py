@@ -120,7 +120,7 @@ with tabs_2[2]:
     st.image("images/pedragrf.png",caption="Evasão por pedras", width=600)
 	
 # Tab Modelo
-with tabs_2[0]: 
+with tabs_2[3]: 
     st.header("Modelo")
     st.markdown("")
     colunas_1 = st.columns(2)
