@@ -100,9 +100,9 @@ with tabs_2[2]:
  #	with colunas_3 [2]:
     st.markdown('<p style="text-align: justify;">A pedra é a classificação do aluno, baseado no número do INDE (Índice do Desenvolvimento Educacional), que é uma métrica de processo avaliativo geral do aluno. O conceito de classificação é dado por:</p>', unsafe_allow_html = True)
     st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Quartzo – </span>2,405 a 5,506</li></p></ul>', unsafe_allow_html = True)
-    st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">Ágata – </span>5,506 a 6,868</p>', unsafe_allow_html = True)
-    st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">Ametista – </span>6,868 a 8,230</p>', unsafe_allow_html = True)
-    st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">Topázio – </span>8,230 a 9,294</p>', unsafe_allow_html = True)
+    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Ágata – </span>5,506 a 6,868</li></p></ul>', unsafe_allow_html = True)
+    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Ametista – </span>6,868 a 8,230</li></p></ul>', unsafe_allow_html = True)
+    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Topázio – </span>8,230 a 9,294</li></p></ul>', unsafe_allow_html = True)
     st.image("images/pedraINDE.png",caption="Faixas de desempenho Pedra-conceito INDE - Fonte:PEDE Pontos importantes", width=600)
     st.markdown('<p style="text-align: justify;">Essas quatro pedras, que simbolizam etapas de uma jornada de aprendizado e de desenvolvimento educacional, indicarão a posição de cada estudante em relação ao desempenho geral de todos na pesquisa avaliativa PEDE 2021.Analisando a evasão por Pedra, é possível identificar que a pedra Ametista e Ágata, são as que mais possuem alunos na situação de evasão, onde há alunos com valores na média do INDE.</p>', unsafe_allow_html = True)
     st.image("images/pedragrf.png",caption="Evasão por pedras", width=600)
