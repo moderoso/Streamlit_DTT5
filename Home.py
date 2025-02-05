@@ -79,8 +79,24 @@ with tabs_2[1]:
     with colunas_3 [0]:
         st.markdown( '#### Faixa etária')
         st.markdown('<p style="text-align: justify;">Iniciando pela faixa etária, ao analisarmos a informação, o gráfico abaixo indica que a evasão é mais expressiva entre os alunos de 10 a 18 anos, com um aumento notável na faixa etária de 12 a 13 anos. A partir dos 14 anos, observa-se uma leve tendência de queda na taxa de evasão.<br><br></p>', unsafe_allow_html = True)
-        st.image("images/ev_idade.png",caption="Evasão por Idade", width=600)		
-		
+        st.image("images/ev_idade.png",caption="Evasão por Idade", width=600)
+
+        st.markdown( '#### Gênero')
+        st.markdown('<p style="text-align: justify;">Ao analisar o gênero dos alunos da ONG, representado por feminino e masculino, observa-se que as meninas apresentam uma taxa de evasão mais elevada em comparação aos meninos. Esse fenômeno pode ser atribuído a diversos fatores, como as responsabilidades domésticas e o cuidado com a família, o casamento precoce e a gravidez na adolescência, violência de gênero e o assédio escolar, entre outros aspectos.<br><br></p>', unsafe_allow_html = True)
+        st.image("images/ev_genero.png",caption="Evasão por Gênero", width=600)		
+
+        st.markdown( '#### Instituição de Ensino')
+        st.markdown('<p style="text-align: justify;">A instituição de ensino é um fator crucial para a análise da evasão escolar. De acordo com os dados, as escolas públicas apresentam o maior número de alunos que abandonaram os estudos.<br><br></p>', unsafe_allow_html = True)
+        st.image("images/ev_ensino.png",caption="Evasão por Instituição de ensino", width=600)
+
+        st.markdown( '#### Permanência na Passos Mágicos')
+        st.markdown('<p style="text-align: justify;">O tempo de permanência dos alunos na ONG Passos Mágicos também se revelou um dado importante para nossa análise, fornecendo informações valiosas para a instituição. Observamos que os maiores índices de evasão ocorrem entre os alunos que não completaram 1 ano, bem como entre aqueles com 1 e 3 anos de permanência. Por outro lado, alunos com 2 anos na Passos Mágicos apresentam uma taxa de evasão menor em comparação aos demais períodos.<br><br></p>', unsafe_allow_html = True)
+        st.image("images/ev_tempo.png",caption="Evasão por Permanência no PM", width=600)	
+
+        st.markdown( '#### Fase')
+        st.markdown('<p style="text-align: justify;">A Fase está associada ao nível de aprendizado do aluno, com a fase 0 correspondendo à alfabetização e a fase 7 representando o 3º ano do ensino médio. Nesse contexto, as fases 2 e 3, que correspondem ao 5º ao 8º ano, apresentam o maior número de alunos desistentes de continuar no programa. Esse dado está relacionado ao primeiro gráfico apresentado, no qual observamos que a faixa etária de 10 a 13 anos é a que registra a maior taxa de evasão escolar.<br><br></p>', unsafe_allow_html = True)
+        st.image("images/ev_fase.png",caption="Evasão por Fase", width=600)	
+        st.markdown('<p style="text-align: justify;">Isso pode estar relacionado ao fato de que, entre os 10 e 13 anos, os alunos vivenciam uma fase de transição da infância para a adolescência, marcada por mudanças físicas e emocionais significativas. Esse processo pode gerar confusão e insegurança. A busca por identidade e a pressão para se encaixar socialmente podem resultar em desinteresse pela escola, especialmente se o ambiente escolar não oferecer o apoio necessário.Além disso, fatores como dificuldades de desafios acadêmicos, responsabilidades familiares e a falta de perspectivas de futuro também podem contribuir para a evasão nesse período.<br><br></p>', unsafe_allow_html = True)		
 		
 # TAB de Indicadores      
 with tabs_2[2]: 
