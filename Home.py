@@ -97,7 +97,10 @@ with tabs_2[2]:
  #   with colunas_3 [1]:
         st.image("images/indicador_conselho.png",caption="Indicadores de Conselho, descrição e seus pesos - Fonte:PEDE Pontos importantes", width=600)
  #	with colunas_3 [2]:
-		st.markdown('''<p style='font-size:20px;'>A pedra é a classificação do aluno, baseado no número do INDE (Índice do Desenvolvimento Educacional), que é uma métrica de processo avaliativo geral do aluno.O conceito de classificação é dado por:</p>''', unsafe_allow_html = True)
+    st.markdown('''<p style='font-size:20px;'>A pedra é a classificação do aluno, baseado no número do INDE (Índice do Desenvolvimento Educacional), que é uma métrica de processo avaliativo geral do aluno.
+O conceito de classificação é dado por: 
+                <br><br>
+                </p>''',unsafe_allow_html=True)
         st.image("images/pedraINDE.png",caption="Faixas de desempenho Pedra-conceito INDE - Fonte:PEDE Pontos importantes", width=600)
 ## Rodapé
 st.markdown("---")
