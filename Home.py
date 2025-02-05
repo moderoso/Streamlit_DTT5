@@ -90,7 +90,7 @@ with tabs_2[1]:
 # TAB de Indicadores      
 with tabs_2[2]: 
     st.header("Indicadores Passos Mágicos")
-    st.markdown('''<p style='font-size:20px;'>Os dados que serão mostrados abaixo tem a finalidade de demonstrar o impacto da Passos Mágicos no sistema educacional e nos jovens da região de Embu-Guaçu.
+    st.markdown('''<p style="text-align: justify;'>Os dados que serão mostrados abaixo tem a finalidade de demonstrar o impacto da Passos Mágicos no sistema educacional e nos jovens da região de Embu-Guaçu.
                 <br><br>
                 </p>''',unsafe_allow_html=True)
     colunas_3 = st.columns(2)
