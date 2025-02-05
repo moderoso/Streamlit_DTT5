@@ -43,3 +43,5 @@ st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">For
 
 st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">Taxas de Repetência: </span> A repetência escolar também tem uma relação direta com a evasão. Quando os alunos repetem o ano, muitos acabam desistindo de estudar, especialmente no Ensino Médio. O Brasil tem uma das maiores taxas de repetência da América Latina, com cerca de 13,6% no Ensino Médico em 2021.</p>', unsafe_allow_html = True)
 
+st.markdown('<p style="text-align: justify;">A situação tem causado um impacto significativo no futuro educacional e social desses jovens, demandando ações urgentes e políticas públicas voltadas à inclusão e à permanência escolar, áreas com as quais a ONG Passos Mágicos possui uma estreita conexão. Considerando a gravidade do tema, que pode acarretar consequências sérias tanto para os indivíduos quanto para o país, nosso objetivo é apresentar um modelo preditivo relacionado à evasão escolar, visando aprimorar as previsões e estratégias da ONG.</p>', unsafe_allow_html = True)
+
