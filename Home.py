@@ -128,6 +128,7 @@ with tabs_2[3]:
                 </p>""", unsafe_allow_html=True)
 
     colunas_3 = st.columns(2, gap="large")
+    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Random Forest: </span>Algoritmo de aprendizado de máquina baseado em conjuntos de árvores de decisão. Ele funciona criando várias árvores de decisão durante o treinamento e, em seguida, combinando suas previsões para melhorar a precisão do modelo e reduzir o risco de overfitting (ajuste excessivo aos dados).</li></p></ul>', unsafe_allow_html = True)
 	
 ## Rodapé
 st.markdown("---")
