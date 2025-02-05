@@ -64,8 +64,7 @@ try:
             df = pd.read_excel(uploaded_file)
 
             # Exibe o DataFrame
-            st.write("### Dados do Arquivo:")
-            st.dataframe(df)
+            st.write("### Resultado de Previsão:")
 
             rodando_modelo(modelo_carregado,scaler,df,tipo='Massivo')
         
