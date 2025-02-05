@@ -145,7 +145,7 @@ with tabs_2[3]:
     st.image("images/mod_random.png",caption="Modelo Random Forest", width=600)
     st.image("images/mod_XGBoost.png",caption="Modelo XGBoost", width=600)	
     st.markdown('<p style="text-align: justify;">O modelo RandomForest trouxe uma precisão, recall e f1-score de 93%, comparada com 78% do XGBoost, indicando que o RandomForest tem um bom equilíbrio entre precisão e recall, com uma média harmônica alta entre essas duas métricas. A pontuação sugere que o modelo é bastante eficiente em evitar erros (tanto falsos positivos quanto falsos negativos), e que está geralmente acertando nas suas previsões.</p>', unsafe_allow_html = True)
-    st.image("images/mod_X_mod.png",caption="Modelo XGBoost", width=600)		
+    st.image("images/mod_X_mod.png",caption="Modelo XGBoost x Modelo Random Forest", width=700)		
 	
 ## Rodapé
 st.markdown("---")
