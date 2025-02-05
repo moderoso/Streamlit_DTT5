@@ -124,7 +124,7 @@ with tabs_2[3]:
     st.header("Modelo")
     st.markdown("")
     colunas_1 = st.columns(2)
-    with colunas_1 [0]:	
+#    with colunas_1 [0]:	
 	
 ## Rodapé
 st.markdown("---")
