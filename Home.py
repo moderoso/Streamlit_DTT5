@@ -41,7 +41,7 @@ st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 #st.markdown("#")
 
 ### Tabs da página inicial
-tabs_titles_2= ["Como funciona a Passos","Alunos impactados pela Passos","Indicadores"]
+tabs_titles_2= ["Como funciona a Passos","Alunos Impactados e evasão na Passos","Indicadores"]
 tabs_2 = st.tabs(tabs_titles_2)
 
 # Tab Como funciona a Passos
@@ -65,7 +65,7 @@ with tabs_2[0]:
 
 # TAB Alunos Impactados
 with tabs_2[1]: 
-    st.header("Alunos Impactados pela Passos Mágicos")
+    st.header("Alunos Impactados e evasão na Passos Mágicos")
 
     st.markdown("""
                 <p style='font-size:20px;'>A Passos Mágicos, no decorrer de sua trajetória, já impactou mais de 4.400 pessoas( considerando familiares). Vamos demostrar, logo abaixo, a quantidade de alunos
