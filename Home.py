@@ -102,9 +102,7 @@ with tabs_2[2]:
     st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">Ágata – </span>5,506 a 6,868</p>', unsafe_allow_html = True)
     st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">Ametista – </span>6,868 a 8,230</p>', unsafe_allow_html = True)
     st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">Topázio – </span>8,230 a 9,294</p>', unsafe_allow_html = True)
-     
-
-	st.image("images/pedraINDE.png",caption="Faixas de desempenho Pedra-conceito INDE - Fonte:PEDE Pontos importantes", width=600)
+    st.image("images/pedraINDE.png",caption="Faixas de desempenho Pedra-conceito INDE - Fonte:PEDE Pontos importantes", width=600)
 ## Rodapé
 st.markdown("---")
 
