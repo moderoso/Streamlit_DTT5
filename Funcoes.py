@@ -83,7 +83,7 @@ def rodando_modelo(model,sc,df,tipo):
         df = df.assign(ProbabilidadeEvasao=probabilidades,Previsao=previsao)
         df['Previsao'] = df['Previsao'].apply(lambda x: "Não evadir" if x == 0 else "Evadir")
         df['ProbabilidadeEvasao'] = df['ProbabilidadeEvasao'] * 100
-        df['ProbabilidadeEvasao'] = df['ProbabilidadeEvasao'].apply(lambda x: f'{x:.0f}%')
+        df['ProbabilidadeEvasao'] = df['ProbabilidadeEvasao'].apply(lambda x: f'{x:.1f}%')
 
         st.dataframe(df)
  
