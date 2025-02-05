@@ -41,7 +41,7 @@ st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 #st.markdown("#")
 
 ### Tabs da página inicial
-tabs_titles_2= ["Como funciona a Passos","Evasão de alunos na Passos","Indicadores"]
+tabs_titles_2= ["Como funciona a Passos","Evasão de alunos na Passos","Indicadores","Modelo"]
 tabs_2 = st.tabs(tabs_titles_2)
 
 # Tab Como funciona a Passos
@@ -119,7 +119,12 @@ with tabs_2[2]:
     st.markdown('<p style="text-align: justify;">Essas quatro pedras, que simbolizam etapas de uma jornada de aprendizado e de desenvolvimento educacional, indicarão a posição de cada estudante em relação ao desempenho geral de todos na pesquisa avaliativa PEDE 2021.Analisando a evasão por Pedra, é possível identificar que a pedra Ametista e Ágata, são as que mais possuem alunos na situação de evasão, onde há alunos com valores na média do INDE.</p>', unsafe_allow_html = True)
     st.image("images/pedragrf.png",caption="Evasão por pedras", width=600)
 	
-	
+# Tab Modelo
+with tabs_2[0]: 
+    st.header("Modelo")
+    st.markdown("")
+    colunas_1 = st.columns(2)
+    with colunas_1 [0]:	
 	
 ## Rodapé
 st.markdown("---")
