@@ -38,12 +38,9 @@ st.header("", divider="gray")
 tabs_titles_2= ["Evasão de alunos na Passos","Indicadores","Modelo"]
 tabs_2 = st.tabs(tabs_titles_2)
 
- 
-
 # TAB Evasão de alunos na Passos Mágicos
-with tabs_2[1]: 
+with tabs_2[0]: 
     st.header("Evasão de alunos na Passos Mágicos")
-
     st.markdown("""
                 <p style='text-align: justify;'>Com base na análise realizada, iniciamos nosso estudo com um panorama mais detalhado sobre os alunos da ONG Passos Mágicos
                 <br><br>
@@ -74,7 +71,7 @@ with tabs_2[1]:
         st.markdown('<p style="text-align: justify;">Isso pode estar relacionado ao fato de que, entre os 10 e 13 anos, os alunos vivenciam uma fase de transição da infância para a adolescência, marcada por mudanças físicas e emocionais significativas. Esse processo pode gerar confusão e insegurança. A busca por identidade e a pressão para se encaixar socialmente podem resultar em desinteresse pela escola, especialmente se o ambiente escolar não oferecer o apoio necessário.Além disso, fatores como dificuldades de desafios acadêmicos, responsabilidades familiares e a falta de perspectivas de futuro também podem contribuir para a evasão nesse período.<br><br></p>', unsafe_allow_html = True)		
 		
 # TAB de Indicadores      
-with tabs_2[2]: 
+with tabs_2[1]: 
     st.header("Indicadores Passos Mágicos")
     st.markdown('''<p style='text-align: justify;'>Os dados que serão mostrados abaixo tem a finalidade de demonstrar o impacto da Passos Mágicos no sistema educacional e nos jovens da região de Embu-Guaçu.
                 <br><br>
@@ -82,9 +79,7 @@ with tabs_2[2]:
     colunas_3 = st.columns(2)
     with colunas_3 [0]:
         st.image("images/indicador_avaliacao.png",caption="Indicadores de Avaliação, descrição e seus pesos - Fonte:PEDE Pontos importantes", width=500)
- #   with colunas_3 [1]:
         st.image("images/indicador_conselho.png",caption="Indicadores de Conselho, descrição e seus pesos - Fonte:PEDE Pontos importantes", width=500)
- #	with colunas_3 [2]:
     st.markdown('<p style="text-align: justify;">A pedra é a classificação do aluno, baseado no número do INDE (Índice do Desenvolvimento Educacional), que é uma métrica de processo avaliativo geral do aluno. O conceito de classificação é dado por:</p>', unsafe_allow_html = True)
     st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Quartzo – </span>2,405 a 5,506</li></p></ul>', unsafe_allow_html = True)
     st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Ágata – </span>5,506 a 6,868</li></p></ul>', unsafe_allow_html = True)
@@ -95,7 +90,7 @@ with tabs_2[2]:
     st.image("images/pedragrf.png",caption="Evasão por pedras", width=500)
 	
 # Tab Modelo
-with tabs_2[3]: 
+with tabs_2[2]: 
     st.header("Modelo")
     st.markdown("""
                 <p style='text-align: justify;'>Para a construção da análise preditiva, foi escolhido dois modelos para serem treinados, o RandomForest e o XGBoost:
