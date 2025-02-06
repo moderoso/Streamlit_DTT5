@@ -32,9 +32,9 @@ with cols[3]:
 with cols[4]:
     if st.button("Conclusão"):
         st.switch_page("pages/Conclusao.py")
-with cols[5]:
-    if st.button("Referências"):
-        st.switch_page("pages/Referencias.py")
+##with cols[5]:
+    ##if st.button("Referências"):
+        ##st.switch_page("pages/Referencias.py")
 st.header("", divider="gray")
 
 ### Tabs da página inicial
