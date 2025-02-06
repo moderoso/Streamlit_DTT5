@@ -41,7 +41,7 @@ st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 #st.markdown("#")
 
 ### Tabs da página inicial
-tabs_titles_2= ["Quem Somos","Como funciona a Passos","Contexto","Modelo"]
+tabs_titles_2= ["Quem Somos","Como funciona a Passos","Contexto","Visão Geral"]
 tabs_2 = st.tabs(tabs_titles_2)
 
 
@@ -106,33 +106,26 @@ with tabs_2[2]:
     colunas_2 = st.columns(2, gap="large")
 
 	
-# Tab Modelo
+# Tab Visão Geral
 with tabs_2[3]: 
-    st.header("Modelo")
-    st.markdown("""
-                <p style='text-align: justify;'>Para a construção da análise preditiva, foi escolhido dois modelos para serem treinados, o RandomForest e o XGBoost:
-                <br><br>
-                </p>""", unsafe_allow_html=True)
+    st.header("Visão Geral")
+    st.markdown("")
+    colunas_1 = st.columns(2)
+    with colunas_1 [0]:
+        with st.container(border=True):
+            # Descrição do projeto
+            st.markdown('### O Problema')
+            st.markdown('<p style="text-align: justify;">A ONG Passos Mágicos enfrenta um desafio delicado e crucial: como ampliar o impacto positivo em crianças e jovens em situação de vulnerabilidade, quando as dificuldades em medir de forma clara os efeitos de suas ações tornam esse processo complexo.<br />Cada aluno traz consigo uma realidade única, com diferentes contextos socioeconômicos e emocionais, o que torna difícil acompanhar seu progresso de maneira personalizada. Ela precisa de novas ferramentas para entender melhor os dados e ajustar suas estratégias, garantindo que cada criança receba o apoio e as oportunidades que merece, para que possa crescer e superar os obstáculos de sua jornada.</p>', unsafe_allow_html = True)
+            st.markdown('### Objetivo')
+            st.markdown('<p style="text-align: justify;">Este projeto visa utilizar análises preditivas para avaliar como as ações da ONG Passos Mágicos impactam o desempenho e o desenvolvimento dos estudantes.<br />O objetivo é identificar padrões e relações nos dados educacionais, socioeconômicos e comportamentais, para compreender como diferentes fatores influenciam tanto o sucesso quanto as dificuldades dos alunos.<br />Com esses insights, a ONG poderá aprimorar suas abordagens e programas, ajustando-os para atender de forma mais eficaz às necessidades individuais dos alunos e potencializar os benefícios em suas trajetórias educacionais.</p>', unsafe_allow_html = True)		
 
-    colunas_3 = st.columns(2, gap="large")
-    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Random Forest: </span>Algoritmo de aprendizado de máquina baseado em conjuntos de árvores de decisão. Ele funciona criando várias árvores de decisão durante o treinamento e, em seguida, combinando suas previsões para melhorar a precisão do modelo e reduzir o risco de overfitting (ajuste excessivo aos dados).</li></p></ul>', unsafe_allow_html = True)
-    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">XGBoost (Extreme Gradient Boosting): </span>É um algoritmo de aprendizado de máquina altamente eficiente e poderoso, utilizado principalmente para classificação e regressão. Ele é uma implementação otimizada do método de Gradient Boosting, que combina múltiplos modelos fracos (tipicamente árvores de decisão) para formar um modelo forte.</li></p></ul>', unsafe_allow_html = True)
-    st.markdown( '#### Termos')
-    st.markdown('<p style="text-align: justify;">Durante a análise dos modelos, iremos utilizar alguns termos e para facilitar o entendimento do que estamos descrevendo e abaixo há uma melhor explicação de cada termo:</p>', unsafe_allow_html = True)
-    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Precision: </span>A taxa de acerto entre as previsões positivas feitas pelo modelo e as reais positivas.</li></p></ul>', unsafe_allow_html = True)
-    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Recall: </span>A taxa de acerto entre as reais positivas e as positivas corretamente identificadas pelo modelo.</li></p></ul>', unsafe_allow_html = True)	
-    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">F1-Score: </span>A média harmônica entre precisão e recall, usada para balancear esses dois aspectos.</li></p></ul>', unsafe_allow_html = True)
-    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Support: </span> Quantidade de exemplos reais de cada classe no conjunto de dados de teste.</li></p></ul>', unsafe_allow_html = True)
-    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Accuracy: </span> A proporção de acertos no total de previsões feitas.</li></p></ul>', unsafe_allow_html = True)
-    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Macro Avg: </span>A média macro calcula a média simples de uma métrica (como precisão, recall ou F1-score) para todas as classes, sem levar em consideração o suporte de cada classe.</li></p></ul>', unsafe_allow_html = True)
-    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Weighted Avg: </span>A média ponderada calcula a média das métricas (como precisão, recall ou F1-score), pesando cada classe de acordo com o número de exemplos (suporte) da classe no conjunto de teste.</li></p></ul>', unsafe_allow_html = True)	
-	
-    st.markdown( '#### Comparação dos modelos')
-    st.markdown('<p style="text-align: justify;">Comparando o treinamento dos dois modelos, é possível obter as seguintes informações:</p>', unsafe_allow_html = True)	
-    st.image("images/mod_random.png",caption="Modelo Random Forest", width=400)
-    st.image("images/mod_XGBoost.png",caption="Modelo XGBoost", width=400)	
-    st.markdown('<p style="text-align: justify;">O modelo RandomForest trouxe uma precisão, recall e f1-score de 93%, comparada com 78% do XGBoost, indicando que o RandomForest tem um bom equilíbrio entre precisão e recall, com uma média harmônica alta entre essas duas métricas. A pontuação sugere que o modelo é bastante eficiente em evitar erros (tanto falsos positivos quanto falsos negativos), e que está geralmente acertando nas suas previsões.</p>', unsafe_allow_html = True)
-    st.image("images/mod_X_mod.png",caption="Modelo XGBoost x Modelo Random Forest", width=700)		
+    with colunas_1 [1]:
+                st.image("images/borda.png",width=300)
+
+
+    colunas_2 = st.columns(2, gap="large")
+
+
 	
 ## Rodapé
 st.markdown("---")
