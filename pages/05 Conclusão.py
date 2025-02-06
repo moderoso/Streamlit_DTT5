@@ -37,8 +37,8 @@ with cols[0]:
 ##with cols[5]:
     ##if st.button("Referências"):
         ##st.switch_page("pages/Referencias.py")
-st.header("", divider="gray")
 
+st.header("", divider="gray")
 
 ## Rodapé
 st.markdown("---")

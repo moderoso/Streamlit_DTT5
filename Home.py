@@ -3,7 +3,6 @@ import streamlit as st
 from PIL import Image
 from auxiliar import apply_custom_style
 
-
 # Configuração da página
 st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon=':gem:')
 

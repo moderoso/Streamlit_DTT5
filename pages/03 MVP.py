@@ -44,6 +44,8 @@ with cols[0]:
     ##if st.button("Referências"):
         ##st.switch_page("pages/Referencias.py")
 
+st.header("", divider="gray")
+
 ### Tabs da página inicial
 tabs_titles_2= ["Entradas de Dados"]
 tabs_2 = st.tabs(tabs_titles_2)
