@@ -21,8 +21,8 @@ with cols[2]:
     if st.button("MVP"):
         st.switch_page("pages/MVP.py")
 with cols[3]:
-    if st.button("História"):
-        st.switch_page("pages/Historia.py")
+    if st.button("Conclusão"):
+        st.switch_page("pages/Conclusao.py")
 with cols[4]:
     if st.button("Sobre"):
         st.switch_page("pages/Sobre.py")
