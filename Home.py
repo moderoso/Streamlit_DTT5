@@ -18,8 +18,8 @@ with cols[1]:
     if st.button("Home"):
         st.switch_page("Home.py")
 with cols[2]:
-    if st.button("Análise"):
-        st.switch_page("pages/Analise.py")
+    if st.button("MVP"):
+        st.switch_page("pages/MVP.py")
 with cols[3]:
     if st.button("História"):
         st.switch_page("pages/Historia.py")
