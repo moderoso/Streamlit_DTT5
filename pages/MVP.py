@@ -46,9 +46,6 @@ with tabs_2[0]:
     with colunas_3 [0]:
         scaler = joblib.load('db/scaler.pkl')
         modelo_carregado = joblib.load("db/modelo_evasao.pkl")
-
-        # Título do aplicativo
-        st.title("Entrada de Dados: Manual ou Upload de Arquivo")
         # Criando um botão de escolha
         escolha = st.radio("Como deseja inserir os dados?", ("Upload de Excel", "Entrada Manual"))
 
