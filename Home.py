@@ -17,14 +17,17 @@ with cols[0]:
 with cols[1]:
     if st.button("Home"):
         st.switch_page("Home.py")
-with cols[2]:
+ with cols[2]:
+    if st.button("Estudo"):
+        st.switch_page("pages/Estudo.py")
+with cols[3]:
     if st.button("MVP"):
         st.switch_page("pages/MVP.py")
-with cols[3]:
+with cols[4]:
     if st.button("Conclusão"):
         st.switch_page("pages/Conclusao.py")
-with cols[4]:
-    if st.button("Sobre"):
+with cols[5]:
+    if st.button("Referências"):
         st.switch_page("pages/Sobre.py")
 st.header("", divider="gray")
 
@@ -41,13 +44,13 @@ st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 #st.markdown("#")
 
 ### Tabs da página inicial
-tabs_titles_2= ["Quem Somos","Como funciona a Passos","Contexto","Visão Geral"]
+tabs_titles_2= ["Introdução Projeto","Sobre a Passos Mágicos","Contexto do Projeto","Problema e Objetivo do projeto"]
 tabs_2 = st.tabs(tabs_titles_2)
 
 
-# TAB Quem Somos
+# TAB Introdução Projeto
 with tabs_2[0]: 
-    st.header("Quem Somos")
+    st.header("Introdução Projeto")
     st.markdown("")
     colunas_1 = st.columns(2)
     with colunas_1 [0]:
@@ -64,9 +67,9 @@ with tabs_2[0]:
 
 
 
-# Tab Como funciona a Passos
+# Tab Sobre a Passos Mágicos
 with tabs_2[1]: 
-    st.header("Como funciona a Passos Mágicos")
+    st.header("Sobre a Passos Mágicos")
     st.markdown("")
     colunas_1 = st.columns(2)
     with colunas_1 [0]:
@@ -83,10 +86,29 @@ with tabs_2[1]:
     colunas_2 = st.columns(2, gap="large")
 
  
+ # Tab Contexto do projeto
+with tabs_2[2]: 
+    st.header("Contexto do Projeto")
+    st.markdown("")
+    colunas_1 = st.columns(2)
+    with colunas_1 [0]:
+        with st.container(border=True):
+            # Descrição do projeto
+            st.markdown('### O Problema')
+            st.markdown('<p style="text-align: justify;">A ONG Passos Mágicos enfrenta um desafio delicado e crucial: como ampliar o impacto positivo em crianças e jovens em situação de vulnerabilidade, quando as dificuldades em medir de forma clara os efeitos de suas ações tornam esse processo complexo.<br />Cada aluno traz consigo uma realidade única, com diferentes contextos socioeconômicos e emocionais, o que torna difícil acompanhar seu progresso de maneira personalizada. Ela precisa de novas ferramentas para entender melhor os dados e ajustar suas estratégias, garantindo que cada criança receba o apoio e as oportunidades que merece, para que possa crescer e superar os obstáculos de sua jornada.</p>', unsafe_allow_html = True)
+            st.markdown('### Objetivo')
+            st.markdown('<p style="text-align: justify;">Este projeto visa utilizar análises preditivas para avaliar como as ações da ONG Passos Mágicos impactam o desempenho e o desenvolvimento dos estudantes.<br />O objetivo é identificar padrões e relações nos dados educacionais, socioeconômicos e comportamentais, para compreender como diferentes fatores influenciam tanto o sucesso quanto as dificuldades dos alunos.<br />Com esses insights, a ONG poderá aprimorar suas abordagens e programas, ajustando-os para atender de forma mais eficaz às necessidades individuais dos alunos e potencializar os benefícios em suas trajetórias educacionais.</p>', unsafe_allow_html = True)		
+
+    with colunas_1 [1]:
+                st.image("images/borda.png",width=300)
+
+
+    colunas_2 = st.columns(2, gap="large")
 
 		
-# TAB de Contexto 
-with tabs_2[2]: 
+# TAB de Problema e Objetivo do Projeto 
+with tabs_2[3]: 
+    st.header("Problema e Objetivo do projeto")
     st.markdown("")
     colunas_1 = st.columns(2)
     with colunas_1 [0]:
@@ -104,28 +126,6 @@ with tabs_2[2]:
 
 
     colunas_2 = st.columns(2, gap="large")
-
-	
-# Tab Visão Geral
-with tabs_2[3]: 
-    st.header("Visão Geral")
-    st.markdown("")
-    colunas_1 = st.columns(2)
-    with colunas_1 [0]:
-        with st.container(border=True):
-            # Descrição do projeto
-            st.markdown('### O Problema')
-            st.markdown('<p style="text-align: justify;">A ONG Passos Mágicos enfrenta um desafio delicado e crucial: como ampliar o impacto positivo em crianças e jovens em situação de vulnerabilidade, quando as dificuldades em medir de forma clara os efeitos de suas ações tornam esse processo complexo.<br />Cada aluno traz consigo uma realidade única, com diferentes contextos socioeconômicos e emocionais, o que torna difícil acompanhar seu progresso de maneira personalizada. Ela precisa de novas ferramentas para entender melhor os dados e ajustar suas estratégias, garantindo que cada criança receba o apoio e as oportunidades que merece, para que possa crescer e superar os obstáculos de sua jornada.</p>', unsafe_allow_html = True)
-            st.markdown('### Objetivo')
-            st.markdown('<p style="text-align: justify;">Este projeto visa utilizar análises preditivas para avaliar como as ações da ONG Passos Mágicos impactam o desempenho e o desenvolvimento dos estudantes.<br />O objetivo é identificar padrões e relações nos dados educacionais, socioeconômicos e comportamentais, para compreender como diferentes fatores influenciam tanto o sucesso quanto as dificuldades dos alunos.<br />Com esses insights, a ONG poderá aprimorar suas abordagens e programas, ajustando-os para atender de forma mais eficaz às necessidades individuais dos alunos e potencializar os benefícios em suas trajetórias educacionais.</p>', unsafe_allow_html = True)		
-
-    with colunas_1 [1]:
-                st.image("images/borda.png",width=300)
-
-
-    colunas_2 = st.columns(2, gap="large")
-
-
 	
 ## Rodapé
 st.markdown("---")

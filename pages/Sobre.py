@@ -13,14 +13,17 @@ with cols[0]:
 with cols[1]:
     if st.button("Home"):
         st.switch_page("Home.py")
-with cols[2]:
+ with cols[2]:
+    if st.button("Estudo"):
+        st.switch_page("pages/Estudo.py")
+with cols[3]:
     if st.button("MVP"):
         st.switch_page("pages/MVP.py")
-with cols[3]:
+with cols[4]:
     if st.button("Conclusão"):
         st.switch_page("pages/Conclusao.py")
-with cols[4]:
-    if st.button("Sobre"):
+with cols[5]:
+    if st.button("Referências"):
         st.switch_page("pages/Sobre.py")
 st.header("", divider="gray")
 
@@ -28,7 +31,7 @@ st.header("", divider="gray")
 #st.set_page_config(page_title= 'Projeto ML preço do Petróleo', layout='wide', page_icon= '📊')
 
 # Título da página
-st.title('ONG - Passos Mágicos :woman-woman-girl-boy:')
+st.title('Referências utilizadas para o projeto:')
 
 
 
@@ -51,8 +54,6 @@ st.title('ONG - Passos Mágicos :woman-woman-girl-boy:')
 #st.markdown('Link acessado em 20 novembro 2024   ' '[Oito motivos para a queda do preço do  petróleo](https://www.dw.com/pt-br/oito-motivos-para-a-queda-do-pre%C3%A7o-do-petr%C3%B3leo/a-19051686)') 
 
 st.markdown('<p style="text-align: justify;"><br /><br /><br /><br /></p>', unsafe_allow_html = True)
-
-
 
 st.write("### Fontes de dados")
 st.write("Links acessado em 20 e 30 Janeiro 2025"

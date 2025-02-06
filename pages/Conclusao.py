@@ -17,14 +17,17 @@ with cols[0]:
 with cols[1]:
     if st.button("Home"):
         st.switch_page("Home.py")
-with cols[2]:
+ with cols[2]:
+    if st.button("Estudo"):
+        st.switch_page("pages/Estudo.py")
+with cols[3]:
     if st.button("MVP"):
         st.switch_page("pages/MVP.py")
-with cols[3]:
+with cols[4]:
     if st.button("Conclusão"):
         st.switch_page("pages/Conclusao.py")
-with cols[4]:
-    if st.button("Sobre"):
+with cols[5]:
+    if st.button("Referências"):
         st.switch_page("pages/Sobre.py")
 st.header("", divider="gray")
 
