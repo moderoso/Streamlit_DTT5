@@ -32,9 +32,9 @@ with cols[3]:
 with cols[4]:
     if st.button("Conclusão"):
         st.switch_page("pages/Conclusao.py")
-##with cols[5]:
-   ## if st.button("Referências"):
-       ## st.switch_page("pages/Sobre.py")
+with cols[5]:
+    if st.button("Referências"):
+        st.switch_page("pages/Referencias.py")
 st.header("", divider="gray")
 
 ### Tabs da página inicial
@@ -80,7 +80,7 @@ with tabs_2[1]:
     st.header("Modelo")
     st.markdown("""
                 <p style='text-align: justify;'>Para a construção da análise preditiva, foi escolhido dois modelos para serem treinados, o RandomForest e o XGBoost:
-                <br><br>
+                <br></br>
                 </p>""", unsafe_allow_html=True)
 
     colunas_3 = st.columns(2, gap="large")
