@@ -76,7 +76,7 @@ with tabs_2[0]:
 
 	
 # Tab Modelo
-with tabs_2[2]: 
+with tabs_2[1]: 
     st.header("Modelo")
     st.markdown("""
                 <p style='text-align: justify;'>Para a construção da análise preditiva, foi escolhido dois modelos para serem treinados, o RandomForest e o XGBoost:
@@ -105,7 +105,7 @@ with tabs_2[2]:
 
 
 # TAB de Indicadores      
-with tabs_2[3]: 
+with tabs_2[2]: 
     st.header("Indicadores Passos Mágicos")
     st.markdown('''<p style='text-align: justify;'>Os dados que serão mostrados abaixo tem a finalidade de demonstrar o impacto da Passos Mágicos no sistema educacional e nos jovens da região de Embu-Guaçu.
                 <br><br>
