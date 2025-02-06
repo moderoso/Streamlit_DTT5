@@ -35,11 +35,102 @@ with cols[4]:
 st.header("", divider="gray")
 
 ### Tabs da página inicial
-tabs_titles_2= ["Evasão de alunos na Passos","Indicadores","Modelo"]
+tabs_titles_2= ["Entradas de Dados","Evasão de alunos na Passos","Indicadores","Modelo"]
 tabs_2 = st.tabs(tabs_titles_2)
 
-# TAB Evasão de alunos na Passos Mágicos
+# TAB Entrada de dados
 with tabs_2[0]: 
+    st.header("Entrada de Dados: Manual ou Upload de Arquivo"")
+    st.markdown("")
+    colunas_3 = st.columns(2, gap="large")
+    with colunas_3 [0]:
+        scaler = joblib.load('db/scaler.pkl')
+        modelo_carregado = joblib.load("db/modelo_evasao.pkl")
+
+        # Título do aplicativo
+        st.title("Entrada de Dados: Manual ou Upload de Arquivo")
+        # Criando um botão de escolha
+        escolha = st.radio("Como deseja inserir os dados?", ("Upload de Excel", "Entrada Manual"))
+
+        try:
+            # Se o usuário escolher "Upload de Excel"
+            if escolha == "Upload de Excel":
+               ex = pd.read_excel('db/exemplo.xlsx',sheet_name='Planilha1')
+               # Exibe o DataFrame
+               st.write("### Exemplo de layout do arquivo:")
+
+               st.markdown('<p style="text-align: justify;">A tabela abaixo é um exemplo de como os dados e quais colunas devem estar no arquivo para que o modelo consiga prever a probabilidade de evasão do aluno. O modelo retornará o mesmo arquivo passado, mas acrescentará duas colunas, de probabilidade de evasão e o resultado final da previsão ("Evadir" ou "Não evadir").</p>', unsafe_allow_html = True)
+               st.dataframe(ex)
+               # Título do aplicativo
+               st.write("### Upload de Arquivo Excel:")
+
+               # Criando o widget de upload
+               uploaded_file = st.file_uploader("Faça upload do seu arquivo Excel", type=["xlsx"])
+
+               # Verifica se um arquivo foi enviado
+               if uploaded_file is not None:
+                  # Lendo o arquivo Excel como DataFrame
+                  df = pd.read_excel(uploaded_file)
+   
+                  # Exibe o DataFrame
+                  st.write("### Resultado de Previsão:")
+
+                  rodando_modelo(modelo_carregado,scaler,df,tipo='Massivo')
+        
+            # Se o usuário escolher "Entrada Manual"
+            else:
+                st.write("### Insira os dados manualmente:")
+
+                ano_atual =  datetime.now().year
+
+                #Adicionando inputs do Usuario
+                fase = st.number_input("Insira um número 0 - 7", max_value=7, min_value=0)
+                idade = st.slider("Insira a idade", value=10, min_value=6, max_value=26)
+                genero = st.radio("Selecione o Genero", ["Masculino", "Feminino"]) 
+                ano_pm = st.slider("Insira anos na Passos Mágicos", value=1, min_value=0, max_value=7)
+                intituicao_ensino = st.selectbox("Selecione a Instituição de Ensino",["Escola Pública", "Escola Privada", "Já Formado", "Outro"])
+                pedra = st.selectbox("Selecione a Pedra",["Ametista", "Topázio", "Ágata", "Quartzo","Outro"])
+                inde = st.number_input("INDE 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+                iaa = st.number_input("IAA 0 - 10",  max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+                ieg = st.number_input("IEG 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+                ips = st.number_input("IPS 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+                ida = st.number_input("IDA 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+                ipv = st.number_input("IPV 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+                ian = st.number_input("IAN 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+                ipp = st.number_input("IPP 0 - 10", max_value=10.0, min_value=1.0, step=0.1, format="%.1f" )
+                defas = st.selectbox("Nível defasagem",["Em Fase", "Moderada", "Severa"])
+
+                respostas = {'Fase' : fase,
+                        'Idade' : idade,
+                            'Gênero' : genero,
+                            'Anos PM': ano_pm,
+                            'Instituição de Ensino': intituicao_ensino,
+                            'Pedra': pedra,
+                            'INDE': inde,
+                            'IAA': iaa,
+                            'IEG': ieg,
+                            'IPS': ips,
+                            'IDA': ida,
+                            'IPV': ipv,
+                            'IAN': ian,
+                            'IPP': ipp,
+                            'Defasagem': defas}
+                df = pd.DataFrame(data=[respostas])
+
+                print(df.info())
+
+                if st.button("Prever"):
+                    resultado = rodando_modelo(modelo_carregado, scaler, df, tipo='Manual')
+        except:
+            st.error('Ops, ocorreu um erro!', icon="🚨")
+        		
+
+
+
+
+
+# TAB Evasão de alunos na Passos Mágicos
+with tabs_2[1]: 
     st.header("Evasão de alunos na Passos Mágicos")
     st.markdown("""
                 <p style='text-align: justify;'>Com base na análise realizada, iniciamos nosso estudo com um panorama mais detalhado sobre os alunos da ONG Passos Mágicos
@@ -71,7 +162,7 @@ with tabs_2[0]:
         st.markdown('<p style="text-align: justify;">Isso pode estar relacionado ao fato de que, entre os 10 e 13 anos, os alunos vivenciam uma fase de transição da infância para a adolescência, marcada por mudanças físicas e emocionais significativas. Esse processo pode gerar confusão e insegurança. A busca por identidade e a pressão para se encaixar socialmente podem resultar em desinteresse pela escola, especialmente se o ambiente escolar não oferecer o apoio necessário.Além disso, fatores como dificuldades de desafios acadêmicos, responsabilidades familiares e a falta de perspectivas de futuro também podem contribuir para a evasão nesse período.<br><br></p>', unsafe_allow_html = True)		
 		
 # TAB de Indicadores      
-with tabs_2[1]: 
+with tabs_2[2]: 
     st.header("Indicadores Passos Mágicos")
     st.markdown('''<p style='text-align: justify;'>Os dados que serão mostrados abaixo tem a finalidade de demonstrar o impacto da Passos Mágicos no sistema educacional e nos jovens da região de Embu-Guaçu.
                 <br><br>
@@ -90,7 +181,7 @@ with tabs_2[1]:
     st.image("images/pedragrf.png",caption="Evasão por pedras", width=500)
 	
 # Tab Modelo
-with tabs_2[2]: 
+with tabs_2[3]: 
     st.header("Modelo")
     st.markdown("""
                 <p style='text-align: justify;'>Para a construção da análise preditiva, foi escolhido dois modelos para serem treinados, o RandomForest e o XGBoost:
