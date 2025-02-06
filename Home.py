@@ -44,7 +44,7 @@ st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 #st.markdown("#")
 
 ### Tabs da página inicial
-tabs_titles_2= ["Introdução Projeto","Sobre a Passos Mágicos","Contexto do Projeto","Problema e Objetivo do projeto"]
+tabs_titles_2= ["Introdução Projeto","Sobre a Passos Mágicos","Problema e Objetivo do projeto","Contexto do que será abordado no projeto"]
 tabs_2 = st.tabs(tabs_titles_2)
 
 
