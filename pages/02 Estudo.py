@@ -52,19 +52,7 @@ tabs_2 = st.tabs(tabs_titles_2)
 
 
 # TAB Evasão de alunos na Passos Mágicos
-st.markdown("""<style>[data-testid="stTab"]
-        .css-1d391kg {  /* Estilo para as abas */
-            background-color: #3498db;  /* Cor de fundo das abas */
-            color: white;  /* Cor do texto */
-        }
-        .css-1d391kg:hover {  /* Efeito de hover */
-            background-color: #2980b9;  /* Cor ao passar o mouse */
-        }
-        .css-1d391kg span {
-            font-weight: bold;
-        }
-    </style>
-""", unsafe_allow_html=True)
+st.markdown("""<style>[data-testid="stTab"]{background-color: blue} </style>""", unsafe_allow_html=True)
 with tabs_2[0]: 
     st.header("Estudo Evasão de alunos na Passos Mágicos")
     st.markdown("""
