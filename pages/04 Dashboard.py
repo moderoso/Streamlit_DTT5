@@ -15,9 +15,9 @@ with st.sidebar:
                 - Volmir Moderoso Santos - RM 355589''')
 		
 #### Menu Superior
-#cols = st.columns(5, gap="large")
-#with cols[0]:
-#    st.image("images/pme.png")
+cols = st.columns(5, gap="large")
+with cols[0]:
+    st.image("images/pme.png")
 #with cols[1]:
 #    if st.button("Home"):
 #        st.switch_page("Home.py")
