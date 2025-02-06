@@ -11,6 +11,6 @@
 base="dark"
 primaryColor="#3296e3"
 backgroundColor="#FFFFFF"
-secondaryBackgroundColor="#F0F2F6"
+secondaryBackgroundColor="##5c729e"
 textColor="#262730"
 font="sans serif"
