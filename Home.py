@@ -54,7 +54,7 @@ with tabs_2[0]:
     st.markdown("")
     colunas_1 = st.columns(2)
     with colunas_1 [0]:
-        with st.container(border=True):
+        with st.container(border=False):
             # Descrição Passos Magicos
             st.markdown('<p style="text-align: justify;">A Associação Passos Mágicos tem uma trajetória de 30 anos de atuação, trabalhando na transformação da vida de crianças e jovens de baixa renda os levando a melhores oportunidades de vida.A transformação, idealizada por Michelle Flues e Dimetri Ivanoff, começou em 1992, atuando dentro de orfanatos, no município de Embu-Guaçu.<br />Em 2016, depois de anos de atuação, decidem ampliar o programa para que mais jovens tivessem acesso a essa fórmula mágica para transformação que inclui: educação de qualidade, auxílio psicológico/psicopedagógico, ampliação de sua visão de mundo e protagonismo. Passaram então a atuar como um projeto social e educacional, criando assim a Associação Passos Mágicos.<br />A ONG Passos Mágicos é uma organização dedicada a transformar vidas por meio da educação e do acolhimento de crianças e jovens em situação de vulnerabilidade. Com um olhar atento às necessidades de cada estudante, a ONG oferece mais do que apenas ensino – ela proporciona um espaço seguro onde cada criança pode se sentir valorizada, respeitada e motivada a alcançar seu potencial.<br />A missão da Passos Mágicos é movida pela crença de que, para que um aluno realmente prospere, é necessário atender não só às suas necessidades acadêmicas, mas também ao seu bem-estar emocional, social e psicológico.<br /> A ONG se dedica a ser uma rede de apoio, não só no processo de aprendizagem, mas em todo o desenvolvimento do jovem, ajudando-o a superar desafios diários, sejam eles de ordem pessoal, familiar ou comunitária.<r />Em tempos de tantas desigualdades, a Passos Mágicos se destaca, oferecendo oportunidades para que cada criança e jovem possa dar os passos necessários para um futuro mais digno e promissor.Por isso, a Passos Mágicos busca entender e adaptar suas ações para apoiar de forma personalizada, promovendo um ambiente acolhedor onde a confiança e a autoestima possam florescer.</p>', unsafe_allow_html = True)		
 
@@ -92,7 +92,7 @@ with tabs_2[1]:
     st.markdown("")
     colunas_1 = st.columns(2)
     with colunas_1 [0]:
-        with st.container(border=True):
+        with st.container(border=False):
             # Descrição do projeto
             st.markdown('### O Problema')
             st.markdown('<p style="text-align: justify;">A ONG Passos Mágicos enfrenta um desafio delicado e crucial: como ampliar o impacto positivo em crianças e jovens em situação de vulnerabilidade, quando as dificuldades em medir de forma clara os efeitos de suas ações tornam esse processo complexo.<br />Cada aluno traz consigo uma realidade única, com diferentes contextos socioeconômicos e emocionais, o que torna difícil acompanhar seu progresso de maneira personalizada. Ela precisa de novas ferramentas para entender melhor os dados e ajustar suas estratégias, garantindo que cada criança receba o apoio e as oportunidades que merece, para que possa crescer e superar os obstáculos de sua jornada.</p>', unsafe_allow_html = True)
@@ -112,7 +112,7 @@ with tabs_2[2]:
     st.markdown("")
     colunas_1 = st.columns(2)
     with colunas_1 [0]:
-        with st.container(border=True):
+        with st.container(border=False):
             st.markdown('### Contexto')
             st.markdown('<p style="text-align: justify;">O abandono escolar é uma realidade no Brasil, sendo um problema significativo, onde muitos jovens são afetados por diversos fatores, como por exemplo, problemas familiares, dificuldades financeiras, falta de motivação, falta de apoio educacional adequado, gravidez na adolescência, dificuldades de aprendizagem, violência nas comunidades, entre outros, especialmente em áreas rurais e periféricas.Segundo o censo de 2022 escolar do INEP (Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira) de 2022, mostra que a situação é preocupante, com muitos jovens fora da escola e que não completaram seus estudos, principalmente nas faixas etárias mais altas. Alguns desses dados são:</p>', unsafe_allow_html = True)
             st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">Evasão por nível de ensino:</span> Em 2021, a taxa de abandono escolar no Ensino Fundamental foi de cerca de 1,9% no Brasil. Já no Ensino Médio, a taxa de abandono é mais alarmante, onde no mesmo ano, cerca de 11,5% dos estudantes abandonaram a escola no Brasil. Este número é significativamente mais alto do que no Ensino Fundamental.</p>', unsafe_allow_html = True)
