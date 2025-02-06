@@ -84,7 +84,7 @@ with tabs_2[1]:
 # TAB de Contexto 
 with tabs_2[2]: 
     st.markdown("")
-    colunas_3 = st.columns(2)
+    colunas_1 = st.columns(2)
     with colunas_1 [0]:
         with st.container(border=True):
             st.markdown('### Contexto')
