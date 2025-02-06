@@ -44,7 +44,7 @@ st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 #st.markdown("#")
 
 ### Tabs da página inicial
-tabs_titles_2= ["Introdução Projeto","Sobre a Passos Mágicos","Problema e Objetivo do projeto","Contexto do que será abordado no projeto"]
+tabs_titles_2= ["Introdução Projeto","Problema e Objetivo do projeto","Contexto do que será abordado no projeto"]
 tabs_2 = st.tabs(tabs_titles_2)
 
 
@@ -68,26 +68,26 @@ with tabs_2[0]:
 
 
 # Tab Sobre a Passos Mágicos
-with tabs_2[1]: 
-    st.header("Sobre a Passos Mágicos")
-    st.markdown("")
-    colunas_1 = st.columns(2)
-    with colunas_1 [0]:
-        with st.container(border=True):
-            st.markdown("""
-                        <p style='text-align: justify;'>A Passos Mágicos tem como objetivo acelerar a ascensão social de crianças e jovens do município de Embu Guaçu através da educação.
-                         É efetuada um processo seletivo visando garantir a dignidade e a autoestima com o intuito de promover a inclusão social ativa. É efetuada a divulgação das vagas na comunidade, é aplicada uma prova de sondagem aos interessados, aos selecionados é feita uma entrevista com psicologos, pedagogos e assistentes sociais. Após deliberarem analisam o perfil socioeconomicos para direcionar o conteudo e por fim a matricula.</p>""", unsafe_allow_html=True)
+#with tabs_2[1]: 
+    #st.header("Sobre a Passos Mágicos")
+    #st.markdown("")
+    #colunas_1 = st.columns(2)
+    #with colunas_1 [0]:
+        #with st.container(border=True):
+            #st.markdown("""
+                        #<p style='text-align: justify;'>A Passos Mágicos tem como objetivo acelerar a ascensão social de crianças e jovens do município de Embu Guaçu através da educação.
+                         #É efetuada um processo seletivo visando garantir a dignidade e a autoestima com o intuito de promover a inclusão social ativa. É efetuada a divulgação das vagas na comunidade, é aplicada uma prova de sondagem aos interessados, aos selecionados é feita uma entrevista com psicologos, pedagogos e assistentes sociais. Após deliberarem analisam o perfil socioeconomicos para direcionar o conteudo e por fim a matricula.</p>""", unsafe_allow_html=True)
 
 
-    with colunas_1 [1]:
-                st.image("images/borda.png",width=300)
+    #with colunas_1 [1]:
+                #st.image("images/borda.png",width=300)
 
 
-    colunas_2 = st.columns(2, gap="large")
+    #colunas_2 = st.columns(2, gap="large")
 
  
  # Tab Contexto do projeto
-with tabs_2[2]: 
+with tabs_2[1]: 
     st.header("Contexto do Projeto")
     st.markdown("")
     colunas_1 = st.columns(2)
@@ -107,7 +107,7 @@ with tabs_2[2]:
 
 		
 # TAB de Problema e Objetivo do Projeto 
-with tabs_2[3]: 
+with tabs_2[2]: 
     st.header("Problema e Objetivo do projeto")
     st.markdown("")
     colunas_1 = st.columns(2)
