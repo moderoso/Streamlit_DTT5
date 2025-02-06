@@ -97,9 +97,9 @@ with tabs_2[0]:
     #colunas_2 = st.columns(2, gap="large")
 
  
- # Tab Contexto do projeto
+ # Tab Problema e Objetivo do projeto
 with tabs_2[1]: 
-    st.header("Contexto do Projeto")
+    st.header("Problema e Objetivo do projeto")
     st.markdown("")
     colunas_1 = st.columns(2)
     with colunas_1 [0]:
@@ -117,9 +117,9 @@ with tabs_2[1]:
     colunas_2 = st.columns(2, gap="large")
 
 		
-# TAB de Problema e Objetivo do Projeto 
+# TAB de Contexto do que será abordado no projeto 
 with tabs_2[2]: 
-    st.header("Problema e Objetivo do projeto")
+    st.header("Contexto do que será abordado no projeto")
     st.markdown("")
     colunas_1 = st.columns(2)
     with colunas_1 [0]:
