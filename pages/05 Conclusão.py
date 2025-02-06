@@ -40,9 +40,6 @@ with st.sidebar:
 st.header("", divider="gray")
 
 
-
-
-
 ## Rodapé
 st.markdown("---")
 
