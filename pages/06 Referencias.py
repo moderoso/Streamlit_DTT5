@@ -5,6 +5,14 @@ from auxiliar import apply_custom_style
 
 if __name__ == '__main__':
         apply_custom_style()
+
+st.markdown("""<style>[data-testid="stSidebar"] {display: flex; align-items: center; margin-bottom: 20px;}.icon-container a {margin-right: 15px;}</style>""", unsafe_allow_html=True)
+with st.sidebar:
+    st.markdown('''<b><u>Equipe FIAP - 5DTAT - Grupo 79</u></b></font>''', unsafe_allow_html=True)
+    st.markdown('''
+                - Jhonny da Silva Mineu - RM 355135
+                - Marina Mendez Araujo - RM 355100  
+                - Volmir Moderoso Santos - RM 355589''')
 		
 #### Menu Superior
 cols = st.columns(5, gap="large")
@@ -69,13 +77,6 @@ st.write("Links acessado em 20 e 30 Janeiro 2025"
 
 st.markdown('<p style="text-align: justify;"><br /><br /><br /><br /></p>', unsafe_allow_html = True)
 
-
-# Equipe do projeto
-st.write("### Equipe FIAP - 5DTAT - Grupo 79")
-#st.markdown('<h5>Equipe FIAP - 5DTAT - Grupo 10</h5>', unsafe_allow_html = True)
-st.markdown('#### Jhonny da Silva Mineu - RM 355135')
-st.markdown('#### Marina Mendez Araujo - RM 355100')
-st.markdown('#### Volmir Moderoso Santos - RM 355589')
 
 ## Rodapé
 st.markdown("---")
