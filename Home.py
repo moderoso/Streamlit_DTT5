@@ -64,7 +64,7 @@ with tabs_2[0]:
 
  
 
-# TAB Alunos Impactados
+# TAB Quem Somos
 with tabs_2[1]: 
     st.header("Quem Somos")
     st.markdown("")
@@ -85,7 +85,7 @@ with tabs_2[1]:
 with tabs_2[2]: 
     st.markdown("")
     colunas_3 = st.columns(2)
-    with colunas_3 [0]:
+    with colunas_1 [0]:
         with st.container(border=True):
             st.markdown('### Contexto')
             st.markdown('<p style="text-align: justify;">O abandono escolar é uma realidade no Brasil, sendo um problema significativo, onde muitos jovens são afetados por diversos fatores, como por exemplo, problemas familiares, dificuldades financeiras, falta de motivação, falta de apoio educacional adequado, gravidez na adolescência, dificuldades de aprendizagem, violência nas comunidades, entre outros, especialmente em áreas rurais e periféricas.Segundo o censo de 2022 escolar do INEP (Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira) de 2022, mostra que a situação é preocupante, com muitos jovens fora da escola e que não completaram seus estudos, principalmente nas faixas etárias mais altas. Alguns desses dados são:</p>', unsafe_allow_html = True)
