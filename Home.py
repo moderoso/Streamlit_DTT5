@@ -10,6 +10,14 @@ st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon
 if __name__ == '__main__':
         apply_custom_style()
 
+st.markdown("""<style>[data-testid="stSidebar"] {background: linear-gradient(180deg, #00c6ff, #0072ff);padding: 20px;}.icon-container {display: flex; align-items: center; margin-bottom: 20px;}.icon-container a {margin-right: 15px;}</style>""", unsafe_allow_html=True)
+with st.sidebar:
+    st.markdown('''<b><u>Equipe FIAP - 5DTAT - Grupo 79</u></b></font>''', unsafe_allow_html=True)
+    st.markdown('''
+                - Jhonny da Silva Mineu - RM 355135
+                - Marina Mendez Araujo - RM 355100  
+                - Volmir Moderoso Santos - RM 355589''')
+
 #### Menu Superior
 cols = st.columns(5, gap="large")
 with cols[0]:
@@ -30,6 +38,9 @@ with cols[4]:
    ## if st.button("Referências"):
         ##st.switch_page("pages/Sobre.py")
 st.header("", divider="gray")
+
+
+
 
 # Carregando top
 #top = Image.open('images/pme.png')
@@ -126,6 +137,7 @@ with tabs_2[2]:
 
 
     colunas_2 = st.columns(2, gap="large")
+
 	
 ## Rodapé
 st.markdown("---")
