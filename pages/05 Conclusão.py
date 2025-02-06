@@ -19,13 +19,13 @@ with cols[1]:
         st.switch_page("Home.py")
 with cols[2]:
     if st.button("Estudo"):
-        st.switch_page("pages/Estudo.py")
+        st.switch_page("pages/02 Estudo.py")
 with cols[3]:
     if st.button("MVP"):
-        st.switch_page("pages/MVP.py")
+        st.switch_page("pages/03 MVP.py")
 with cols[4]:
     if st.button("Conclusão"):
-        st.switch_page("pages/Conclusao.py")
+        st.switch_page("pages/05 Conclusao.py")
 ##with cols[5]:
     ##if st.button("Referências"):
         ##st.switch_page("pages/Referencias.py")
