@@ -40,7 +40,7 @@ tabs_2 = st.tabs(tabs_titles_2)
 
 # TAB Entrada de dados
 with tabs_2[0]: 
-    st.header("Entrada de Dados: Manual ou Upload de Arquivo"")
+    st.header("Entrada de Dados: Manual ou Upload de Arquivo")
     st.markdown("")
     colunas_3 = st.columns(2, gap="large")
     with colunas_3 [0]:
