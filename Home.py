@@ -46,7 +46,7 @@ tabs_2 = st.tabs(tabs_titles_2)
 
 
 # TAB Quem Somos
-with tabs_2[1]: 
+with tabs_2[0]: 
     st.header("Quem Somos")
     st.markdown("")
     colunas_1 = st.columns(2)
@@ -65,7 +65,7 @@ with tabs_2[1]:
 
 
 # Tab Como funciona a Passos
-with tabs_2[0]: 
+with tabs_2[1]: 
     st.header("Como funciona a Passos Mágicos")
     st.markdown("")
     colunas_1 = st.columns(2)
