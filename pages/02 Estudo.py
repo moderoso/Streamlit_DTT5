@@ -52,8 +52,7 @@ tabs_2 = st.tabs(tabs_titles_2)
 
 
 # TAB Evasão de alunos na Passos Mágicos
-#st.markdown("""<style>[data-testid="stTab"]{background-color: #3498db; border-radius: 8px 8px 0 0; padding: 10px 20px; } </style>""", unsafe_allow_html=True)
-st.markdown('<style>.css-1d391kg{background-color:#3498db;color:white;border-radius:8px 8px 0 0;border:2px solid #2980b9;box-shadow:0 4px 6px rgba(0,0,0,0.1);font-weight:bold;padding:10px 20px;}.css-1d391kg:hover{background-color:#2980b9;border-color:#1f6d94;}.css-1d391kg.st-active{background-color:#2980b9;border-color:#1f6d94;color:white;box-shadow:0 4px 10px rgba(0,0,0,0.2);font-weight:bold;}.css-1d391kg span{font-size:16px;}.css-1d391kg:focus-within{outline:none;}.st-tabs>div>div>div.st-bw>div{border-bottom:3px solid #2980b9;}</style>', unsafe_allow_html=True)
+st.markdown("""<style>[data-testid="stTab"]{background-color: #3498db; border-radius: 8px 8px 0 0; padding: 10px 20px; hover: blue; active:blue} </style>""", unsafe_allow_html=True)
 with tabs_2[0]: 
     st.header("Estudo Evasão de alunos na Passos Mágicos")
     st.markdown("""
