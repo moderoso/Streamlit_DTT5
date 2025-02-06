@@ -23,7 +23,7 @@ with cols[0]:
 with cols[1]:
     if st.button("Home"):
         st.switch_page("Home.py")
- with cols[2]:
+with cols[2]:
     if st.button("Estudo"):
         st.switch_page("pages/Estudo.py")
 with cols[3]:

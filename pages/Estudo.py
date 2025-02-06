@@ -101,7 +101,7 @@ with tabs_2[2]:
     st.image("images/mod_X_mod.png",caption="Modelo XGBoost x Modelo Random Forest", width=700)		
 
 
-    # TAB de Indicadores      
+# TAB de Indicadores      
 with tabs_2[3]: 
     st.header("Indicadores Passos Mágicos")
     st.markdown('''<p style='text-align: justify;'>Os dados que serão mostrados abaixo tem a finalidade de demonstrar o impacto da Passos Mágicos no sistema educacional e nos jovens da região de Embu-Guaçu.
