@@ -53,20 +53,6 @@ st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 #st.header(":footprints: ONG Passos Mágicos e seus principais indicadores")
 #st.markdown("#")
 
-st.markdown("""
-    <style>
-        .css-1d391kg {  /* Estilo para as abas */
-            background-color: #blue;  /* Cor de fundo das abas */
-            color: blue;  /* Cor do texto */
-        }
-        .css-1d391kg:hover {  /* Efeito de hover */
-            background-color: #blue;  /* Cor ao passar o mouse */
-        }
-        .css-1d391kg span {
-            font-weight: bold;
-        }
-    </style>
-""", unsafe_allow_html=True)
 
 ### Tabs da página inicial
 tabs_titles_2= ["Introdução Projeto","Problema e Objetivo do projeto","Contexto do que será abordado no projeto"]
