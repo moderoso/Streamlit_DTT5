@@ -38,3 +38,5 @@ st.header("", divider="gray")
 
 # Título da página
 st.title('Dashboard e Storytelling')
+
+st.markdown('https://app.powerbi.com/view?r=eyJrIjoiMmZjOGI5MjgtMDE0NS00ZDgyLWE1MDAtZjExMjhkNThjOTRjIiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9',unsafe_allow_html=True)
