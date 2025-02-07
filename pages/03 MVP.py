@@ -54,7 +54,7 @@ tabs_2 = st.tabs(tabs_titles_2)
 with tabs_2[0]: 
     st.header("Entrada de Dados: Manual ou Upload de Arquivo")
     st.markdown("")
-    colunas_3 = st.columns(2, gap="large")
+    colunas_3 = st.columns(0, gap="large")
     with colunas_3 [0]:
         scaler = joblib.load('db/scaler.pkl')
         modelo_carregado = joblib.load("db/modelo_evasao.pkl")
