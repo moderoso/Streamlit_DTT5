@@ -68,7 +68,7 @@ with tabs_2[0]:
                 st.image("images/borda.png",width=300)
 
 
-    colunas_2 = st.columns(2, gap="large")
+    colunas_2 = st.columns(1, gap="large")
 
 
 
