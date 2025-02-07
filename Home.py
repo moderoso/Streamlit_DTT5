@@ -58,7 +58,7 @@ tabs_2 = st.tabs(tabs_titles_2)
 with tabs_2[0]: 
     st.header("Introdução Projeto")
     st.markdown("")
-    colunas_1 = st.columns(2)
+    colunas_1 = st.columns(1)
     with colunas_1 [0]:
         with st.container(border=False):
             # Descrição Passos Magicos
