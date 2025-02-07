@@ -56,7 +56,10 @@ tabs_2 = st.tabs(tabs_titles_2)
 with tabs_2[0]: 
     st.header("Estudo Evasão de alunos na Passos Mágicos")
     st.markdown("""
-                <p style='text-align: justify;'>Com base na análise realizada, iniciamos nosso estudo com um panorama mais detalhado sobre os alunos da ONG Passos Mágicos
+                <p style='text-align: justify;'> Este projeto visa utilizar análises preditivas para avaliar como as ações da ONG Passos Mágicos impactam o desempenho e o desenvolvimento dos estudantes. 
+O objetivo é identificar padrões e relações nos dados educacionais, socioeconômicos e comportamentais, a fim de compreender de que maneira diferentes fatores impactam tanto o sucesso quanto as dificuldades dos alunos. Dada a relevância e a gravidade do tema, nossa abordagem será focada na evasão escolar, como um dos principais desafios a ser enfrentado.
+Com esses insights, a ONG poderá aprimorar suas abordagens e programas, ajustando-os para atender de forma mais eficaz às necessidades individuais dos alunos e potencializar os benefícios em suas trajetórias educacionais.
+
                 <br><br>
                 </p>""", unsafe_allow_html=True)
 

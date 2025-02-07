@@ -49,11 +49,6 @@ st.header("", divider="gray")
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 
 
-### Título da Página Inicial
-#st.header(":footprints: ONG Passos Mágicos e seus principais indicadores")
-#st.markdown("#")
-
-
 ### Tabs da página inicial
 tabs_titles_2= ["Introdução Projeto","Problema e Objetivo do projeto","Contexto do que será abordado no projeto"]
 tabs_2 = st.tabs(tabs_titles_2)
