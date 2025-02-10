@@ -24,6 +24,10 @@ with st.sidebar:
                 - Marina Mendez Araujo - RM 355100  
                 - Volmir Moderoso Santos - RM 355589''')
 
+
+# Título da página
+st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
+
 #### Menu Superior
 cols = st.columns(5, gap="large")
 with cols[0]:
