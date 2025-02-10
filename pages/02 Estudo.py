@@ -28,7 +28,7 @@ with st.sidebar:
 cols = st.columns(5, gap="large")
 with cols[0]:
     st.image("images/pme.png")
-    st.markdown("--")
+    st.markdown("  ")
 #with cols[1]:
 #    if st.button("Home"):
 #        st.switch_page("Home.py")
