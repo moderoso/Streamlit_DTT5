@@ -60,7 +60,7 @@ with tabs_2[0]:
                 <br><br>
                 </p>""", unsafe_allow_html=True)
 
-    colunas_3 = st.columns(2, gap="large")
+    colunas_3 = st.columns(1, gap="large")
     
     with colunas_3 [0]:
         st.markdown( '#### Faixa etária')
