@@ -46,6 +46,9 @@ with cols[0]:
 
 st.header("", divider="gray")
 
+# Título da página
+#st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
+
 ### Tabs da página inicial
 tabs_titles_2= ["Entradas de Dados"]
 tabs_2 = st.tabs(tabs_titles_2)
@@ -137,7 +140,7 @@ with tabs_2[0]:
 st.markdown("---")
 
 st.markdown('''<div class="center">
-                    <a target="_self" href="#e0b3b9e8">
+                    <a target="_self" href="#entrada-de-dados-manual-ou-upload-de-arquivo">
                         <button class="back-to-top">
                             Voltar ao topo
                         </button>
