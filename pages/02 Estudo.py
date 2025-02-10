@@ -25,8 +25,7 @@ with st.sidebar:
                 - Volmir Moderoso Santos - RM 355589''')
 
 
-# Título da página
-st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
+
 
 #### Menu Superior
 cols = st.columns(5, gap="large")
@@ -50,6 +49,9 @@ with cols[0]:
         ##st.switch_page("pages/Referencias.py")
 
 st.header("", divider="gray")
+
+# Título da página
+st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 
 ### Tabs da página inicial
 tabs_titles_2= ["Estudo Evasão de alunos na Passos","Modelo","Indicadores"]
