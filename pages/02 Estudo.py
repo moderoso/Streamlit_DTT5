@@ -26,7 +26,7 @@ with st.sidebar:
 #### Menu Superior
 cols = st.columns(6, gap="large")
 with cols[0]:
-    st.image("images/passos-magicos-1.png")
+    st.image("images/passos-magicos.png")
     st.markdown("  ")
 with cols[1]:
     if st.button("Home"):
