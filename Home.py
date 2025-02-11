@@ -24,9 +24,7 @@ with st.sidebar:
     }
     </style>
     """, unsafe_allow_html=True)
-    _, col0, _ = st.columns([1, 3, 1])
-    with col0:
-        st.sidebar.image("images/fiap.png", width=150)
+    st.sidebar.image("images/fiap.png", width=150)
 
 #### Menu Superior
 cols = st.columns(6, gap="large")
