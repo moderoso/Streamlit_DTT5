@@ -16,6 +16,8 @@ with st.sidebar:
                 - Jhonny da Silva Mineu - RM 355135
                 - Marina Mendez Araujo - RM 355100  
                 - Volmir Moderoso Santos - RM 355589''')
+    st.divider()
+    st.sidebar.image("images/pme.png", use_column_width=True)
 
 #### Menu Superior
 cols = st.columns(5, gap="large")
