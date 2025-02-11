@@ -16,10 +16,10 @@ with st.sidebar:
                 - Jhonny da Silva Mineu - RM 355135
                 - Marina Mendez Araujo - RM 355100  
                 - Volmir Moderoso Santos - RM 355589''')
-    st.divider()
+    #st.divider()
     _, col0, _ = st.columns([1, 3, 1])
     with col0:
-        st.sidebar.image("images/passos-magicos-2.png", width=250)
+        st.sidebar.image("images/passos-magicos-2.png", width=200)
 
 #### Menu Superior
 #cols = st.columns(5, gap="large")
