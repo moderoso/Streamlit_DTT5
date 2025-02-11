@@ -13,7 +13,7 @@ from Funcoes import rodando_modelo # type: ignore
 st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon=':gem:')
 
 
-st.markdown("""<style>[data-testid="stSidebar"] {display: flex; align-items: center; margin-bottom: 5px;}.icon-container a {margin-right: 15px;}</style>""", unsafe_allow_html=True)
+#st.markdown("""<style>[data-testid="stSidebar"] {display: flex; align-items: center; margin-bottom: 5px;}.icon-container a {margin-right: 15px;}</style>""", unsafe_allow_html=True)
 with st.sidebar:
     st.markdown('''<b><u>Equipe FIAP - 5DTAT - Grupo 79</u></b></font>''', unsafe_allow_html=True)
     st.markdown('''
