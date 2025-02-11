@@ -6,8 +6,6 @@ from auxiliar import apply_custom_style
 # Configuração da página
 st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon=':gem:')
 
-if __name__ == '__main__':
-        apply_custom_style()
 
 st.markdown("""<style>[data-testid="stSidebar"] {display: flex; align-items: center; margin-bottom: 20px;}.icon-container a {margin-right: 15px;}</style>""", unsafe_allow_html=True)
 with st.sidebar:
@@ -16,30 +14,32 @@ with st.sidebar:
                 - Jhonny da Silva Mineu - RM 355135
                 - Marina Mendez Araujo - RM 355100  
                 - Volmir Moderoso Santos - RM 355589''')
-    #st.divider()
+    st.divider()
     _, col0, _ = st.columns([1, 3, 1])
     with col0:
         st.sidebar.image("images/passos-magicos-2.png", width=200)
 
 #### Menu Superior
-#cols = st.columns(5, gap="large")
-#with cols[0]:
-#   st.image("images/pme.png")
-#with cols[1]:
-#    if st.button("Home"):
-#        st.switch_page("Home.py")
-#with cols[2]:
-#    if st.button("Estudo"):
-#        st.switch_page("pages/02 Estudo.py")
-#with cols[3]:
-#    if st.button("MVP"):
-#        st.switch_page("pages/03 MVP.py")
-#with cols[4]:
-#    if st.button("Conclusão"):
-#        st.switch_page("pages/05 Conclusao.py")
-##with cols[5]:
-    ##if st.button("Referências"):
-        ##st.switch_page("pages/Referencias.py")
+cols = st.columns(6, gap="large")
+with cols[0]:
+    st.image("images/passos-magicos.png")
+    st.markdown("  ")
+with cols[1]:
+    if st.button("Home"):
+        st.switch_page("Home.py")
+with cols[2]:
+    if st.button("Estudo"):
+        st.switch_page("pages/02 Estudo.py")
+with cols[3]:
+    if st.button("MVP"):
+        st.switch_page("pages/03 MVP.py")
+with cols[4]:
+    if st.button("Conclusão"):
+        st.switch_page("pages/05 Conclusão.py")
+with cols[5]:
+    if st.button("Referências"):
+        st.switch_page("pages/06 Referencias.py")
+
 st.header("", divider="gray")
 
 
