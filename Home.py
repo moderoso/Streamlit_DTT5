@@ -17,7 +17,7 @@ with st.sidebar:
     st.divider()
     _, col0, _ = st.columns([1, 3, 1])
     with col0:
-        st.sidebar.image("images/fiap.png", width=200)
+        st.sidebar.image("images/fiap.png", width=150)
 
 #### Menu Superior
 cols = st.columns(6, gap="large")

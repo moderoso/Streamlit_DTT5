@@ -3,7 +3,6 @@ import streamlit as st
 from auxiliar import apply_custom_style
 
 
-st.markdown("""<style>[data-testid="stSidebar"] {display: flex; align-items: center; margin-bottom: 20px;}.icon-container a {margin-right: 15px;}</style>""", unsafe_allow_html=True)
 with st.sidebar:
     st.markdown('''<b><u>Equipe FIAP - 5DTAT - Grupo 79</u></b></font>''', unsafe_allow_html=True)
     st.markdown('''
