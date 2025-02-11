@@ -15,7 +15,16 @@ with st.sidebar:
                 - Marina Mendez Araujo - RM 355100  
                 - Volmir Moderoso Santos - RM 355589''')
     st.divider()
-    _, col0, _ = st.columns([2, 3, 2])
+    st.sidebar.markdown(
+    """
+    <style>
+    .sidebar .element-container {
+        display: flex;
+        justify-content: center;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    _, col0, _ = st.columns([1, 3, 1])
     with col0:
         st.sidebar.image("images/fiap.png", width=150)
 

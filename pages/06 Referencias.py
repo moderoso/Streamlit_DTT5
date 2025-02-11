@@ -35,7 +35,7 @@ st.header("", divider="gray")
 # Título da página
 st.title('Referências utilizadas para o projeto:')
 
-st.markdown('<p style="text-align: justify;"><br /><br /><br /><br /></p>', unsafe_allow_html = True)
+#st.markdown('<p style="text-align: justify;"><br /><br /><br /><br /></p>', unsafe_allow_html = True)
 
 st.write("### Fontes de dados")
 st.write("Links acessado em 20 e 30 Janeiro 2025"
