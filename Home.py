@@ -7,7 +7,7 @@ from auxiliar import apply_custom_style
 st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon=':gem:')
 
 
-st.markdown("""<style>[data-testid="stSidebar"] {display: flex; align-items: center; margin-bottom: 20px;}.icon-container a {margin-right: 15px;}</style>""", unsafe_allow_html=True)
+#st.markdown("""<style>[data-testid="stSidebar"] {display: flex; align-items: center; margin-bottom: 20px;}.icon-container a {margin-right: 15px;}</style>""", unsafe_allow_html=True)
 with st.sidebar:
     st.markdown('''<b><u>Equipe FIAP - 5DTAT - Grupo 79</u></b></font>''', unsafe_allow_html=True)
     st.markdown('''
@@ -17,7 +17,7 @@ with st.sidebar:
     st.divider()
     _, col0, _ = st.columns([1, 3, 1])
     with col0:
-        st.sidebar.image("images/passos-magicos-2.png", width=200)
+        st.sidebar.image("images/fiap.png", width=200)
 
 #### Menu Superior
 cols = st.columns(6, gap="large")
