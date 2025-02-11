@@ -17,12 +17,14 @@ with st.sidebar:
                 - Marina Mendez Araujo - RM 355100  
                 - Volmir Moderoso Santos - RM 355589''')
     st.divider()
-    st.sidebar.image("images/pme.png", use_column_width=True)
+    _, col0, _ = st.columns([1, 3, 1])
+    with col0:
+        st.sidebar.image("images/pme.png", width=150)
 
 #### Menu Superior
-cols = st.columns(5, gap="large")
-with cols[0]:
-   st.image("images/pme.png")
+#cols = st.columns(5, gap="large")
+#with cols[0]:
+#   st.image("images/pme.png")
 #with cols[1]:
 #    if st.button("Home"):
 #        st.switch_page("Home.py")
@@ -40,12 +42,6 @@ with cols[0]:
         ##st.switch_page("pages/Referencias.py")
 st.header("", divider="gray")
 
-
-
-
-# Carregando top
-#top = Image.open('images/pme.png')
-#st.image(top, width=200)
 
 # Título da página
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
@@ -71,28 +67,6 @@ with tabs_2[0]:
 
 
     colunas_2 = st.columns(2, gap="large")
-
-
-
-
-# Tab Sobre a Passos Mágicos
-#with tabs_2[1]: 
-    #st.header("Sobre a Passos Mágicos")
-    #st.markdown("")
-    #colunas_1 = st.columns(2)
-    #with colunas_1 [0]:
-        #with st.container(border=True):
-            #st.markdown("""
-                        #<p style='text-align: justify;'>A Passos Mágicos tem como objetivo acelerar a ascensão social de crianças e jovens do município de Embu Guaçu através da educação.
-                         #É efetuada um processo seletivo visando garantir a dignidade e a autoestima com o intuito de promover a inclusão social ativa. É efetuada a divulgação das vagas na comunidade, é aplicada uma prova de sondagem aos interessados, aos selecionados é feita uma entrevista com psicologos, pedagogos e assistentes sociais. Após deliberarem analisam o perfil socioeconomicos para direcionar o conteudo e por fim a matricula.</p>""", unsafe_allow_html=True)
-
-
-    #with colunas_1 [1]:
-                #st.image("images/borda.png",width=300)
-
-
-    #colunas_2 = st.columns(2, gap="large")
-
  
  # Tab Problema e Objetivo do projeto
 with tabs_2[1]: 
