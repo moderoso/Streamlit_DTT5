@@ -41,4 +41,4 @@ st.title('Dashboard e Storytelling')
 
 powerbi_url = 'https://app.powerbi.com/view?r=eyJrIjoiZjI4NmNiN2QtNDMxOC00MmZjLTlkNWItN2FlMDdkMjZiOTRmIiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9'
 
-st.components.v1.iframe(powerbi_url, width=800, height=600)
+st.components.v1.iframe(powerbi_url, width=1200, height=800)
