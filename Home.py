@@ -59,8 +59,8 @@ with tabs_2[0]:
             # Descrição Passos Magicos
             st.markdown('<p style="text-align: justify;"> A Associação Passos Mágicos tem uma trajetória de 30 anos de atuação, trabalhando na transformação da vida de crianças e jovens de baixa renda os levando a melhores oportunidades de vida.A transformação, idealizada por Michelle Flues e Dimetri Ivanoff, começou em 1992, atuando dentro de orfanatos, no município de Embu-Guaçu.<br />Em 2016, depois de anos de atuação, decidem ampliar o programa para que mais jovens tivessem acesso a essa fórmula mágica para transformação que inclui: educação de qualidade, auxílio psicológico/psicopedagógico, ampliação de sua visão de mundo e protagonismo. Passaram então a atuar como um projeto social e educacional, criando assim a Associação Passos Mágicos.<br />A ONG Passos Mágicos é uma organização dedicada a transformar vidas por meio da educação e do acolhimento de crianças e jovens em situação de vulnerabilidade. Com um olhar atento às necessidades de cada estudante, a ONG oferece mais do que apenas ensino – ela proporciona um espaço seguro onde cada criança pode se sentir valorizada, respeitada e motivada a alcançar seu potencial.<br />A missão da Passos Mágicos é movida pela crença de que, para que um aluno realmente prospere, é necessário atender não só às suas necessidades acadêmicas, mas também ao seu bem-estar emocional, social e psicológico.<br /> A ONG se dedica a ser uma rede de apoio, não só no processo de aprendizagem, mas em todo o desenvolvimento do jovem, ajudando-o a superar desafios diários, sejam eles de ordem pessoal, familiar ou comunitária.<r />Em tempos de tantas desigualdades, a Passos Mágicos se destaca, oferecendo oportunidades para que cada criança e jovem possa dar os passos necessários para um futuro mais digno e promissor.Por isso, a Passos Mágicos busca entender e adaptar suas ações para apoiar de forma personalizada, promovendo um ambiente acolhedor onde a confiança e a autoestima possam florescer.</p>', unsafe_allow_html = True)		
 
-    #with colunas_1 [1]:
-                #st.image("images/borda.png",width=300)
+    with colunas_1 [1]:
+                st.image("images/borda.png",width=300)
 
 
     colunas_2 = st.columns(2, gap="large")
@@ -78,8 +78,8 @@ with tabs_2[1]:
             st.markdown('### Objetivo')
             st.markdown('<p style="text-align: justify;"><br> Este projeto visa utilizar análises preditivas para avaliar como as ações da ONG Passos Mágicos impactam o desempenho e o desenvolvimento dos estudantes. O objetivo é identificar padrões e relações nos dados educacionais, socioeconômicos e comportamentais, a fim de compreender de que maneira diferentes fatores impactam tanto o sucesso quanto as dificuldades dos alunos. Dada a relevância e a gravidade do tema, nossa abordagem será focada na evasão escolar, como um dos principais desafios a ser enfrentado. Com esses insights, a ONG poderá aprimorar suas abordagens e programas, ajustando-os para atender de forma mais eficaz às necessidades individuais dos alunos e potencializar os benefícios em suas trajetórias educacionais.</p>', unsafe_allow_html = True)		
 
-    #with colunas_1 [1]:
-                #st.image("images/borda.png",width=300)
+    with colunas_1 [1]:
+                st.image("images/borda.png",width=300)
 
 
     colunas_2 = st.columns(2, gap="large")
@@ -100,8 +100,8 @@ with tabs_2[2]:
             st.markdown('<p style="text-align: justify;"><span style="font-weight: bold">Taxas de Repetência: </span> A repetência escolar também tem uma relação direta com a evasão. Quando os alunos repetem o ano, muitos acabam desistindo de estudar, especialmente no Ensino Médio. O Brasil tem uma das maiores taxas de repetência da América Latina, com cerca de 13,6% no Ensino Médico em 2021.</p>', unsafe_allow_html = True)
             st.markdown('<p style="text-align: justify;"><br> A situação tem causado um impacto significativo no futuro educacional e social desses jovens, demandando ações urgentes e políticas públicas voltadas à inclusão e à permanência escolar, áreas com as quais a ONG Passos Mágicos possui uma estreita conexão. Considerando a gravidade do tema, que pode acarretar consequências sérias tanto para os indivíduos quanto para o país, nosso objetivo é apresentar um modelo preditivo relacionado à evasão escolar, visando aprimorar as previsões e estratégias da ONG.</p>', unsafe_allow_html = True)
 
-    #with colunas_1 [1]:
-                #st.image("images/borda.png",width=300)
+    with colunas_1 [1]:
+                st.image("images/borda.png",width=300)
 
 
     colunas_2 = st.columns(2, gap="large")
