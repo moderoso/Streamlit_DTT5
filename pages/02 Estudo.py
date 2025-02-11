@@ -12,8 +12,8 @@ from Funcoes import rodando_modelo # type: ignore
 # Configuração da página
 st.set_page_config(page_title= 'ONG - Passos Mágicos', layout='wide', page_icon=':gem:')
 
-if __name__ == '__main__':
-        apply_custom_style()
+#if __name__ == '__main__':
+        #apply_custom_style()
 
 st.markdown("""<style>[data-testid="stSidebar"] {display: flex; align-items: center; margin-bottom: 20px;}.icon-container a {margin-right: 15px;}</style>""", unsafe_allow_html=True)
 with st.sidebar:
@@ -24,25 +24,25 @@ with st.sidebar:
                 - Volmir Moderoso Santos - RM 355589''')
 
 #### Menu Superior
-#cols = st.columns(7, gap="large")
-#with cols[0]:
-    #st.image("images/passos-magicos-1.png")
-    #st.markdown("  ")
-#with cols[1]:
-    #if st.button("Home"):
-        #st.switch_page("Home.py")
-#with cols[2]:
-    #if st.button("Estudo"):
-        #st.switch_page("pages/02 Estudo.py")
-#with cols[3]:
-    #if st.button("MVP"):
-        #st.switch_page("pages/03 MVP.py")
-#with cols[4]:
-    #if st.button("Conclusão"):
-        #st.switch_page("pages/05 Conclusao.py")
-#with cols[5]:
-    #if st.button("Referências"):
-        #st.switch_page("pages/Referencias.py")
+cols = st.columns(6, gap="large")
+with cols[0]:
+    st.image("images/passos-magicos-1.png")
+    st.markdown("  ")
+with cols[1]:
+    if st.button("Home"):
+        st.switch_page("Home.py")
+with cols[2]:
+    if st.button("Estudo"):
+        st.switch_page("pages/02 Estudo.py")
+with cols[3]:
+    if st.button("MVP"):
+        st.switch_page("pages/03 MVP.py")
+with cols[4]:
+    if st.button("Conclusão"):
+        st.switch_page("pages/05 Conclusão.py")
+with cols[5]:
+    if st.button("Referências"):
+        st.switch_page("pages/06 Referencias.py")
 
 st.header("", divider="gray")
 
