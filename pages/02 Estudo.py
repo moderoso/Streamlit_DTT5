@@ -48,7 +48,8 @@ st.header("", divider="gray")
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 
 ### Tabs da página inicial
-tabs_titles_2= ["Estudo Evasão de alunos na Passos","Modelo","Indicadores", "Análise do Estudo"]
+tabs_titles_2= ["Estudo Evasão de alunos na Passos","Modelo","Indicadores"
+                ]
 tabs_2 = st.tabs(tabs_titles_2)
 
 
@@ -142,25 +143,6 @@ with tabs_2[2]:
     st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Topázio – </span>8,230 a 9,294</li></p></ul>', unsafe_allow_html = True)
     st.image("images/pedraINDE.png",caption="Faixas de desempenho Pedra-conceito INDE - Fonte:PEDE Pontos importantes", width=400)
 
-# TAB de Indicadores      
-with tabs_2[3]: 
-    st.header("Análise do estudo")
-    st.markdown('''<p style='text-align: justify;'>Os dados que serão mostrados abaixo tem a finalidade de demonstrar o impacto da Passos Mágicos no sistema educacional e nos jovens da região de Embu-Guaçu.
-                <br><br>
-                </p>''',unsafe_allow_html=True)
-    colunas_3 = st.columns(2)
-    with colunas_3 [0]:
-        #st.image("images/indicador_avaliacao.png",caption="Indicadores de Avaliação, descrição e seus pesos - Fonte:PEDE Pontos importantes", width=500)
-        #st.image("images/indicador_conselho.png",caption="Indicadores de Conselho, descrição e seus pesos - Fonte:PEDE Pontos importantes", width=500)
-    #st.markdown('<p style="text-align: justify;">Com base nos dados encontrados, comprovamos que 78,98% da origem dos alunos são de escolas públicas, 10,21% escolas privadas e 10,81% são de outras origens. Dentre esse público pouco mais de 53% femininos e 46% masculinos e nos últimos 3 anos (2022, 2023 e 2024) foram atendidos 1661 alunos. E o maior faixa etária  de seus alunos possuem em média 12 anos de idade:</p>', unsafe_allow_html = True)
-    st.image("images/indicador_conselho.png",caption="Indicadores de Conselho, descrição e seus pesos - Fonte:PEDE Pontos importantes", width=500)
-    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Quartzo – </span>2,405 a 5,506</li></p></ul>', unsafe_allow_html = True)
-    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Ágata – </span>5,506 a 6,868</li></p></ul>', unsafe_allow_html = True)
-    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Ametista – </span>6,868 a 8,230</li></p></ul>', unsafe_allow_html = True)
-    st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Topázio – </span>8,230 a 9,294</li></p></ul>', unsafe_allow_html = True)
-    st.image("images/pedraINDE.png",caption="Faixas de desempenho Pedra-conceito INDE - Fonte:PEDE Pontos importantes", width=400)
-    st.markdown('<p style="text-align: justify;">Essas quatro pedras, que simbolizam etapas de uma jornada de aprendizado e de desenvolvimento educacional, indicarão a posição de cada estudante em relação ao desempenho geral de todos na pesquisa avaliativa PEDE 2021.Analisando a evasão por Pedra, é possível identificar que a pedra Ametista e Ágata, são as que mais possuem alunos na situação de evasão, onde há alunos com valores na média do INDE.</p>', unsafe_allow_html = True)
-    st.image("images/pedragrf.png",caption="Evasão por pedras", width=500)
 	
 ## Rodapé
 st.markdown("---")
