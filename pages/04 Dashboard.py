@@ -40,8 +40,8 @@ tabs_2 = st.tabs(tabs_titles_2)
 with tabs_2[0]: 
     st.header("Dashboard e Storytelling")
     colunas_3 = st.columns(1, gap="large")
-powerbi_url = 'https://app.powerbi.com/view?r=eyJrIjoiZjI4NmNiN2QtNDMxOC00MmZjLTlkNWItN2FlMDdkMjZiOTRmIiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9'
-st.components.v1.iframe(powerbi_url, width=1200, height=800)
+    powerbi_url = 'https://app.powerbi.com/view?r=eyJrIjoiZjI4NmNiN2QtNDMxOC00MmZjLTlkNWItN2FlMDdkMjZiOTRmIiwidCI6IjExZGJiZmUyLTg5YjgtNDU0OS1iZTEwLWNlYzM2NGU1OTU1MSIsImMiOjR9'
+    st.components.v1.iframe(powerbi_url, width=1200, height=800)
 
 with tabs_2[1]: 
     st.header("Análise e Insights")
