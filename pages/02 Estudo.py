@@ -48,8 +48,7 @@ st.header("", divider="gray")
 st.title('ONG - Passos Mágicos :woman-woman-girl-boy:✨')
 
 ### Tabs da página inicial
-tabs_titles_2= ["Estudo Evasão de alunos na Passos","Modelo","Indicadores"
-                ]
+tabs_titles_2= ["Estudo Evasão de alunos na Passos","Modelo","Indicadores"]
 tabs_2 = st.tabs(tabs_titles_2)
 
 
@@ -87,7 +86,7 @@ with tabs_2[0]:
 
         st.markdown( '#### Pedra')
         st.markdown('<p style="text-align: justify;">A pedra é a classificação do aluno, baseado no número do INDE (Índice do Desenvolvimento Educacional), que é uma métrica de processo avaliativo geral do aluno.<br><br></p>', unsafe_allow_html = True)
-        st.markdown('<p style="text-align: justify;">O conceito de classificação é dado por:<br><br></p>', unsafe_allow_html = True)
+        st.markdown('<p style="text-align: justify;">O conceito de classificação é dado por:</p>', unsafe_allow_html = True)
         st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Quartzo - </span>2,405 a 5,506.</li></p></ul>', unsafe_allow_html = True)
         st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Ágata - </span>5,506 a 6,868.</li></p></ul>', unsafe_allow_html = True)
         st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Ametista - </span>6,868 a 8,230.</li></p></ul>', unsafe_allow_html = True)
