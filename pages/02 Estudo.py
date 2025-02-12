@@ -152,7 +152,7 @@ with tabs_2[3]:
     with colunas_3 [0]:
         #st.image("images/indicador_avaliacao.png",caption="Indicadores de Avaliação, descrição e seus pesos - Fonte:PEDE Pontos importantes", width=500)
         #st.image("images/indicador_conselho.png",caption="Indicadores de Conselho, descrição e seus pesos - Fonte:PEDE Pontos importantes", width=500)
-    st.markdown('<p style="text-align: justify;">Com base nos dados encontrados, comprovamos que 78,98% da origem dos alunos são de escolas públicas, 10,21% escolas privadas e 10,81% são de outras origens. Dentre esse público pouco mais de 53% femininos e 46% masculinos e nos últimos 3 anos (2022, 2023 e 2024) foram atendidos 1661 alunos. E o maior faixa etária  de seus alunos possuem em média 12 anos de idade:</p>', unsafe_allow_html = True)
+    #st.markdown('<p style="text-align: justify;">Com base nos dados encontrados, comprovamos que 78,98% da origem dos alunos são de escolas públicas, 10,21% escolas privadas e 10,81% são de outras origens. Dentre esse público pouco mais de 53% femininos e 46% masculinos e nos últimos 3 anos (2022, 2023 e 2024) foram atendidos 1661 alunos. E o maior faixa etária  de seus alunos possuem em média 12 anos de idade:</p>', unsafe_allow_html = True)
     st.image("images/indicador_conselho.png",caption="Indicadores de Conselho, descrição e seus pesos - Fonte:PEDE Pontos importantes", width=500)
     st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Quartzo – </span>2,405 a 5,506</li></p></ul>', unsafe_allow_html = True)
     st.markdown('<ul class="font-text-destaques"><p style="text-align: justify;"><li><span style="font-weight: bold">Ágata – </span>5,506 a 6,868</li></p></ul>', unsafe_allow_html = True)
