@@ -46,5 +46,5 @@ with tabs_2[0]:
 with tabs_2[1]: 
     st.header("Análise e Insights")
     st.write("Com base nos dados encontrados, comprovamos que 78,98% da origem dos alunos são de escolas públicas, 10,21% escolas privadas e 10,81% são de outras origens. Dentre esse público pouco mais de 53% femininos e 46% masculinos e nos últimos 3 anos (2022, 2023 e 2024) foram atendidos 1661 alunos. E o maior faixa etária  de seus alunos possuem em média 12 anos de idade:")
-    
+    st.image("qtdeAlunosIdadeGen.png", width=500)
 
