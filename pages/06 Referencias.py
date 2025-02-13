@@ -15,7 +15,7 @@ with cols[0]:
     st.image("images/passos-magicos.png")
     st.markdown("  ")
 with cols[1]:
-    if st.button("Home", on_click=foo):
+    if st.button("Home"):
         st.switch_page("Home.py")
 with cols[2]:
     if st.button("Estudo"):
